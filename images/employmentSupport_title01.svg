@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="23" viewBox="0 0 42 23">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 11.435px;
+        text-anchor: end;
+        font-family: "Freestyle Script";
+      }
+    </style>
+  </defs>
+  <text id="Meeting" class="cls-1" transform="translate(43.792 6.977) rotate(-18.169) scale(1.749)"><tspan x="0">Meeting</tspan></text>
+</svg>

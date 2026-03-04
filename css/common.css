@@ -1,0 +1,394 @@
+@charset "UTF-8";
+
+/* CSS変数 */
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-yellow: #ffef8a;
+  --background-gray: #ececec;
+  --font-size-S: 1.8rem;
+  --font-size-M: 2.4rem;
+  --font-size-L: 4.6rem;
+}
+/* 共通 */
+* {
+  font-feature-settings: "palt";
+  letter-spacing: 0.025em;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.8rem;
+  line-height: 1.667;
+  font-family:
+    "Helvetica Neue", "Arial", "hiragino-kaku-gothic-pron", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/* 768px以下では改行タグを無効 */
+.pc_br {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .pc_br {
+    display: none;
+  }
+}
+
+/* スクロール禁止 */
+body.no-scroll {
+  overflow: hidden;
+}
+/* fonts */
+.futura {
+  font-family:
+    "futura-pt", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.futura-bold {
+  font-family:
+    "futura-pt-bold", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.source-bold {
+  font-family: "source-han-sans-japanese", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h2 {
+  font-size: 10rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+h3 {
+  display: inline;
+  font-size: 2.4rem;
+  line-height: 1;
+  background-image: linear-gradient(0deg, transparent 0.38em, #ffef8a80 0.38em, #ffef8a80 0.76em, transparent 0.76em);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.container {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+header {
+  width: 100vw;
+  max-width: 1200px;
+  height: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  mix-blend-mode: difference;
+}
+.header__wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  width: 164px;
+  margin-right: auto;
+}
+header h1 {
+  width: 164px;
+  margin-right: auto;
+}
+header h1 a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+header nav {
+  display: flex;
+  font-size: 2rem;
+  column-gap: 2rem;
+  align-items: center;
+}
+.header__menu--ic,
+.header__contact--ic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  cursor: pointer;
+}
+.header__menu--ic {
+  color: var(--color-white);
+}
+.header__contact--ic {
+  background-color: #001075;
+  color: var(--color-white);
+  border-radius: 22px;
+  width: 140px;
+  height: 45px;
+}
+.header__contact--ic span::before {
+  content: url("../images/contact_mail.svg");
+  display: block;
+  width: 21px;
+  height: 15px;
+  line-height: 0;
+}
+/* ハンバーガーメニューアイコンのスタイル */
+.hamburger {
+  background: var(--color-white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.6rem;
+}
+.hamburger .line {
+  width: 17px;
+  height: 0.5px;
+  background-color: var(--color-black);
+  transition: all 0.3s ease;
+}
+.hamburger .line:nth-child(1) {
+  position: relative;
+  right: 2px;
+}
+.hamburger .line:nth-child(2) {
+  position: relative;
+  left: 2px;
+}
+.hamburger .line:nth-child(3) {
+  position: relative;
+  right: 2px;
+}
+
+/* 全画面メニュー */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-white);
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 999;
+}
+/* 閉じるボタン（右上） */
+.close-btn__container {
+  width: 100%;
+  max-width: 1200px;
+  height: 89px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+}
+.close-btn {
+  font-size: 2rem;
+  color: var(--color-black);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+}
+.close-btn span {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: inline-block;
+}
+.close-btn span::before,
+.close-btn span::after {
+  content: "";
+  background: var(--color-black);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.close-btn span::before {
+  transform: translateY(-50%) rotate(20deg);
+}
+.close-btn span::after {
+  transform: translateY(-50%) rotate(-20deg);
+}
+.menu-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.menu-left,
+.menu-right {
+  flex: 1;
+  display: flex;
+  padding-top: 120px;
+}
+.menu-ttl {
+  font-size: 4.4rem;
+  line-height: 3.4rem;
+  padding-bottom: 3rem;
+}
+.menu-left .menu-ttl {
+  border-bottom: 1px solid var(--color-black);
+}
+.menu-left {
+  flex: 56.667;
+  justify-content: right;
+}
+.menu-left__wrapper {
+  width: 730px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.menu-left__wrapper .menu-ttl {
+  max-width: 550px;
+}
+.menu-left .menu-left__list {
+  font-size: 4.4rem;
+  line-height: 3.4rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+}
+
+.menu-left ul li span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 1.5rem;
+}
+.menu-right {
+  flex: 43.333;
+  background-color: #ffef8a;
+  justify-content: left;
+}
+.menu-right__wrapper {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  padding-left: 100px;
+}
+.menu-right__text {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+.menu-right__btn {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  text-decoration: none;
+  width: 256px;
+  padding: 0.5rem 0rem;
+  font-size: 1.8rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+}
+.menu-right__btn span {
+  display: inline-block;
+}
+.menu-right__btn span::after {
+  content: url("../images/mail_white.svg");
+  display: block;
+  width: 21px;
+  height: 15px;
+  line-height: 0;
+}
+/* footer */
+footer {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  background: linear-gradient(to right, #515151 0%, #515151 50%, var(--color-black) 50%, var(--color-black) 100%);
+  font-size: 1.4rem;
+}
+.footer__wrapper {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+.footer__wrapper div {
+  flex: 1;
+  color: var(--color-white);
+}
+.footer__left {
+  text-align: left;
+  padding: 4rem 5rem 1.5rem;
+}
+.footer__list {
+  max-width: 345px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+}
+.footer__list li {
+  width: 50%;
+}
+.footer__list li a {
+  color: var(--color-white);
+}
+.footer__right {
+  text-align: right;
+  padding: 4rem 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.footer__title--main {
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.footer__title--sub {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*　画面サイズが375px以下　*/
+@media screen and (max-width: 375px) {
+}

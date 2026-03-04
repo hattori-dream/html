@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ドリームマーリン・ANNEX | 就労継続支援A型・就労移行支援</title>
+    <meta name="description" content="ページの説明" />
+    <meta name="keywords" content="キーワード1, キーワード2, キーワード3" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <link rel="canonical" href="https://example.com" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- adobeフォント -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "avy5lfd",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- リセットCSS-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./JS/main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header__wrapper">
+          <h1><a href="" class="futura">DreamBridge</a></h1>
+          <nav aria-label="main">
+            <div class="header__menu--ic">
+              <p class="futura">Menu</p>
+              <p class="hamburger" id="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </p>
+            </div>
+            <div class="header__contact--ic">
+              <p class="futura">Contact</p>
+              <span></span>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="menu-overlay" id="menu">
+        <div class="close-btn__container">
+          <button class="close-btn futura" id="closeBtn">Close<span></span></button>
+        </div>
+        <div class="menu-container">
+          <div class="menu-left">
+            <div class="menu-left__wrapper">
+              <p class="menu-ttl futura">Menu</p>
+              <ul class="menu-left__list futura">
+                <li>
+                  <a href="">5 Strengths<span>5つの強み</span></a>
+                </li>
+                <li>
+                  <a href="">Support Results<span>支援実績</span></a>
+                </li>
+                <li>
+                  <a href="">Employment Support<span>就職徹底サポート</span></a>
+                </li>
+                <li>
+                  <a href="">Service<span>サービス事業</span></a>
+                </li>
+                <li>
+                  <a href="">Curriculum<span>学習内容</span></a>
+                </li>
+                <li>
+                  <a href="">Flow to use<span>ご利用の流れ</span></a>
+                </li>
+                <li>
+                  <a href="">Voice<span>利用者の声</span></a>
+                </li>
+                <li>
+                  <a href="">News<span>お知らせ</span></a>
+                </li>
+                <li>
+                  <a href="">Access<span>事業所一覧</span></a>
+                </li>
+                <li>
+                  <a href="">Profile<span>会社概要</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-right">
+            <div class="menu-right__wrapper">
+              <p class="menu-ttl futura">Contact</p>
+              <ul>
+                <li>
+                  <p class="menu-right__text">
+                    見学・体験のお問い合わせは、各事業所へお電話<br />
+                    もしくは下記お問い合わせフォームからご相談ください。
+                  </p>
+                </li>
+                <li>
+                  <a href="" class="menu-right__btn"><span></span>お問合わせフォーム</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="firstView">
+          <div class="firstView__col">
+            <div class="firstView__slogan">
+              <section class="firstView__slogan--container">
+                <div class="firstView__slogan--main">就いて<br />ピース</div>
+              </section>
+            </div>
+            <div class="firstView__desc">
+              <section class="firstView__desc--container">
+                <div class="firstView__desc--title">
+                  <p>ドリームマーリン</p>
+                </div>
+                <div class="firstView__desc--text">
+                  利用者の皆様が就職を勝ち取り、<br class="pc_br" />
+                  働いて幸せを築く未来をスローガンに込めました。<br class="pc_br" />
+                  皆様を就職までサポートすることはもちろん、<br class="pc_br" />
+                  その先もずっと幸せに働き続けていただくために尽くすことが、<br class="pc_br" />
+                  ドリームマーリンのミッションです。理想の未来へ向かう一歩を、<br class="pc_br" />
+                  ドリームマーリンで踏み出してみませんか？<br class="pc_br" />
+                </div>
+              </section>
+            </div>
+          </div>
+          <section class="firstView__img">
+            <img src="./images/firstView_img.jpg" alt="firstView__img" />
+          </section>
+        </div>
+        <main>
+          <div class="main__wrapper">
+            <div class="main__container">
+              <section class="fiveStrengths" id="fiveStrengths">
+                <h2 class="futura-bold">5 Strengths</h2>
+                <h3>ドリームマーリンの５つの強み</h3>
+                <ul class="fiveStrengths__list">
+                  <li class="fiveStrengths__color--black01">
+                    <div class="fiveStrengths__desc">
+                      <dl class="fiveStrengths__sub futura-bold">
+                        <dt class="fiveStrengths__num">01</dt>
+                        <dd class="fiveStrengths__eng">pay for certification</dd>
+                      </dl>
+                      <dl class="fiveStrengths__main">
+                        <dt class="fiveStrengths__title">資格費用全額負担</dt>
+                        <dd class="fiveStrengths__text">
+                          就職や実務で役立つ資格取得費用を全額負担します。資格に関する教材についても、基礎から応用、試験対策まで取り揃えているので、個人のレベルやペースに合わせた学習が可能です。
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="fiveStrengths__img">
+                      <img src="./images/fiveStrengths_img01.png" alt="fiveStrengths_img01" />
+                    </div>
+                  </li>
+                  <li class="fiveStrengths__color--black02">
+                    <div class="fiveStrengths__desc">
+                      <dl class="fiveStrengths__sub futura-bold">
+                        <dt class="fiveStrengths__num">02</dt>
+                        <dd class="fiveStrengths__eng">lunch for free</dd>
+                      </dl>
+                      <dl class="fiveStrengths__main">
+                        <dt class="fiveStrengths__title">ランチ無料提供</dt>
+                        <dd class="fiveStrengths__text">
+                          バラエティ豊かなメニューのランチを無料で提供しています。栄養バランスが考えられたメニューで集中して訓練に取り組んでいただけます。
+                          <br /><small>※一部例外あり</small>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="fiveStrengths__img">
+                      <img src="./images/fiveStrengths_img02.png" alt="fiveStrengths_img02" />
+                    </div>
+                  </li>
+                  <li class="fiveStrengths__color--black03">
+                    <div class="fiveStrengths__desc">
+                      <dl class="fiveStrengths__sub futura-bold">
+                        <dt class="fiveStrengths__num">03</dt>
+                        <dd class="fiveStrengths__eng">training from home</dd>
+                      </dl>
+                      <dl class="fiveStrengths__main fiveStrengths__white">
+                        <dt class="fiveStrengths__title">在宅利用可能</dt>
+                        <dd class="fiveStrengths__text">
+                          通所が困難な方でも、ご自宅での訓練が行える体制を整えています。訓練や生活についての悩み事を日々オンラインでヒアリングするとともに、定期的にご自宅へ訪問し、訓練全般に関する支援を行っております。
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="fiveStrengths__img">
+                      <img src="./images/fiveStrengths_img03.png" alt="fiveStrengths_img03" />
+                    </div>
+                  </li>
+                  <li class="fiveStrengths__color--black04">
+                    <div class="fiveStrengths__desc">
+                      <dl class="fiveStrengths__sub futura-bold">
+                        <dt class="fiveStrengths__num">04</dt>
+                        <dd class="fiveStrengths__eng">high employment rat</dd>
+                      </dl>
+                      <dl class="fiveStrengths__main fiveStrengths__white">
+                        <dt class="fiveStrengths__title">圧倒的な就職実績</dt>
+                        <dd class="fiveStrengths__text">
+                          元人事やキャリアアドバイザーのサポートにより、高い就職率を実現しています。ビジネスマナーの講座や応募書類の添削・模擬面接、面接同席など徹底してフォローしますので、安心して就職準備に取り組んでいただけます
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="fiveStrengths__img">
+                      <img src="./images/fiveStrengths_img04.png" alt="fiveStrengths_img04" />
+                    </div>
+                  </li>
+                  <li class="fiveStrengths__color--black05">
+                    <div class="fiveStrengths__desc">
+                      <dl class="fiveStrengths__sub futura-bold">
+                        <dt class="fiveStrengths__num">05</dt>
+                        <dd class="fiveStrengths__eng">IT specialist</dd>
+                      </dl>
+                      <dl class="fiveStrengths__main fiveStrengths__white">
+                        <dt class="fiveStrengths__title">IT専門スタッフ</dt>
+                        <dd class="fiveStrengths__text">
+                          プログラミングやデザインなどの専門スキルを持った元IT企業出身のスタッフが多数在籍しているため、未経験でも安心して基礎から実践的なスキルの取得が目指せます。
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="fiveStrengths__img">
+                      <img src="./images/fiveStrengths_img05.png" alt="fiveStrengths_img05" />
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <section class="supportResults" id="supportResults">
+                <h2 class="futura-bold">Support Results</h2>
+                <h3>ドリームマーリンの支援実績</h3>
+                <ul class="supportResults__list">
+                  <li>
+                    <div class="supportResults__chart">
+                      <img src="./images/supportResults_chart01.png" alt="就職率96%" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="supportResults__chart">
+                      <img src="./images/supportResults_chart02.png" alt="就職定着率99%" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="supportResults__chart">
+                      <img src="./images/supportResults_chart03.png" alt="資格取得率99%" />
+                    </div>
+                  </li>
+                </ul>
+                <p class="supportResults__text">※2025年6月現在</p>
+              </section>
+              <section class="employmentSupport" id="employmentSupport">
+                <h2 class="futura-bold">Employment<br />Support</h2>
+                <h3>就職徹底サポート</h3>
+                <ul class="employmentSupport__list">
+                  <li>
+                    <p class="employmentSupport__num futura">[01]</p>
+                    <p class="employmentSupport__title">
+                      面談<span><img src="./images/employmentSupport_title01.svg" alt="Meeting" /></span>
+                    </p>
+                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust01.png" alt="面談" /></p>
+                    <p class="employmentSupport__text">
+                      ご自身の障がいや特性、現在の状況、職種や勤務地などの就職に関するご希望をお伺いし、一人ひとりに合わせた支援計画を作成します。
+                    </p>
+                  </li>
+                  <li>
+                    <p class="employmentSupport__num futura">[02]</p>
+                    <p class="employmentSupport__title">
+                      訓練<span><img src="./images/employmentSupport_title02.svg" alt="Training" /></span>
+                    </p>
+                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust02.png" alt="訓練" /></p>
+                    <p class="employmentSupport__text">
+                      ITに特化した専門的なスキルの学習を中心に、講座やグループディスカッションを通じて、就労に必要なスキルと知識を習得していきます。
+                    </p>
+                  </li>
+                  <li>
+                    <p class="employmentSupport__num futura">[03]</p>
+                    <p class="employmentSupport__title">
+                      実習<span><img src="./images/employmentSupport_title03.svg" alt="Internship" /></span>
+                    </p>
+                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust03.png" alt="実習" /></p>
+                    <p class="employmentSupport__text">
+                      訓練では体験できない実務経験の中から、就職に必要なスキルやマナーを学ぶとともに、訓練で培ったスキルを企業にアピールしていきます。
+                    </p>
+                  </li>
+                  <li>
+                    <p class="employmentSupport__num futura">[04]</p>
+                    <p class="employmentSupport__title">
+                      就職<span><img src="./images/employmentSupport_title04.svg" alt="Start Working" /></span>
+                    </p>
+                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust04.png" alt="就職" /></p>
+                    <p class="employmentSupport__text">
+                      応募書類の添削や模擬面接の実施など就職までサポートします。また、就職後も長く働き続けていただけるよう、定着支援も行っていきます。
+                    </p>
+                  </li>
+                </ul>
+              </section>
+              <section class="service" id="service">
+                <h2 class="futura-bold">Service</h2>
+                <h3>サービス事業</h3>
+                <div class="service__wrapper">
+                  <ul class="service__list">
+                    <li>
+                      <div class="service__item">
+                        <p class="service__title">就労移行支援事業所</p>
+                        <p class="service__img"><img src="./images/service_illust01.png" alt="就労移行支援事業所" /></p>
+                        <p class="service__text">
+                          一般企業への就職を目指す方を対象に、必要な知識やスキル習得のための支援を受けられます。コミュニケーション・専門スキル・ビジネスマナー・職業に関する知識など就労に関する支援を幅広く受けることができます。
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="service__item">
+                        <p class="service__title">A型事業所</p>
+                        <p class="service__img"><img src="./images/service_illust02.png" alt="A型事業所" /></p>
+                        <p class="service__text">
+                          障がいや特性によって一般企業での就労が困難な方が、雇用契約を結び就労することができます。実務を通して、一般企業に就職するために必要な知識と能力を習得していきます。
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="curriculum" id="curriculum">
+                <h2 class="futura-bold">Curriculum</h2>
+                <h3>学習内容</h3>
+                <div class="curriculum__wrapper01">
+                  <div class="curriculum__container01">
+                    <div class="curriculum__content-box">
+                      <div class="curriculum__Category">
+                        <p class="curriculum__Category-title source-bold">グラフィックデザイン<br />webデザイン</p>
+                        <p class="curriculum__text">
+                          デザインソフトの基礎から学び、情報を視覚的にわかりやすく伝えるスキルを<br class="pc_br" />身につけていきます。
+                        </p>
+                        <ul class="curriculum__list">
+                          <li class="curriculum__item">Photoshop</li>
+                          <li class="curriculum__item">Illustrator</li>
+                          <li class="curriculum__item">AdobeXD</li>
+                          <li class="curriculum__item">Figma</li>
+                          <li class="curriculum__item">HTML&CSS</li>
+                          <li class="curriculum__item">Javascript</li>
+                          <li class="curriculum__item">InDesign</li>
+                          <li class="curriculum__item">WordPress</li>
+                          <li class="curriculum__item">Wix</li>
+                          <li class="curriculum__item">STUDIO</li>
+                          <li class="curriculum__item">Live2D</li>
+                          <li class="curriculum__item">Blender</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="curriculum__wrapper02">
+                  <div class="curriculum__container02">
+                    <div class="curriculum__background-circle"></div>
+                    <div class="curriculum__center-content">
+                      <p class="curriculum__catchphrase">実際に取得できる！</p>
+                      <h2 class="curriculum__main-title">検定・資格</h2>
+                      <img src="./images/curriculum_img.png" alt="学習イラスト" class="curriculum__center-img" />
+                    </div>
+                    <div class="curriculum__circle-item" style="--i: 0">Microsoft Office<br />Specialist</div>
+                    <div class="curriculum__circle-item" style="--i: 1">Microsoft Office<br />Expert</div>
+                    <div class="curriculum__circle-item" style="--i: 2">VBA<br />Expert</div>
+                    <div class="curriculum__circle-item" style="--i: 3">ITパスポート</div>
+                    <div class="curriculum__circle-item" style="--i: 4">日商簿記検定</div>
+                    <div class="curriculum__circle-item" style="--i: 5">基本情報<br />技術者試験</div>
+                    <div class="curriculum__circle-item" style="--i: 6">応用情報<br />技術者試験</div>
+                    <div class="curriculum__circle-item" style="--i: 7">Web<br />クリエイター<br />能力認定試験</div>
+                    <div class="curriculum__circle-item" style="--i: 8">Photoshop<br />クリエイター<br />能力認定試験</div>
+                    <div class="curriculum__circle-item" style="--i: 9">Illustrator<br />クリエイター<br />能力認定試験</div>
+                  </div>
+                </div>
+                <p class="curriculum__background-text futura-bold">JOB FROM DREAM</p>
+              </section>
+              <section class="flowToUse" id="flowToUse">
+                <div class="flowToUse__box00">
+                  <h2 class="futura-bold">Flow to use</h2>
+                  <h3>ご利用の流れ</h3>
+                </div>
+                <div class="flowToUse__list">
+                  <div class="flowToUse__box01">
+                    <div class="flowToUse__box--content">
+                      <div class="flowToUse__box--border">
+                        <span class="flowToUse__flow futura-bold">01</span>
+                        <p class="flowToUse__title">お問い合せ</p>
+                        <p class="flowToUse__text">
+                          まずは、お気軽にお電話またはメールにてお問い合せください。事業所のことや就労支援サービスなど、ご不明な点や気になることをお聞かせください。見学・面談・体験のご予約も受け付けています。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flowToUse__box02">
+                    <div class="flowToUse__box--content">
+                      <span class="flowToUse__flow futura-bold">02</span>
+                      <p class="flowToUse__title">見学・面談</p>
+                      <p class="flowToUse__text">
+                        訓練の内容・事業所の設備などをご案内します。面談では、今までの状況やどのような仕事に就きたいかなどをお伺いいたします。また、安心して利用できるかどうか、実際に訓練を体験することができます。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flowToUse__box03">
+                    <div class="flowToUse__box--content">
+                      <div class="flowToUse__box--border">
+                        <span class="flowToUse__flow futura-bold">03</span>
+                        <p class="flowToUse__title">ご利用手続き</p>
+                        <p class="flowToUse__text">
+                          お住まいの市区町村の役所窓口にて、障害福祉利用サービス受給者証の申請を行います。ご希望の場合、スタッフが手続きをサポートしますので、ご安心ください。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flowToUse__box04">
+                    <div class="flowToUse__box--content">
+                      <span class="flowToUse__flow futura-bold">04</span>
+                      <p class="flowToUse__title">契約・利用開始</p>
+                      <p class="flowToUse__text">
+                        受給者証が支給されましたら、事業所との契約手続きを行い、ご利用開始となります。
+                        就職に向けて一緒にプログラムに取り組んでいきましょう！
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="voice" id="voice">
+                <h2 class="futura-bold">Voice</h2>
+                <h3>利用者の声</h3>
+                <div class="voice__wrapper">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="swiper-box">
+                          <p class="voice__img"><img src="./images/voice_illust01.png" alt="利用者の声" /></p>
+                          <div class="voice__content">
+                            <p class="voice__title">復職への不安が、<br class="pc_br" />自信に変わりました！</p>
+                            <p class="voice__text">
+                              仕事や人間関係につまずき自信をなくしていましたが、職員のみなさんに寄り添ってもらいながら訓練に励むうちに少しずつ前向きになれました。今では再就職を果たし、自信を持って笑顔で働けるようになりました。
+                            </p>
+                            <p class="voice__people">発達障害/ADHD 30代・女性</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-box">
+                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                          <p class="voice__title">訓練したことを活かせる<br class="pc_br" />会社に就職できました</p>
+                          <div class="voice__content">
+                            <p class="voice__text">
+                              前職でうつ病が再発し、休職を挟んで退職しました。その後、ドリームマーリンへ通所を開始し、デザインスキル向上のためコーディングの学習に取り組みました。通所してから３か月程で就職が決まり、名刺やホームページのデザインに携わっています。
+                            </p>
+                            <p class="voice__people">発達障害/ADHD 40代・男性</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-box">
+                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                          <div class="voice__content">
+                            <p class="voice__title">なりたい自分と向き合う、<br class="pc_br" />有意義な時間</p>
+                            <p class="voice__text">
+                              気持ちの浮き沈みで生活リズムが崩れやすい状態でしたが、職員さんとの報連相で励ましや気づきを感じ、自分の特性や考え方に向き合うことができました。就職先も決まり、自分らしい人生を歩めていることを実感しています。
+                            </p>
+                            <p class="voice__people">精神障害/うつ病 30代・男性</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-box">
+                          <p class="voice__img"><img src="./images/voice_illust01.png" alt="利用者の声" /></p>
+                          <div class="voice__content">
+                            <p class="voice__title">復職への不安が、<br class="pc_br" />自信に変わりました！</p>
+                            <p class="voice__text">
+                              仕事や人間関係につまずき自信をなくしていましたが、職員のみなさんに寄り添ってもらいながら訓練に励むうちに少しずつ前向きになれました。今では再就職を果たし、自信を持って笑顔で働けるようになりました。
+                            </p>
+                            <p class="voice__people">発達障害/ADHD 30代・女性</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-box">
+                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                          <p class="voice__title">訓練したことを活かせる<br class="pc_br" />会社に就職できました</p>
+                          <div class="voice__content">
+                            <p class="voice__text">
+                              前職でうつ病が再発し、休職を挟んで退職しました。その後、ドリームマーリンへ通所を開始し、デザインスキル向上のためコーディングの学習に取り組みました。通所してから３か月程で就職が決まり、名刺やホームページのデザインに携わっています。
+                            </p>
+                            <p class="voice__people">発達障害/ADHD 40代・男性</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-box">
+                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                          <div class="voice__content">
+                            <p class="voice__title">なりたい自分と向き合う、<br class="pc_br" />有意義な時間</p>
+                            <p class="voice__text">
+                              気持ちの浮き沈みで生活リズムが崩れやすい状態でしたが、職員さんとの報連相で励ましや気づきを感じ、自分の特性や考え方に向き合うことができました。就職先も決まり、自分らしい人生を歩めていることを実感しています。
+                            </p>
+                            <p class="voice__people">精神障害/うつ病 30代・男性</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ページネーション -->
+                    <div class="slide-pagination-wrapper">
+                      <div class="swiper-button-prev">◀</div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-next">▶</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="contact" id="contact">
+                <h2 class="futura-bold">Contact</h2>
+                <h3>お問い合わせ</h3>
+                <div class="contact__wrapper">
+                  <p class="contact__text">まずはお気軽に見学・ご相談ください</p>
+                  <ul class="contact__list">
+                    <li class="contact__item">
+                      <div class="contact__content">
+                        <p class="contact__item-title">電話でのお問い合わせはこちら</p>
+                        <p class="contact__item-tel futura">04-7157-3307</p>
+                        <p class="contact__item-text">受付時間 10:00 -18:00 (平日)</p>
+                      </div>
+                    </li>
+                    <li class="contact__item">
+                      <div class="contact__content">
+                        <p class="contact__item-title">メールでのお問い合わせはこちら</p>
+                        <p class="contact__item-btn">お問い合わせフォーム</p>
+                        <p class="contact__item-text">24時間受付中</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="news" id="news">
+                <h2 class="futura-bold">News</h2>
+                <h3>お知らせ</h3>
+                <div class="news__wrapper">
+                  <div class="news__content">
+                    <ul class="news__list">
+                      <li class="news__item">
+                        <a href="">
+                          <p class="news__item-date futura">25.6.10</p>
+                          <p class="news__item-title">ホームページリニューアル</p>
+                          <p class="news__item-text">
+                            この度、ドリームマーリンのホームページを大幅にリニューアルいたしました。新しいサイトでは、訓練内容や取得可能な資格、これまでの実績、就職までのステップなどを、より分かりやすく具体的にご紹介しています。見学・体験のご相談もお待ちしております。
+                          </p>
+                        </a>
+                      </li>
+                      <li class="news__item">
+                        <a href="">
+                          <p class="news__item-date">25.6.10</p>
+                          <p class="news__item-title">ドリームマーリン千葉10.1オープン予定</p>
+                          <p class="news__item-text">
+                            ドリームマーリン千葉駅前校の開校が決定いたしました。2025年10月1日のオープンに向けて準備を進めております。ドリームマーリンは、充実した訓練プログラムと高い就職実績を誇り、多くの方の“働く”を全力でサポートしています。「自分らしい就職を叶えたい」「スキルを身につけたい」――そんな想いを、ぜひ新しい校舎で実現してみませんか？皆さまからのお問い合わせを心よりお待ちしております。
+                          </p>
+                        </a>
+                      </li>
+                    </ul>
+                    <a href="" class="news__btn futura-bold">MORE</a>
+                  </div>
+                </div>
+              </section>
+              <section class="access" id="access">
+                <h2 class="futura-bold">Access</h2>
+                <h3>事業所一覧</h3>
+                <div class="access__wrapper">
+                  <ul class="access__list">
+                    <li class="access__item">
+                      <div class="access__item-left">
+                        <ul class="access__tag-list">
+                          <li class="access__tag-item">就労移行支援事業所</li>
+                          <li class="access__tag-item">就労継続支援A型事業所</li>
+                        </ul>
+                        <p class="access__item-title">ドリームマーリン</p>
+                        <ul class="access__data">
+                          <li class="access__data-address">
+                            <dl>
+                              <dt>所在地</dt>
+                              <dd>277-0005<br />千葉県柏市 柏6-8-40小溝ビル3階B</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-tel">
+                            <dl>
+                              <dt>TEL</dt>
+                              <dd>04-7157-3307</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-fax">
+                            <dl>
+                              <dt>FAX</dt>
+                              <dd>04-7196-7735</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-time">
+                            <dl>
+                              <dt>営業時間</dt>
+                              <dd>10:00-18:00（平日）</dd>
+                            </dl>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="access__item-right">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.3363444582272!2d139.97567876674947!3d35.86505214242634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189df31e5342f9%3A0x8f2fec75a09b0a82!2z5bCx5Yq05pSv5o-05LqL5qWt5omA44OJ44Oq44O844Og44Oe44O844Oq44Oz!5e0!3m2!1sja!2sjp!4v1771555852444!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="access__item">
+                      <div class="access__item-left">
+                        <ul class="access__tag-list">
+                          <li class="access__tag-item">就労移行支援事業所</li>
+                        </ul>
+                        <p class="access__item-title">ドリームマーリンANNEX</p>
+                        <ul class="access__data">
+                          <li class="access__data-address">
+                            <dl>
+                              <dt>所在地</dt>
+                              <dd>277-0021<br />千葉県柏市中央町5-19 1階</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-tel">
+                            <dl>
+                              <dt>TEL</dt>
+                              <dd>04-7196-7316</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-fax">
+                            <dl>
+                              <dt>FAX</dt>
+                              <dd>04-7196-7735</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-time">
+                            <dl>
+                              <dt>営業時間</dt>
+                              <dd>10:00-18:00（平日）</dd>
+                            </dl>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="access__item-right">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.3990185624219!2d139.97116630064497!3d35.858906850074646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189d2c902500b7%3A0x93bff27430eeec04!2z5bCx5Yq05pSv5o-05LqL5qWt5omA44OJ44Oq44O844Og44Oe44O844Oq44OzIEFOTkVY!5e0!3m2!1sja!2sjp!4v1771555600669!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                      </div>
+                    </li>
+                    <li class="access__item">
+                      <div class="access__item-left">
+                        <ul class="access__tag-list">
+                          <li class="access__tag-item">就労移行支援事業所</li>
+                          <li class="access__tag-item">就労継続支援A型事業所</li>
+                        </ul>
+                        <p class="access__item-title">ドリームマーリン<br />千葉就労支援センター</p>
+                        <ul class="access__data">
+                          <li class="access__data-address">
+                            <dl>
+                              <dt>所在地</dt>
+                              <dd>260-0032<br />千葉県千葉市中央区登戸1-13-22<br />シティファイブビルA棟206号</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-tel">
+                            <dl>
+                              <dt>TEL</dt>
+                              <dd>043-216-5905</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-fax">
+                            <dl>
+                              <dt>FAX</dt>
+                              <dd>04-7196-7735</dd>
+                            </dl>
+                          </li>
+                          <li class="access__data-time">
+                            <dl>
+                              <dt>営業時間</dt>
+                              <dd>10:00-18:00（平日）</dd>
+                            </dl>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="access__item-right">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.930825683822!2d140.1096184878079!3d35.609891396122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022850b316b6785%3A0x7de2b467dce35365!2z5bCx5Yq05pSv5o-05LqL5qWt5omA44OJ44Oq44O844Og44Oe44O844Oq44OzIOWNg-iRieWwseWKtOaUr-aPtOOCu-ODs-OCv-ODvA!5e0!3m2!1sja!2sjp!4v1771555912252!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="profile" id="profile">
+                <h2 class="futura-bold">Profile</h2>
+                <h3>会社概要</h3>
+                <div class="profile__wrapper">
+                  <ul class="profile__list">
+                    <li class="profile__item">
+                      <dl>
+                        <dt>運営会社</dt>
+                        <dd>株式会社ドリームブリッジ</dd>
+                      </dl>
+                    </li>
+                    <li class="profile__item">
+                      <dl>
+                        <dt>役員</dt>
+                        <dd>代表取締役 大屋隆之<br />専務取締役 岸岡直哉</dd>
+                      </dl>
+                    </li>
+                    <li class="profile__item">
+                      <dl>
+                        <dt>指定認可日</dt>
+                        <dd>就労移行支援型：2023 年7月1日 認可（事業所番号：1212102626）</dd>
+                      </dl>
+                    </li>
+                    <li class="profile__item">
+                      <dl>
+                        <dt>事業内容</dt>
+                        <dd>障害者総合支援法に基づく障がい福祉サービス事業</dd>
+                      </dl>
+                    </li>
+                    <li class="profile__item">
+                      <dl>
+                        <dt>事業所住所</dt>
+                        <dd>277-0005 千葉県柏市 柏6-8-40 小溝ビル3階B</dd>
+                      </dl>
+                    </li>
+                    <li class="profile__item">
+                      <dl>
+                        <dt>電話番号 / FAX</dt>
+                        <dd>04-7157-3307 / 04-7196-7735</dd>
+                      </dl>
+                    </li>
+                  </ul>
+                  <p class="score__btn"><a href="https://dreammarlin.com/wp-content/uploads/2024/05/dream-marlin_2024.pdf">スコアシート</a></p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div class="footer__wrapper">
+            <div class="footer__left">
+              <ul class="footer__list">
+                <li><a href="">5つの強み</a></li>
+                <li><a href="">ご利用までの流れ</a></li>
+                <li><a href="">支援実績</a></li>
+                <li><a href="">利用者の声</a></li>
+                <li><a href="">就労までの流れ</a></li>
+                <li><a href="">お知らせ</a></li>
+                <li><a href="">サービス内容</a></li>
+                <li><a href="">事業所一覧</a></li>
+                <li><a href="">カリキュラム</a></li>
+                <li><a href="">会社概要</a></li>
+              </ul>
+            </div>
+            <div class="footer__right">
+              <div class="footer__title">
+                <p class="footer__title--main">就いて<br />ピース</p>
+                <p class="footer__title--sub">ドリームマーリン</p>
+              </div>
+              <p class="footer__copyright">© 2025 Dreambridge Inc.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
