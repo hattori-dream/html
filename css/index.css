@@ -329,11 +329,13 @@ main {
 }
 .curriculum__container01 {
   width: 100vw;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/curriculum_bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/curriculum_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.splide__pagination {
+  bottom: 5.5em;
 }
 .curriculum__content-box {
   color: #fff;
@@ -466,7 +468,6 @@ main {
   overflow: hidden;
 }
 /* ご利用の流れ */
-
 .flowToUse__box00 {
   width: 100vw;
   margin: 0 calc(50% - 50vw);

@@ -45,13 +45,16 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
     <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./JS/main.js" defer></script>
+    <script src="./JS/scroll.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -59,7 +62,7 @@
         <div class="header__wrapper">
           <h1><a href="" class="futura">DreamBridge</a></h1>
           <nav aria-label="main">
-            <div class="header__menu--ic">
+            <div class="header__menu--ic" id="header__menu--ic">
               <p class="futura">Menu</p>
               <p class="hamburger" id="hamburger">
                 <span class="line"></span>
@@ -290,9 +293,7 @@
                       面談<span><img src="./images/employmentSupport_title01.svg" alt="Meeting" /></span>
                     </p>
                     <p class="employmentSupport__img"><img src="./images/employmentSupport_illust01.png" alt="面談" /></p>
-                    <p class="employmentSupport__text">
-                      ご自身の障がいや特性、現在の状況、職種や勤務地などの就職に関するご希望をお伺いし、一人ひとりに合わせた支援計画を作成します。
-                    </p>
+                    <p class="employmentSupport__text">ご自身の障がいや特性、現在の状況、職種や勤務地などの就職に関するご希望をお伺いし、一人ひとりに合わせた支援計画を作成します。</p>
                   </li>
                   <li>
                     <p class="employmentSupport__num futura">[02]</p>
@@ -300,9 +301,7 @@
                       訓練<span><img src="./images/employmentSupport_title02.svg" alt="Training" /></span>
                     </p>
                     <p class="employmentSupport__img"><img src="./images/employmentSupport_illust02.png" alt="訓練" /></p>
-                    <p class="employmentSupport__text">
-                      ITに特化した専門的なスキルの学習を中心に、講座やグループディスカッションを通じて、就労に必要なスキルと知識を習得していきます。
-                    </p>
+                    <p class="employmentSupport__text">ITに特化した専門的なスキルの学習を中心に、講座やグループディスカッションを通じて、就労に必要なスキルと知識を習得していきます。</p>
                   </li>
                   <li>
                     <p class="employmentSupport__num futura">[03]</p>
@@ -310,9 +309,7 @@
                       実習<span><img src="./images/employmentSupport_title03.svg" alt="Internship" /></span>
                     </p>
                     <p class="employmentSupport__img"><img src="./images/employmentSupport_illust03.png" alt="実習" /></p>
-                    <p class="employmentSupport__text">
-                      訓練では体験できない実務経験の中から、就職に必要なスキルやマナーを学ぶとともに、訓練で培ったスキルを企業にアピールしていきます。
-                    </p>
+                    <p class="employmentSupport__text">訓練では体験できない実務経験の中から、就職に必要なスキルやマナーを学ぶとともに、訓練で培ったスキルを企業にアピールしていきます。</p>
                   </li>
                   <li>
                     <p class="employmentSupport__num futura">[04]</p>
@@ -320,9 +317,7 @@
                       就職<span><img src="./images/employmentSupport_title04.svg" alt="Start Working" /></span>
                     </p>
                     <p class="employmentSupport__img"><img src="./images/employmentSupport_illust04.png" alt="就職" /></p>
-                    <p class="employmentSupport__text">
-                      応募書類の添削や模擬面接の実施など就職までサポートします。また、就職後も長く働き続けていただけるよう、定着支援も行っていきます。
-                    </p>
+                    <p class="employmentSupport__text">応募書類の添削や模擬面接の実施など就職までサポートします。また、就職後も長く働き続けていただけるよう、定着支援も行っていきます。</p>
                   </li>
                 </ul>
               </section>
@@ -357,28 +352,138 @@
                 <h3>学習内容</h3>
                 <div class="curriculum__wrapper01">
                   <div class="curriculum__container01">
-                    <div class="curriculum__content-box">
-                      <div class="curriculum__Category">
-                        <p class="curriculum__Category-title source-bold">グラフィックデザイン<br />webデザイン</p>
-                        <p class="curriculum__text">
-                          デザインソフトの基礎から学び、情報を視覚的にわかりやすく伝えるスキルを<br class="pc_br" />身につけていきます。
-                        </p>
-                        <ul class="curriculum__list">
-                          <li class="curriculum__item">Photoshop</li>
-                          <li class="curriculum__item">Illustrator</li>
-                          <li class="curriculum__item">AdobeXD</li>
-                          <li class="curriculum__item">Figma</li>
-                          <li class="curriculum__item">HTML&CSS</li>
-                          <li class="curriculum__item">Javascript</li>
-                          <li class="curriculum__item">InDesign</li>
-                          <li class="curriculum__item">WordPress</li>
-                          <li class="curriculum__item">Wix</li>
-                          <li class="curriculum__item">STUDIO</li>
-                          <li class="curriculum__item">Live2D</li>
-                          <li class="curriculum__item">Blender</li>
+                    <section class="splide" aria-label="カリキュラムスライダー">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide curriculum__container">
+                            <div class="curriculum__content-box">
+                              <div class="curriculum__Category">
+                                <p class="curriculum__Category-title source-bold">グラフィックデザイン<br />webデザイン</p>
+                                <p class="curriculum__text">デザインソフトの基礎から学び、情報を視覚的にわかりやすく伝えるスキルを<br class="pc_br" />身につけていきます。</p>
+                                <ul class="curriculum__list">
+                                  <li class="curriculum__item">Photoshop</li>
+                                  <li class="curriculum__item">Illustrator</li>
+                                  <li class="curriculum__item">AdobeXD</li>
+                                  <li class="curriculum__item">Figma</li>
+                                  <li class="curriculum__item">HTML&CSS</li>
+                                  <li class="curriculum__item">Javascript</li>
+                                  <li class="curriculum__item">InDesign</li>
+                                  <li class="curriculum__item">WordPress</li>
+                                  <li class="curriculum__item">Wix</li>
+                                  <li class="curriculum__item">STUDIO</li>
+                                  <li class="curriculum__item">Live2D</li>
+                                  <li class="curriculum__item">Blender</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide curriculum__container">
+                            <div class="curriculum__content-box">
+                              <div class="curriculum__Category">
+                                <p class="curriculum__Category-title source-bold">プログラミング</p>
+                                <p class="curriculum__text">PC作業の効率化させるツールやアプリの開発を目指し、<br class="pc_br" />プログラミングの基礎から学んでいきます。</p>
+                                <ul class="curriculum__list">
+                                  <li class="curriculum__item">Javascript</li>
+                                  <li class="curriculum__item">Java</li>
+                                  <li class="curriculum__item">PHP</li>
+                                  <li class="curriculum__item">Python</li>
+                                  <li class="curriculum__item">C言語</li>
+                                  <li class="curriculum__item">C++</li>
+                                  <li class="curriculum__item">C#</li>
+                                  <li class="curriculum__item">Go</li>
+                                  <li class="curriculum__item">MySQL</li>
+                                  <li class="curriculum__item">Linux</li>
+                                  <li class="curriculum__item">Git</li>
+                                  <li class="curriculum__item">AWS</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide curriculum__container">
+                            <div class="curriculum__content-box">
+                              <div class="curriculum__Category">
+                                <p class="curriculum__Category-title source-bold">動画編集<br />3Dデザイン</p>
+                                <p class="curriculum__text">プロが使用する専用ソフトの基本操作を学び、多彩な表現方法を駆使して、<br class="pc_br" />楽しく、実践的な作品を制作していきます。</p>
+                                <ul class="curriculum__list">
+                                  <li class="curriculum__item">Premiere Pro</li>
+                                  <li class="curriculum__item">AfterEffect</li>
+                                  <li class="curriculum__item">Illustrator</li>
+                                  <li class="curriculum__item">Audition</li>
+                                  <li class="curriculum__item">Live2D</li>
+                                  <li class="curriculum__item">Blender</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide curriculum__container">
+                            <div class="curriculum__content-box">
+                              <div class="curriculum__Category">
+                                <p class="curriculum__Category-title source-bold">事務</p>
+                                <p class="curriculum__text">
+                                  基本的なPC操作からMicrosoft Office関連の資格取得の学習、<br class="pc_br" />メール・チャット対応まで、実務に直結する事務スキルを段階的に習得していきます。
+                                </p>
+                                <ul class="curriculum__list">
+                                  <li class="curriculum__item">PC基本操作</li>
+                                  <li class="curriculum__item">タイピング</li>
+                                  <li class="curriculum__item">Word</li>
+                                  <li class="curriculum__item">Excel</li>
+                                  <li class="curriculum__item">PowerPoint</li>
+                                  <li class="curriculum__item">Access</li>
+                                  <li class="curriculum__item">マクロ・VBA</li>
+                                  <li class="curriculum__item">メール</li>
+                                  <li class="curriculum__item">チャット</li>
+                                  <li class="curriculum__item">WEB会議</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide curriculum__container">
+                            <div class="curriculum__content-box">
+                              <div class="curriculum__Category">
+                                <p class="curriculum__Category-title source-bold">コミュニケーション<br />自己管理</p>
+                                <p class="curriculum__text">個別ワークやグループワークを通して自己理解を深め、<br class="pc_br" />他者との関わり方や実践的なコミュニケーション力を育成します。</p>
+                                <ul class="curriculum__list">
+                                  <li class="curriculum__item">SST</li>
+                                  <li class="curriculum__item">JST</li>
+                                  <li class="curriculum__item">グループワーク</li>
+                                  <li class="curriculum__item">自己理解・自己分析</li>
+                                  <li class="curriculum__item">ビジネスマナー</li>
+                                  <li class="curriculum__item">アンガーマネジメント</li>
+                                  <li class="curriculum__item">職業適性理解</li>
+                                  <li class="curriculum__item">健康管理・生活管理</li>
+                                  <li class="curriculum__item">レクリエーション</li>
+                                  <li class="curriculum__item">マインドフルネス</li>
+                                  <li class="curriculum__item">ストレスコントロール</li>
+                                  <li class="curriculum__item">コミュニケーション</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide curriculum__container">
+                            <div class="curriculum__content-box">
+                              <div class="curriculum__Category">
+                                <p class="curriculum__Category-title source-bold">就職活動</p>
+                                <p class="curriculum__text">
+                                  応募書類の作成支援に加え、自己PRや志望動機の添削・模擬面接の実施など、<br class="pc_br" />実践的なサポートを通じて、希望企業への内定獲得を全力でバックアップします。
+                                </p>
+                                <ul class="curriculum__list">
+                                  <li class="curriculum__item">履歴書作成</li>
+                                  <li class="curriculum__item">職務経歴書作成</li>
+                                  <li class="curriculum__item">障害説明書作成</li>
+                                  <li class="curriculum__item">職場実習</li>
+                                  <li class="curriculum__item">面接対策</li>
+                                  <li class="curriculum__item">企業研究・業界研究</li>
+                                  <li class="curriculum__item">志望動機作成</li>
+                                  <li class="curriculum__item">自己PR作成</li>
+                                  <li class="curriculum__item">就活講座</li>
+                                  <li class="curriculum__item">ポートフォリオ制作</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
                         </ul>
                       </div>
-                    </div>
+                    </section>
                   </div>
                 </div>
                 <div class="curriculum__wrapper02">
@@ -444,10 +549,7 @@
                     <div class="flowToUse__box--content">
                       <span class="flowToUse__flow futura-bold">04</span>
                       <p class="flowToUse__title">契約・利用開始</p>
-                      <p class="flowToUse__text">
-                        受給者証が支給されましたら、事業所との契約手続きを行い、ご利用開始となります。
-                        就職に向けて一緒にプログラムに取り組んでいきましょう！
-                      </p>
+                      <p class="flowToUse__text">受給者証が支給されましたら、事業所との契約手続きを行い、ご利用開始となります。 就職に向けて一緒にプログラムに取り組んでいきましょう！</p>
                     </div>
                   </div>
                 </div>

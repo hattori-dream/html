@@ -17,15 +17,14 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   width: 100vw;
   height: 100vh;
   font-size: 1.8rem;
   line-height: 1.667;
-  font-family:
-    "Helvetica Neue", "Arial", "hiragino-kaku-gothic-pron", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
-    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "Helvetica Neue", "Arial", "hiragino-kaku-gothic-pron", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 img {
   width: 100%;
@@ -54,16 +53,12 @@ body.no-scroll {
 }
 /* fonts */
 .futura {
-  font-family:
-    "futura-pt", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
-    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 .futura-bold {
-  font-family:
-    "futura-pt-bold", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
-    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "futura-pt-bold", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -191,20 +186,26 @@ header nav {
   right: 2px;
 }
 
-/* 全画面メニュー */
+/* =================================================
+   全画面メニュー (Overlay Menu)
+   ================================================= */
+
+/* メニュー全体 */
 .menu-overlay {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 100vw;
   height: 100vh;
   background: var(--color-white);
-  color: var(--color-black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   z-index: 999;
+  display: flex;
+  overflow: hidden;
+}
+.menu-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 /* 閉じるボタン（右上） */
 .close-btn__container {
@@ -213,8 +214,13 @@ header nav {
   height: 89px;
   display: flex;
   justify-content: flex-end;
-  position: fixed;
+  position: absolute;
   top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding-right: 160px;
+  z-index: 10001;
 }
 .close-btn {
   font-size: 2rem;
@@ -248,74 +254,73 @@ header nav {
 .close-btn span::after {
   transform: translateY(-50%) rotate(-20deg);
 }
-.menu-container {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-}
+/* 共通：パネル設定 */
 .menu-left,
 .menu-right {
   flex: 1;
+  height: 100%;
   display: flex;
-  padding-top: 120px;
+  flex-direction: column;
+  padding-top: 100px;
+  position: relative;
+  will-change: transform;
 }
+
+/* 左パネル（MENU） */
+.menu-left {
+  background-color: var(--color-white);
+  align-items: flex-end;
+  padding-right: 60px;
+}
+
+/* 右パネル（CONTACT） */
+.menu-right {
+  background-color: var(--color-yellow);
+  align-items: flex-start;
+  padding-left: 60px;
+}
+/* 共通：コンテンツラッパー */
+.menu-left__wrapper,
+.menu-right__wrapper {
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+}
+/* 共通：タイトル */
 .menu-ttl {
   font-size: 4.4rem;
-  line-height: 3.4rem;
-  padding-bottom: 3rem;
+  line-height: 1.2;
+  padding-bottom: 2rem;
 }
 .menu-left .menu-ttl {
   border-bottom: 1px solid var(--color-black);
+  margin-bottom: 3rem;
 }
-.menu-left {
-  flex: 56.667;
-  justify-content: right;
-}
-.menu-left__wrapper {
-  width: 730px;
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  margin-left: 50px;
-}
-.menu-left__wrapper .menu-ttl {
-  max-width: 550px;
-}
+/* 左パネル：リスト */
 .menu-left .menu-left__list {
   font-size: 4.4rem;
-  line-height: 3.4rem;
-  margin-top: 3rem;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
-  row-gap: 0.4rem;
+  row-gap: 1.5rem;
 }
-
-.menu-left ul li span {
+.menu-left ul li a span {
   font-size: 1.2rem;
   font-weight: bold;
   padding-left: 1.5rem;
 }
-.menu-right {
-  flex: 43.333;
-  background-color: #ffef8a;
-  justify-content: left;
-}
-.menu-right__wrapper {
-  display: flex;
-  justify-content: right;
-  flex-direction: column;
-  padding-left: 100px;
-}
+/* 右パネル：テキストとボタン */
 .menu-right__text {
   font-size: 1.6rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .menu-right__btn {
   color: var(--color-white);
   background-color: var(--color-black);
   text-decoration: none;
   width: 256px;
-  padding: 0.5rem 0rem;
+  padding: 1.2rem 0;
   font-size: 1.8rem;
   border-radius: 100px;
   display: flex;
@@ -323,15 +328,32 @@ header nav {
   justify-content: center;
   column-gap: 8px;
 }
-.menu-right__btn span {
-  display: inline-block;
-}
 .menu-right__btn span::after {
   content: url("../images/mail_white.svg");
   display: block;
   width: 21px;
   height: 15px;
   line-height: 0;
+}
+/* --- アニメーション要素の初期状態 (右からフェードイン) --- */
+.menu-ttl,
+.menu-left__list li,
+.menu-right__text,
+.menu-right__btn {
+  opacity: 0;
+  transform: translateX(60px);
+  clip-path: inset(0 0 0 100%);
+  pointer-events: none;
+  visibility: hidden;
+  transition: none;
+}
+/* 展開時 */
+.menu-overlay.is-open .menu-ttl,
+.menu-overlay.is-open .menu-left__list li,
+.menu-overlay.is-open .menu-right__text,
+.menu-overlay.is-open .menu-right__btn {
+  pointer-events: auto;
+  visibility: visible;
 }
 /* footer */
 footer {
