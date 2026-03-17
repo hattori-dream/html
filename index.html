@@ -52,6 +52,7 @@
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./JS/main.js" defer></script>
     <script src="./JS/scroll.js" defer></script>
@@ -88,34 +89,34 @@
               <p class="menu-ttl futura">Menu</p>
               <ul class="menu-left__list futura">
                 <li>
-                  <a href="">5 Strengths<span>5つの強み</span></a>
+                  <a href="#fiveStrengths">5 Strengths<span>5つの強み</span></a>
                 </li>
                 <li>
-                  <a href="">Support Results<span>支援実績</span></a>
+                  <a href="#supportResults">Support Results<span>支援実績</span></a>
                 </li>
                 <li>
-                  <a href="">Employment Support<span>就職徹底サポート</span></a>
+                  <a href="#employmentSupport">Employment Support<span>就職徹底サポート</span></a>
                 </li>
                 <li>
-                  <a href="">Service<span>サービス事業</span></a>
+                  <a href="#service">Service<span>サービス事業</span></a>
                 </li>
                 <li>
-                  <a href="">Curriculum<span>学習内容</span></a>
+                  <a href="#curriculum">Curriculum<span>学習内容</span></a>
                 </li>
                 <li>
-                  <a href="">Flow to use<span>ご利用の流れ</span></a>
+                  <a href="#flowToUse">Flow to use<span>ご利用の流れ</span></a>
                 </li>
                 <li>
-                  <a href="">Voice<span>利用者の声</span></a>
+                  <a href="#voice">Voice<span>利用者の声</span></a>
                 </li>
                 <li>
-                  <a href="">News<span>お知らせ</span></a>
+                  <a href="#news">News<span>お知らせ</span></a>
                 </li>
                 <li>
-                  <a href="">Access<span>事業所一覧</span></a>
+                  <a href="#access">Access<span>事業所一覧</span></a>
                 </li>
                 <li>
-                  <a href="">Profile<span>会社概要</span></a>
+                  <a href="#profile">Profile<span>会社概要</span></a>
                 </li>
               </ul>
             </div>
@@ -131,7 +132,7 @@
                   </p>
                 </li>
                 <li>
-                  <a href="" class="menu-right__btn"><span></span>お問合わせフォーム</a>
+                  <a href="" class="menu-right__btn"><span class="btn-icon"></span><span class="btn-text">お問合わせフォーム</span></a>
                 </li>
               </ul>
             </div>
@@ -139,6 +140,46 @@
         </div>
       </div>
       <div class="container">
+        <!-- パララックス■ -->
+        <div class="parallax-squares" aria-hidden="true">
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 100px; right: 6%"></div>
+          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 600px; right: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 900px; left: 5%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 1550px; right: 6%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 1900px; left: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 2300px; right: 5%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 2700px; left: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 3100px; right: 6%"></div>
+          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 3450px; left: 5%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 3700px; right: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 3950px; left: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 4250px; right: 5%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 4600px; left: 7%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 4950px; right: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 5300px; left: 5%"></div>
+          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 5600px; right: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 6050px; right: 6%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 6500px; left: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 6900px; right: 5%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 7100px; left: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 7450px; right: 6%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 7800px; left: 5%"></div>
+          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 8100px; right: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 8500px; left: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 8800px; right: 5%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 9200px; left: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 9650px; right: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 9950px; left: 5%"></div>
+          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 10300px; right: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 10700px; left: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 11050px; right: 5%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 11400px; left: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 11700px; right: 6%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 12000px; left: 5%"></div>
+          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 12300px; right: 7%"></div>
+          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 12500px; left: 6%"></div>
+          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 12750px; right: 5%"></div>
+        </div>
         <div class="firstView">
           <div class="firstView__col">
             <div class="firstView__slogan">
@@ -181,15 +222,19 @@
                       </dl>
                       <dl class="fiveStrengths__main">
                         <dt class="fiveStrengths__title">資格費用全額負担</dt>
+                        <div class="fiveStrengths__img sp_br">
+                          <img src="./images/fiveStrengths_img01.png" alt="fiveStrengths_img01" />
+                        </div>
                         <dd class="fiveStrengths__text">
                           就職や実務で役立つ資格取得費用を全額負担します。資格に関する教材についても、基礎から応用、試験対策まで取り揃えているので、個人のレベルやペースに合わせた学習が可能です。
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img">
+                    <div class="fiveStrengths__img pc_br">
                       <img src="./images/fiveStrengths_img01.png" alt="fiveStrengths_img01" />
                     </div>
                   </li>
+                  <!--
                   <li class="fiveStrengths__color--black02">
                     <div class="fiveStrengths__desc">
                       <dl class="fiveStrengths__sub futura-bold">
@@ -208,54 +253,65 @@
                       <img src="./images/fiveStrengths_img02.png" alt="fiveStrengths_img02" />
                     </div>
                   </li>
+                  -->
                   <li class="fiveStrengths__color--black03">
                     <div class="fiveStrengths__desc">
                       <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">03</dt>
+                        <dt class="fiveStrengths__num">02</dt>
                         <dd class="fiveStrengths__eng">training from home</dd>
                       </dl>
                       <dl class="fiveStrengths__main fiveStrengths__white">
                         <dt class="fiveStrengths__title">在宅利用可能</dt>
+                        <div class="fiveStrengths__img sp_br">
+                          <img src="./images/fiveStrengths_img03.png" alt="fiveStrengths_img03" />
+                        </div>
                         <dd class="fiveStrengths__text">
                           通所が困難な方でも、ご自宅での訓練が行える体制を整えています。訓練や生活についての悩み事を日々オンラインでヒアリングするとともに、定期的にご自宅へ訪問し、訓練全般に関する支援を行っております。
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img">
+                    <div class="fiveStrengths__img pc_br">
                       <img src="./images/fiveStrengths_img03.png" alt="fiveStrengths_img03" />
                     </div>
                   </li>
                   <li class="fiveStrengths__color--black04">
                     <div class="fiveStrengths__desc">
                       <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">04</dt>
+                        <dt class="fiveStrengths__num">03</dt>
                         <dd class="fiveStrengths__eng">high employment rat</dd>
                       </dl>
                       <dl class="fiveStrengths__main fiveStrengths__white">
                         <dt class="fiveStrengths__title">圧倒的な就職実績</dt>
+                        <div class="fiveStrengths__img sp_br">
+                          <img src="./images/fiveStrengths_img04.png" alt="fiveStrengths_img04" />
+                        </div>
                         <dd class="fiveStrengths__text">
                           元人事やキャリアアドバイザーのサポートにより、高い就職率を実現しています。ビジネスマナーの講座や応募書類の添削・模擬面接、面接同席など徹底してフォローしますので、安心して就職準備に取り組んでいただけます
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img">
+                    <div class="fiveStrengths__img pc_br">
                       <img src="./images/fiveStrengths_img04.png" alt="fiveStrengths_img04" />
                     </div>
                   </li>
                   <li class="fiveStrengths__color--black05">
                     <div class="fiveStrengths__desc">
                       <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">05</dt>
+                        <dt class="fiveStrengths__num">04</dt>
                         <dd class="fiveStrengths__eng">IT specialist</dd>
                       </dl>
                       <dl class="fiveStrengths__main fiveStrengths__white">
                         <dt class="fiveStrengths__title">IT専門スタッフ</dt>
+                        <div class="fiveStrengths__img sp_br">
+                          <img src="./images/fiveStrengths_img05.png" alt="fiveStrengths_img05" />
+                        </div>
+
                         <dd class="fiveStrengths__text">
                           プログラミングやデザインなどの専門スキルを持った元IT企業出身のスタッフが多数在籍しているため、未経験でも安心して基礎から実践的なスキルの取得が目指せます。
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img">
+                    <div class="fiveStrengths__img pc_br">
                       <img src="./images/fiveStrengths_img05.png" alt="fiveStrengths_img05" />
                     </div>
                   </li>
@@ -600,23 +656,19 @@
                         <div class="swiper-box">
                           <p class="voice__img"><img src="./images/voice_illust01.png" alt="利用者の声" /></p>
                           <div class="voice__content">
-                            <p class="voice__title">復職への不安が、<br class="pc_br" />自信に変わりました！</p>
-                            <p class="voice__text">
-                              仕事や人間関係につまずき自信をなくしていましたが、職員のみなさんに寄り添ってもらいながら訓練に励むうちに少しずつ前向きになれました。今では再就職を果たし、自信を持って笑顔で働けるようになりました。
-                            </p>
-                            <p class="voice__people">発達障害/ADHD 30代・女性</p>
+                            <p class="voice__title">継続する力が、<br class="pc_br" />身につきました</p>
+                            <p class="voice__text">最初は通所も不安でしたが、少しずつ通う習慣が定着。小さな成功体験を積み重ねることで、自信と継続力が身につきました。</p>
+                            <p class="voice__people">精神障害/適応障害 30代・女性</p>
                           </div>
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="swiper-box">
                           <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
-                          <p class="voice__title">訓練したことを活かせる<br class="pc_br" />会社に就職できました</p>
+                          <p class="voice__title">自分に合う働き方が、<br class="pc_br" />見つかった</p>
                           <div class="voice__content">
-                            <p class="voice__text">
-                              前職でうつ病が再発し、休職を挟んで退職しました。その後、ドリームマーリンへ通所を開始し、デザインスキル向上のためコーディングの学習に取り組みました。通所してから３か月程で就職が決まり、名刺やホームページのデザインに携わっています。
-                            </p>
-                            <p class="voice__people">発達障害/ADHD 40代・男性</p>
+                            <p class="voice__text">体調に配慮した訓練で無理なく通所でき、自分の得意・不得意を整理。支援員と相談しながら現実的な働き方が見えてきました。</p>
+                            <p class="voice__people">精神障害/双極性障害 20代・男性</p>
                           </div>
                         </div>
                       </div>
@@ -624,11 +676,9 @@
                         <div class="swiper-box">
                           <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
                           <div class="voice__content">
-                            <p class="voice__title">なりたい自分と向き合う、<br class="pc_br" />有意義な時間</p>
-                            <p class="voice__text">
-                              気持ちの浮き沈みで生活リズムが崩れやすい状態でしたが、職員さんとの報連相で励ましや気づきを感じ、自分の特性や考え方に向き合うことができました。就職先も決まり、自分らしい人生を歩めていることを実感しています。
-                            </p>
-                            <p class="voice__people">精神障害/うつ病 30代・男性</p>
+                            <p class="voice__title">在宅でも一歩ずつ、<br class="pc_br" />自信を積み重ねて</p>
+                            <p class="voice__text">外出が難しく在宅利用を開始。不安もありましたが、オンライン支援で生活リズムが整い、自信がつきました。就職に向けて前向きに取り組めています。</p>
+                            <p class="voice__people">身体障害/脊髄損傷 50代・男性</p>
                           </div>
                         </div>
                       </div>
@@ -914,5 +964,11 @@
         </footer>
       </div>
     </div>
+    <!-- TOPに戻るボタン -->
+    <button class="back-to-top" id="backToTop" aria-label="TOPに戻る">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
   </body>
 </html>

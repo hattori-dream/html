@@ -41,9 +41,15 @@ ul {
 .pc_br {
   display: block;
 }
+.sp_br {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .pc_br {
     display: none;
+  }
+  .sp_br {
+    display: block;
   }
 }
 
@@ -289,21 +295,21 @@ header nav {
 }
 /* 共通：タイトル */
 .menu-ttl {
-  font-size: 4.4rem;
+  font-size: 2rem;
   line-height: 1.2;
   padding-bottom: 2rem;
 }
 .menu-left .menu-ttl {
   border-bottom: 1px solid var(--color-black);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 /* 左パネル：リスト */
 .menu-left .menu-left__list {
-  font-size: 4.4rem;
+  font-size: 2.8rem;
   line-height: 1.2;
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
 }
 .menu-left ul li a span {
   font-size: 1.2rem;
@@ -316,8 +322,9 @@ header nav {
   margin-bottom: 2rem;
 }
 .menu-right__btn {
-  color: var(--color-white);
-  background-color: var(--color-black);
+  color: var(--color-black);
+  background-color: transparent;
+  border: 1.5px solid var(--color-black);
   text-decoration: none;
   width: 256px;
   padding: 1.2rem 0;
@@ -327,13 +334,55 @@ header nav {
   align-items: center;
   justify-content: center;
   column-gap: 8px;
+  overflow: hidden;
+  position: relative;
+  transition:
+    color 0.4s ease-in-out,
+    border-color 0.4s ease-in-out;
 }
-.menu-right__btn span::after {
+.menu-right__btn:hover {
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+/* メールアイコン：通常は黒、ホバーで白 */
+.menu-right__btn span.btn-icon:not(.ripple)::after {
   content: url("../images/mail_white.svg");
   display: block;
   width: 21px;
   height: 15px;
   line-height: 0;
+  filter: invert(1);
+  transition: filter 0.4s ease-in-out;
+}
+.menu-right__btn:hover span:not(.ripple)::after {
+  filter: invert(0);
+}
+/* リップル */
+.menu-right__btn .ripple {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+.menu-right__btn:hover .ripple {
+  width: 576px;
+  height: 576px;
+}
+.menu-right__btn span:not(.ripple) {
+  position: relative;
+  z-index: 1;
+}
+.menu-right__btn > :not(span) {
+  position: relative;
+  z-index: 1;
 }
 /* --- アニメーション要素の初期状態 (右からフェードイン) --- */
 .menu-ttl,
@@ -411,6 +460,93 @@ footer {
   font-weight: bold;
 }
 
+/*　画面サイズが768px以下　*/
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 2.8rem;
+  }
+}
+
 /*　画面サイズが375px以下　*/
 @media screen and (max-width: 375px) {
+}
+/* TOPに戻るボタン */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    background-color 0.2s ease;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background-color: #333;
+}
+.back-to-top svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* ===== パララックス■ ===== */
+.parallax-squares {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.sq {
+  position: absolute;
+  background-color: var(--color-black);
+  will-change: transform;
+}
+
+/*　画面サイズが768px以下　*/
+@media screen and (max-width: 768px) {
+  .header__menu--ic,
+  .header__contact--ic {
+    column-gap: 1.5rem;
+  }
+  header {
+    padding: 0 30px;
+  }
+  header nav {
+    font-size: 2.8rem;
+  }
+  .header__contact--ic {
+    display: none;
+  }
+  .hamburger {
+    width: 80px;
+    height: 80px;
+    row-gap: 0.9rem;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 2px;
+  }
 }
