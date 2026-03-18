@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     perPage: 1,
     arrows: false,
     pagination: true,
-    wheel: true,
+    wheel: false,
     releaseWheel: true,
     speed: 1200,
   });

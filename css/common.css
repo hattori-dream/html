@@ -463,7 +463,7 @@ footer {
 /*　画面サイズが768px以下　*/
 @media screen and (max-width: 768px) {
   body {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 }
 
