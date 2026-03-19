@@ -53,7 +53,8 @@
   width: 58px;
   height: 2px;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .firstView__desc--text {
   line-height: 2;
@@ -769,8 +770,14 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  content: url(../images/phone.svg);
-  background-size: 25px;
+  content: "";
+  background-image: url(../images/phone.svg);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: translateY(9px);
 }
 .contact__item-btn {
   background-color: var(--color-black);
@@ -786,11 +793,16 @@ main {
   position: absolute;
   top: 26%;
   left: 8%;
-  content: url(../images/contact_mail.svg);
+  content: "";
+  background-image: url(../images/contact_mail.svg);
+  width: 21px;
+  height: 15px;
+  background-size: cover;
 }
 .contact__item-btn::after {
   position: absolute;
-  top: 27%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 5%;
   content: url(../images/cpntact_arrow.svg);
 }
@@ -832,10 +844,12 @@ main {
 .news__item-date {
   font-size: 2.4rem;
   font-weight: bold;
+  line-height: 1;
 }
 .news__item-title {
   font-size: 2.4rem;
   font-weight: bold;
+  line-height: 1;
 }
 .news__item-text {
   text-align: justify;
@@ -850,6 +864,12 @@ main {
   margin: 0 auto;
   display: block;
 }
+.news__item a {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+/* アクセス */
 .access {
   padding-top: 70px;
   border-bottom: 1px solid var(--color-black);
@@ -975,8 +995,8 @@ main {
   filter: invert(1);
 }
 
-/*　画面サイズが768px以下　*/
-@media screen and (max-width: 768px) {
+/*　画面サイズが1024px以下　*/
+@media screen and (max-width: 1024px) {
   .firstView__col {
     width: 100%;
     height: auto;
@@ -999,23 +1019,23 @@ main {
 
   .firstView__img {
     max-width: 100%;
-    padding: 3rem 3rem;
+    padding: 5rem;
     height: auto;
     margin-top: 0;
     background: url(../images/black_bg-news.svg), url(../images/black_bg-news.svg);
     background-size: 160px 160px;
     background-position:
-      top 0rem left 2rem,
-      bottom 0rem right 2rem;
+      top 0rem left 0rem,
+      bottom 0rem right 0rem;
     background-repeat: no-repeat;
   }
   .firstView__img img {
-    max-width: 648px;
+    max-width: 100%;
     height: 490px;
     object-fit: cover;
   }
   .firstView__desc {
-    padding: 80px 30px 100px;
+    padding: 80px 50px 100px;
   }
   .firstView__desc--title {
     font-size: 4.4rem;
@@ -1025,10 +1045,140 @@ main {
   .firstView__desc--text {
     font-size: 2.8rem;
   }
-  .firstView__desc--title::after {
-    left: 50%;
+  .fiveStrengths__list li {
+    padding: 60px 40px;
   }
-  /* SP: stickyスタック維持 + SPレイアウト調整 */
+  .fiveStrengths__img {
+    max-width: 360px;
+  }
+  .employmentSupport__list {
+    padding: 0 5rem;
+  }
+  .employmentSupport__list li {
+    width: 46%;
+  }
+  .employmentSupport h3 {
+    margin-bottom: 7rem;
+  }
+  .service__list li:first-child {
+    padding: 6rem 0 6rem 5rem;
+  }
+  .service__list li:last-child {
+    padding: 6rem 5rem 6rem 0;
+  }
+  .service__item {
+    width: 100%;
+    max-width: 495px;
+    padding: 3rem;
+  }
+  .service__text {
+    width: 100%;
+  }
+  .service__title {
+    font-size: 3.8rem;
+  }
+  .curriculum__wrapper01 {
+    width: 100vw;
+    margin: 4rem calc(50% - 50vw) 8rem;
+  }
+  .curriculum__content-box {
+    padding: 10rem 5rem;
+    justify-content: center;
+  }
+  .curriculum__Category {
+    max-width: 100%;
+  }
+  .curriculum__text {
+    font-size: 2.8rem;
+  }
+  .curriculum__item {
+    max-width: 46%;
+    font-size: 2.4rem;
+  }
+  .splide__pagination {
+    left: 0%;
+    right: 0%;
+    bottom: 6rem;
+  }
+  .curriculum__background-text {
+    font-size: 180px;
+  }
+  .flowToUse__box00 {
+    padding: 60px 0 60px;
+  }
+  .flowToUse__box--content {
+    width: 100%;
+    height: 550px;
+  }
+  .flowToUse__box01,
+  .flowToUse__box03 {
+    padding-left: 5rem;
+  }
+  .flowToUse__box02,
+  .flowToUse__box04 {
+    padding-right: 5rem;
+  }
+  .flowToUse__box03,
+  .flowToUse__box04 {
+    padding-bottom: 100px;
+  }
+  .contact {
+    padding: 9rem 3rem 9rem;
+  }
+  .contact__text {
+    line-height: 1.5;
+  }
+  .contact__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5rem;
+  }
+  .contact__item {
+    width: 80%;
+  }
+  .contact__item-title {
+    font-size: 3rem;
+  }
+  .contact__item-tel {
+    font-size: 6rem;
+    padding: 0 0 0 50px;
+  }
+  .contact__item-tel::before {
+    width: 40px;
+    height: 40px;
+    transform: translateY(11px);
+  }
+  .contact__item:nth-child(1),
+  .contact__item:nth-child(2) {
+    background-size: 125px;
+  }
+  .contact__item-btn {
+    width: 420px;
+    padding: 18px 0;
+  }
+  .contact__item-btn::before {
+    top: 33%;
+    left: 9%;
+    width: 28px;
+    height: 20px;
+  }
+}
+
+/*　画面サイズが768px以下　*/
+@media screen and (max-width: 768px) {
+  .firstView__desc {
+    padding: 80px 30px 100px;
+  }
+  .firstView__img {
+    padding: 3rem;
+    background-position:
+      top 0rem left 2rem,
+      bottom 0rem right 2rem;
+  }
+  .firstView__img img {
+    max-width: 648px;
+    height: 490px;
+  }
   .fiveStrengths__list {
     row-gap: 0;
   }
@@ -1057,7 +1207,7 @@ main {
     max-width: 480px;
   }
   .fiveStrengths__text {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     max-width: 100%;
   }
   .supportResults__list {
@@ -1096,33 +1246,18 @@ main {
   }
   .service__list li {
     width: 100%;
+  }
+  .service__list li:first-child,
+  .service__list li:last-child {
     padding: 8rem 3rem;
   }
   .service__item {
     width: 100%;
+    max-width: 100%;
   }
   .service__text {
     width: 100%;
     padding: 0 2rem;
-  }
-  .curriculum__wrapper01 {
-    width: 100vw;
-    margin: 4rem calc(50% - 50vw) 8rem;
-  }
-  .curriculum__content-box {
-    padding: 10rem 5rem;
-  }
-  .curriculum__text {
-    font-size: 2.4rem;
-  }
-  .curriculum__item {
-    max-width: 46%;
-    font-size: 2.4rem;
-  }
-  .splide__pagination {
-    left: 0%;
-    right: 0%;
-    bottom: 6rem;
   }
   .curriculum__wrapper02 {
     flex-direction: column;
@@ -1170,7 +1305,7 @@ main {
     transform: none;
     width: 240px;
     height: 240px;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     order: 1;
   }
   .curriculum__background-text {
@@ -1227,6 +1362,411 @@ main {
     width: 100%;
     max-width: 100%;
   }
+  .voice {
+    padding-top: 120px;
+  }
+  .voice__wrapper {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
+  .voice__title {
+    font-size: 3.2rem;
+  }
+  .voice__people {
+    font-size: 2.2rem;
+  }
+  .slide-pagination-wrapper {
+    padding-top: 3rem;
+  }
+  .contact__item {
+    width: 100%;
+  }
+  .news {
+    border-bottom: none;
+  }
+  .news__wrapper {
+    margin: 0;
+    padding: 0;
+    margin-top: 8rem;
+    background: none;
+  }
+  .news__content {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+  .news__list {
+    row-gap: 4rem;
+    margin-bottom: 7rem;
+  }
+  .news__item {
+    margin-bottom: 0;
+  }
+  .news__item-title {
+    font-size: 3.4rem;
+  }
+  .news__btn {
+    width: 420px;
+  }
+  .access__wrapper {
+    width: 100vw;
+    margin: 70px calc(50% - 50vw) 120px;
+    border-radius: 0;
+    padding: 6rem 3rem;
+  }
+  .access__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .access__item-left {
+    width: 100%;
+  }
+  .access__tag-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.5rem;
+  }
+  .access__tag-item {
+    font-size: 2.2rem;
+  }
+  .access__item-title {
+    font-size: 4.8rem;
+    text-align: center;
+  }
+  .access__data dl dt {
+    width: 15rem;
+  }
+  .access__item-right {
+    padding-top: 5rem;
+    width: 100%;
+    height: 390px;
+  }
+  .profile__item dl {
+    padding: 2rem 0;
+  }
+  .score__btn a {
+    width: 420px;
+  }
+  .back-to-top {
+    right: 30px;
+  }
+}
+
+/*　画面サイズが425px以下　*/
+@media screen and (max-width: 425px) {
+  .firstView__slogan--main {
+    font-size: 10rem;
+    height: 253px;
+    background-size: 100px;
+    background-position: bottom 15px right 35px;
+  }
+  .firstView__desc {
+    padding: 40px 15px 60px;
+  }
+  .firstView__desc--title {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firstView__desc--text {
+    font-size: 2.4rem;
+  }
+  .firstView__img {
+    padding: 1.5rem;
+    background-position:
+      top 0rem left 1.5rem,
+      bottom 0rem right 1.5rem;
+  }
+  .firstView__img img {
+    max-width: 100%;
+    height: 350px;
+    padding: 0 1.5rem;
+  }
+  main {
+    padding-top: 60px;
+  }
+  .main__wrapper {
+    padding: 0 1.5rem;
+  }
+  .fiveStrengths__list {
+    margin: 30px 0 60px;
+  }
+  .fiveStrengths__list li {
+    padding: 30px 20px 60px;
+  }
+  .fiveStrengths__num {
+    font-size: 6rem;
+  }
+  .fiveStrengths__eng {
+    font-size: 1.8rem;
+  }
+  .fiveStrengths__title {
+    font-size: 3.2rem;
+  }
+  .fiveStrengths__text {
+    font-size: 1.8rem;
+  }
+  .fiveStrengths__img {
+    max-width: 320px;
+  }
+  .fiveStrengths {
+    margin-bottom: 40px;
+  }
+  .supportResults {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .supportResults__list li {
+    width: 80%;
+  }
+  .supportResults__list {
+    margin-top: 40px;
+    row-gap: 3rem;
+  }
+  .supportResults__text {
+    font-size: 1.8rem;
+  }
+  .employmentSupport {
+    padding: 60px 0 60px;
+  }
+  .employmentSupport h3 {
+    margin-bottom: 4rem;
+  }
+  .employmentSupport__list {
+    padding: 0 1.5rem;
+  }
+  .employmentSupport__text {
+    width: 100%;
+    padding: 0 3rem;
+  }
+  .employmentSupport__title {
+    font-size: 4rem;
+  }
+  .employmentSupport__num {
+    font-size: 2.8rem;
+  }
+  .employmentSupport__list li {
+    row-gap: 1.5rem;
+  }
+  .employmentSupport__img {
+    max-width: 180px;
+  }
+  .service {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .service__wrapper {
+    margin-top: 30px;
+  }
+  .service__list li:first-child,
+  .service__list li:last-child {
+    padding: 3rem 1.5rem;
+  }
+  .service__title {
+    font-size: 2.8rem;
+  }
+  .service__text {
+    padding: 0;
+  }
+  .service__item {
+    padding: 2rem;
+    row-gap: 2rem;
+  }
+  .service__list {
+    row-gap: 3rem;
+  }
+  .curriculum__content-box {
+    padding: 4rem 1.5rem;
+  }
+  .curriculum__Category-title {
+    font-size: 3.2rem;
+  }
+  .curriculum__Category {
+    row-gap: 3rem;
+  }
+  .curriculum__text {
+    font-size: 1.8rem;
+  }
+  .curriculum__item {
+    max-width: 49%;
+    font-size: 1.8rem;
+  }
+  .curriculum__main-title,
+  .curriculum__catchphrase {
+    font-size: 3.2rem;
+  }
+  .curriculum__wrapper01 {
+    margin: 4rem calc(50% - 50vw) 5rem;
+  }
+  .curriculum__circle-item {
+    width: 140px;
+    height: 140px;
+    font-size: 1.8rem;
+  }
+  .curriculum__background-text {
+    font-size: 80px;
+    margin: 30px calc(50% - 50vw);
+  }
+  .curriculum__wrapper02 {
+    padding: 0;
+  }
+  .flowToUse__box00 {
+    padding: 30px 0 30px;
+  }
+  .flowToUse__box01,
+  .flowToUse__box02,
+  .flowToUse__box03,
+  .flowToUse__box04 {
+    padding: 0 1.5rem;
+  }
+  .flowToUse__box04 {
+    padding-bottom: 6rem;
+  }
+  .flowToUse__box01 .flowToUse__box--content,
+  .flowToUse__box02 .flowToUse__box--content,
+  .flowToUse__box03 .flowToUse__box--content,
+  .flowToUse__box04 .flowToUse__box--content {
+    padding: 3rem 2rem 0;
+  }
+  .flowToUse__box01 .flowToUse__box--border,
+  .flowToUse__box02 .flowToUse__box--border,
+  .flowToUse__box03 .flowToUse__box--border,
+  .flowToUse__box04 .flowToUse__box--border {
+    padding-bottom: 3rem;
+    row-gap: 15px;
+  }
+  .flowToUse__flow {
+    width: 80px;
+    height: 80px;
+    font-size: 3.4rem;
+  }
+  .flowToUse__title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .voice {
+    padding-top: 60px;
+  }
+  .swiper {
+    padding: 60px 0;
+  }
+  .voice__title {
+    font-size: 2.4rem;
+  }
+  .voice__content {
+    row-gap: 1.5rem;
+  }
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+  .contact__wrapper {
+    margin-top: 2rem;
+    row-gap: 2rem;
+  }
+  .contact__text {
+    font-size: 2.4rem;
+  }
+  .contact__item {
+    padding: 2rem 2rem;
+  }
+  .contact__item-title {
+    font-size: 1.8rem;
+  }
+  .contact__item-tel {
+    font-size: 3rem;
+    padding-left: 22px;
+  }
+  .contact__item:nth-child(1),
+  .contact__item:nth-child(2) {
+    background-size: 20%;
+  }
+  .contact__item-tel::before {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+  .contact__item-btn {
+    width: 260px;
+    font-size: 1.6rem;
+    padding-left: 2rem;
+  }
+  .contact__item-btn::before {
+    top: 33%;
+    left: 9%;
+    width: 24px;
+    height: 16px;
+  }
+  .contact__item-btn::after {
+    right: 7%;
+  }
+  .contact__list {
+    row-gap: 2rem;
+  }
+  .news {
+    padding: 3rem 0 4rem;
+  }
+  .news__wrapper {
+    margin-top: 3rem;
+  }
+  .news__item {
+    padding-bottom: 30px;
+  }
+  .news__item-title {
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+  .news__item-date {
+    font-size: 2rem;
+  }
+  .news__item a {
+    row-gap: 1rem;
+  }
+  .news__list {
+    margin-bottom: 4rem;
+  }
+  .news__btn {
+    width: 100%;
+  }
+  .access {
+    padding-top: 0;
+  }
+  .access__wrapper {
+    margin: 30px calc(50% - 50vw) 60px;
+    padding: 3rem 1.5rem;
+  }
+  .access__item {
+    padding: 3rem 2rem;
+  }
+  .access__tag-item {
+    font-size: 1.8rem;
+  }
+  .access__tag-list {
+    row-gap: 1rem;
+  }
+  .access__item-title {
+    font-size: 3.4rem;
+  }
+  .access__data dl {
+    padding: 1rem 0;
+  }
+  .access__data dl dt {
+    width: 10rem;
+  }
+  .access__item-right {
+    padding-top: 2rem;
+  }
+  .access__list {
+    row-gap: 3rem;
+  }
+  .profile {
+    padding-top: 30px;
+  }
+  .profile__item dt {
+    width: 140px;
+  }
+  .score__btn a {
+    width: 100%;
+  }
 }
 
 /*　画面サイズが375px以下　*/
@@ -1236,10 +1776,98 @@ main {
     height: auto;
     flex-direction: column;
   }
-  .firstView__slogan {
-    padding-left: 4%;
+  .firstView__desc--title {
+    font-size: 3.4rem;
+  }
+  .firstView__desc--text {
+    font-size: 1.8rem;
+  }
+  .firstView__img img {
+    height: 250px;
   }
   .firstView__desc {
-    padding-right: 4%;
+    padding: 40px 15px 40px;
+  }
+  main {
+    padding-top: 40px;
+  }
+  .fiveStrengths__title {
+    font-size: 2.8rem;
+  }
+  .service__title {
+    font-size: 2.4rem;
+  }
+  .service__img img {
+    height: 120px;
+  }
+  .curriculum__Category-title {
+    font-size: 2.4rem;
+    border-left: 5px solid var(--color-white);
+  }
+  .curriculum__item {
+    font-size: 1.4rem;
+  }
+  .splide__pagination {
+    bottom: 2rem;
+  }
+  .curriculum__content-box {
+    padding: 6rem 1.5rem;
+  }
+  .curriculum__main-title,
+  .curriculum__catchphrase {
+    font-size: 2.8rem;
+  }
+  .curriculum__circle-item {
+    font-size: 1.4rem;
+    width: 110px;
+    height: 110px;
+  }
+  .curriculum__background-text {
+    font-size: 60px;
+  }
+  .flowToUse__flow {
+    width: 60px;
+    height: 60px;
+    font-size: 2.8rem;
+  }
+  .flowToUse__title {
+    font-size: 2.4rem;
+  }
+  .voice__people {
+    font-size: 1.6rem;
+  }
+  .contact__text {
+    font-size: 1.8rem;
+  }
+  .contact__item:nth-child(1),
+  .contact__item:nth-child(2) {
+    background-image: none;
+  }
+  .contact__item-title {
+    font-size: 1.6rem;
+  }
+  .news__item-title {
+    font-size: 2.2rem;
+  }
+  .access__tag-item {
+    font-size: 1.4rem;
+  }
+  .access__item-title {
+    font-size: 2.4rem;
+  }
+  .access__data {
+    font-size: 1.6rem;
+  }
+  .access__data dl dt {
+    width: 9.2rem;
+  }
+  .profile__wrapper {
+    margin: 3rem 0 6rem;
+  }
+  .profile__list {
+    font-size: 1.6rem;
+  }
+  .profile__item dt {
+    width: 9.2rem;
   }
 }

@@ -11,16 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   splide.mount();
 
-  // ===== 5 Strengths スタッキングカード =====
-  // CSSのposition:stickyのみで制御（JSは高さ統一のみ担当）
   const container = document.querySelector(".container");
   const cards = Array.from(document.querySelectorAll(".fiveStrengths__list li"));
 
-  // 全カードの中で最大の高さを取得して全カードに適用→高さが揃い重なりがぴったりになる
-  // SP（768px以下）では高さを統一しない（縦並びのため不要、かつレイアウト崩れの原因）
   function equalizeCardHeights() {
-    cards.forEach((c) => (c.style.height = "")); // リセット
-    if (window.innerWidth <= 768) return; // SP時はここで終了
+    cards.forEach((c) => (c.style.height = ""));
     const maxH = Math.max(...cards.map((c) => c.offsetHeight));
     cards.forEach((c) => (c.style.height = maxH + "px"));
   }
@@ -29,11 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", equalizeCardHeights);
 
   // ===== パララックス■（ループ対応） =====
-  // fast:スクロールより速く流れる / normal:同速 / slow:遅く流れる
   const SPEED_MAP = { "sq--fast": 1.5, "sq--normal": 1.0, "sq--slow": 0.4 };
   const allSquares = document.querySelectorAll(".sq");
 
-  // 各■の初期top値・速度をキャッシュ
   const sqData = Array.from(allSquares).map((el) => {
     const baseTop = parseFloat(el.style.top);
     const cls = ["sq--fast", "sq--normal", "sq--slow"].find((c) => el.classList.contains(c));

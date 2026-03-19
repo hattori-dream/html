@@ -99,7 +99,6 @@ const swiper = new Swiper(".swiper", {
   centeredSlides: true,
   loop: true,
   speed: 1000,
-  slidesPerView: 3,
   autoplay: false,
   slideToClickedSlide: true,
   grabCursor: true,
@@ -113,9 +112,13 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  slidesPerView: 1.1,
   breakpoints: {
-    768: {
+    426: {
       slidesPerView: 1.5,
+    },
+    769: {
+      slidesPerView: 3,
     },
   },
 });

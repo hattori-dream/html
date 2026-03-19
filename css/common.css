@@ -459,16 +459,9 @@ footer {
   font-size: 2rem;
   font-weight: bold;
 }
-
-/*　画面サイズが768px以下　*/
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 2.4rem;
-  }
-}
-
-/*　画面サイズが375px以下　*/
-@media screen and (max-width: 375px) {
+.footer__copyright {
+  color: #a4a4a4;
+  padding-top: 8rem;
 }
 /* TOPに戻るボタン */
 .back-to-top {
@@ -525,14 +518,23 @@ footer {
   will-change: transform;
 }
 
-/*　画面サイズが768px以下　*/
-@media screen and (max-width: 768px) {
+/*　画面サイズが1024px以下　*/
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 0 30px;
+  }
   .header__menu--ic,
   .header__contact--ic {
     column-gap: 1.5rem;
   }
-  header {
-    padding: 0 30px;
+  .header__wrapper {
+    justify-content: space-between;
+  }
+  header h1 {
+    width: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
   }
   header nav {
     font-size: 2.8rem;
@@ -541,12 +543,164 @@ footer {
     display: none;
   }
   .hamburger {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     row-gap: 0.9rem;
   }
   .hamburger .line {
     width: 30px;
     height: 2px;
+  }
+  .menu-left,
+  .menu-right {
+    padding: 10rem 3rem 0;
+  }
+}
+
+/*　画面サイズが768px以下　*/
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 2.8rem;
+  }
+  footer {
+    height: auto;
+    background: transparent;
+    font-size: 2.4rem;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+  }
+  .footer__left {
+    background-color: #515151;
+    padding: 8rem 3rem;
+  }
+  .footer__right {
+    background-color: var(--color-black);
+    padding: 7rem 3rem 1.5rem;
+  }
+  .footer__list {
+    max-width: 100%;
+    row-gap: 3rem;
+  }
+  .footer__title--main {
+    font-size: 12rem;
+  }
+  .footer__title--sub {
+    font-size: 3.5rem;
+  }
+  .footer__copyright {
+    padding-top: 8rem;
+  }
+}
+/*　画面サイズが425px以下　*/
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 1.8rem;
+  }
+  header {
+    padding: 0 15px;
+  }
+
+  .close-btn__container {
+    height: 74px;
+    padding-right: 1.5rem;
+  }
+  .menu-container {
+    flex-direction: column;
+  }
+  .menu-left,
+  .menu-right {
+    padding: 7rem 1.5rem 0;
+  }
+  header nav {
+    font-size: 2rem;
+  }
+  .menu-ttl {
+    padding-bottom: 1rem;
+  }
+  .menu-left .menu-ttl {
+    margin-bottom: 1rem;
+  }
+  .menu-left .menu-left__list {
+    font-size: 2.7rem;
+    row-gap: 1.8rem;
+  }
+  .menu-left ul li a span {
+    font-size: 1.1rem;
+    padding-left: 1.2rem;
+  }
+  .menu-left,
+  .menu-right {
+    padding: 2rem 1.5rem 2rem;
+  }
+  .menu-left {
+    padding-top: 6rem;
+    flex: auto;
+  }
+  .menu-right {
+    flex: 1;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  .footer__left {
+    padding: 4rem 1.5rem;
+  }
+  footer {
+    font-size: 1.8rem;
+  }
+  .footer__right {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  .footer__title--main {
+    font-size: 8rem;
+  }
+  .footer__title--sub {
+    font-size: 2.2rem;
+  }
+  .footer__title {
+    row-gap: 2rem;
+  }
+  .footer__copyright {
+    padding-top: 4rem;
+  }
+  .footer__copyright {
+    font-size: 1.4rem;
+  }
+  .back-to-top {
+    right: 15px;
+  }
+}
+/*　画面サイズが320px以下　*/
+@media screen and (max-width: 320px) {
+  header h1 a {
+    font-size: 1.8rem;
+  }
+  header nav {
+    font-size: 1.8rem;
+  }
+  .hamburger {
+    width: 52px;
+    height: 52px;
+  }
+  .hamburger .line {
+    width: 24px;
+    height: 2px;
+  }
+  h2 {
+    font-size: 2.6em;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  .footer__list {
+    font-size: 1.5rem;
+  }
+  .footer__title--main {
+    font-size: 7rem;
+  }
+  .footer__title--sub {
+    font-size: 1.8rem;
   }
 }
