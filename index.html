@@ -41,360 +41,342 @@
         s.parentNode.insertBefore(tk, s);
       })(document);
     </script>
-    <!-- リセットCSS-->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="./JS/main.js" defer></script>
-    <script src="./JS/scroll.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="header__wrapper">
-          <h1><a href="" class="futura">DreamBridge</a></h1>
-          <nav aria-label="main">
-            <div class="header__menu--ic" id="header__menu--ic">
-              <p class="futura">Menu</p>
-              <p class="hamburger" id="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="header__logo"><a href="" class="u-futura">DreamBridge</a></h1>
+          <nav class="header__nav" aria-label="main">
+            <div class="header__menu" id="header__menu--ic">
+              <p class="u-futura">Menu</p>
+              <p class="header__menu-icon" id="hamburger">
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
               </p>
             </div>
-            <div class="header__contact--ic">
-              <p class="futura">Contact</p>
-              <span></span>
-            </div>
+            <a href="/contact.html">
+              <div class="header__contact">
+                <p class="u-futura">Contact</p>
+                <span class="header__contact-icon"></span>
+              </div>
+            </a>
           </nav>
         </div>
       </header>
 
-      <div class="menu-overlay" id="menu">
-        <div class="close-btn__container">
-          <button class="close-btn futura" id="closeBtn">Close<span></span></button>
+      <div class="menu" id="menu">
+        <div class="menu__close-wrap">
+          <button class="menu__close-btn u-futura" id="closeBtn">Close<span class="menu__close-icon"></span></button>
         </div>
-        <div class="menu-container">
-          <div class="menu-left">
-            <div class="menu-left__wrapper">
-              <p class="menu-ttl futura">Menu</p>
-              <ul class="menu-left__list futura">
-                <li>
-                  <a href="#fiveStrengths">5 Strengths<span>5つの強み</span></a>
+        <div class="menu__container">
+          <div class="menu__panel menu__panel--nav">
+            <div class="menu__panel-inner">
+              <p class="menu__heading u-futura">Menu</p>
+              <ul class="menu__list u-futura">
+                <li class="menu__item">
+                  <a class="menu__link" href="#fiveStrengths">5 Strengths<span class="menu__link-sub">5つの強み</span></a>
                 </li>
-                <li>
-                  <a href="#supportResults">Support Results<span>支援実績</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#supportResults">Support Results<span class="menu__link-sub">支援実績</span></a>
                 </li>
-                <li>
-                  <a href="#employmentSupport">Employment Support<span>就職徹底サポート</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#employmentSupport">Employment Support<span class="menu__link-sub">就職徹底サポート</span></a>
                 </li>
-                <li>
-                  <a href="#service">Service<span>サービス事業</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#service">Service<span class="menu__link-sub">サービス事業</span></a>
                 </li>
-                <li>
-                  <a href="#curriculum">Curriculum<span>学習内容</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#curriculum">Curriculum<span class="menu__link-sub">学習内容</span></a>
                 </li>
-                <li>
-                  <a href="#flowToUse">Flow to use<span>ご利用の流れ</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#flowToUse">Flow to use<span class="menu__link-sub">ご利用の流れ</span></a>
                 </li>
-                <li>
-                  <a href="#voice">Voice<span>利用者の声</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#voice">Voice<span class="menu__link-sub">利用者の声</span></a>
                 </li>
-                <li>
-                  <a href="#news">News<span>お知らせ</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#news">News<span class="menu__link-sub">お知らせ</span></a>
                 </li>
-                <li>
-                  <a href="#access">Access<span>事業所一覧</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#access">Access<span class="menu__link-sub">事業所一覧</span></a>
                 </li>
-                <li>
-                  <a href="#profile">Profile<span>会社概要</span></a>
+                <li class="menu__item">
+                  <a class="menu__link" href="#profile">Profile<span class="menu__link-sub">会社概要</span></a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="menu-right">
-            <div class="menu-right__wrapper">
-              <p class="menu-ttl futura">Contact</p>
-              <ul>
+          <div class="menu__panel menu__panel--contact">
+            <div class="menu__panel-inner u-pc-only">
+              <p class="menu__heading u-futura">Contact</p>
+              <ul class="menu__contact-list">
                 <li>
-                  <p class="menu-right__text">
-                    見学・体験のお問い合わせは、各事業所へお電話<br />
-                    もしくは下記お問い合わせフォームからご相談ください。
-                  </p>
+                  <p class="menu__desc">見学・体験のお問い合わせは、各事業所へお電話<br />もしくは下記お問い合わせフォームからご相談ください。</p>
                 </li>
                 <li>
-                  <a href="" class="menu-right__btn"><span class="btn-icon"></span><span class="btn-text">お問合わせフォーム</span></a>
+                  <a href="/contact.html" class="menu__btn"><span class="menu__btn-icon"></span><span class="menu__btn-text">お問合わせフォーム</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu__panel--sp u-sp-only">
+              <p class="menu__heading u-futura">Contact</p>
+              <ul class="menu__contact-list">
+                <li class="menu__contact-item">
+                  <a href="" class="menu__btn-sp"><img src="./images/menu-phone.svg" alt="電話でのお問い合わせ" /></a>
+                </li>
+                <li class="menu__contact-item">
+                  <a href="/contact.html" class="menu__btn-sp"><img src="./images/menu-mail.svg" alt="コンタクトフォームでのお問い合わせ" /></a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+
       <div class="container">
         <!-- パララックス■ -->
-        <div class="parallax-squares" aria-hidden="true">
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 100px; right: 6%"></div>
-          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 600px; right: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 900px; left: 5%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 1550px; right: 6%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 1900px; left: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 2300px; right: 5%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 2700px; left: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 3100px; right: 6%"></div>
-          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 3450px; left: 5%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 3700px; right: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 3950px; left: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 4250px; right: 5%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 4600px; left: 7%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 4950px; right: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 5300px; left: 5%"></div>
-          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 5600px; right: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 6050px; right: 6%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 6500px; left: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 6900px; right: 5%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 7100px; left: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 7450px; right: 6%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 7800px; left: 5%"></div>
-          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 8100px; right: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 8500px; left: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 8800px; right: 5%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 9200px; left: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 9650px; right: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 9950px; left: 5%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 10700px; left: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 11050px; right: 5%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 11400px; left: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 11700px; right: 6%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 12000px; left: 5%"></div>
-          <div class="sq sq--normal" style="width: 24px; height: 24px; top: 12300px; right: 7%"></div>
-          <div class="sq sq--fast" style="width: 14px; height: 14px; top: 12500px; left: 6%"></div>
-          <div class="sq sq--slow" style="width: 38px; height: 38px; top: 12750px; right: 5%"></div>
+        <div class="parallax" aria-hidden="true">
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 100px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--slow" style="width: 38px; height: 38px; top: 600px; right: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 900px; left: 5%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 1550px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 1900px; left: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 2300px; right: 5%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 2700px; left: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 3100px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--slow" style="width: 38px; height: 38px; top: 3450px; left: 5%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 3700px; right: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 3950px; left: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 4250px; right: 5%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 4600px; left: 7%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 4950px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 5300px; left: 5%"></div>
+          <div class="parallax__sq parallax__sq--slow" style="width: 38px; height: 38px; top: 5600px; right: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 6050px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 6500px; left: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 6900px; right: 5%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 7100px; left: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 7450px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 7800px; left: 5%"></div>
+          <div class="parallax__sq parallax__sq--slow" style="width: 38px; height: 38px; top: 8100px; right: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 8500px; left: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 8800px; right: 5%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 9200px; left: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 9650px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 9950px; left: 5%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 10700px; left: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 11050px; right: 5%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 11400px; left: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 11700px; right: 6%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 12000px; left: 5%"></div>
+          <div class="parallax__sq parallax__sq--normal" style="width: 24px; height: 24px; top: 12300px; right: 7%"></div>
+          <div class="parallax__sq parallax__sq--fast" style="width: 14px; height: 14px; top: 12500px; left: 6%"></div>
+          <div class="parallax__sq parallax__sq--slow" style="width: 38px; height: 38px; top: 12750px; right: 5%"></div>
         </div>
-        <div class="firstView">
-          <div class="firstView__col">
-            <div class="firstView__slogan">
-              <section class="firstView__slogan--container">
-                <div class="firstView__slogan--main">就いて<br />ピース</div>
+
+        <div class="fv">
+          <div class="fv__col">
+            <div class="fv__slogan">
+              <section class="fv__slogan-inner">
+                <div class="fv__slogan-text">就いて<br />ピース</div>
               </section>
             </div>
-            <div class="firstView__desc">
-              <section class="firstView__desc--container">
-                <div class="firstView__desc--title">
-                  <p>ドリームマーリン</p>
-                </div>
-                <div class="firstView__desc--text">
-                  利用者の皆様が就職を勝ち取り、<br class="pc_br" />
-                  働いて幸せを築く未来をスローガンに込めました。<br class="pc_br" />
-                  皆様を就職までサポートすることはもちろん、<br class="pc_br" />
-                  その先もずっと幸せに働き続けていただくために尽くすことが、<br class="pc_br" />
-                  ドリームマーリンのミッションです。理想の未来へ向かう一歩を、<br class="pc_br" />
-                  ドリームマーリンで踏み出してみませんか？<br class="pc_br" />
+            <div class="fv__desc">
+              <section class="fv__desc-inner">
+                <div class="fv__desc-title"><p>ドリームマーリン</p></div>
+                <div class="fv__desc-text">
+                  利用者の皆様が就職を勝ち取り、<br class="u-pc-only" />
+                  働いて幸せを築く未来をスローガンに込めました。<br class="u-pc-only" />
+                  皆様を就職までサポートすることはもちろん、<br class="u-pc-only" />
+                  その先もずっと幸せに働き続けていただくために尽くすことが、<br class="u-pc-only" />
+                  ドリームマーリンのミッションです。理想の未来へ向かう一歩を、<br class="u-pc-only" />
+                  ドリームマーリンで踏み出してみませんか？<br class="u-pc-only" />
                 </div>
               </section>
             </div>
           </div>
-          <section class="firstView__img">
+          <section class="fv__image">
             <img src="./images/firstView_img.jpg" alt="firstView__img" />
           </section>
         </div>
-        <main>
+
+        <main class="main">
           <div class="main__wrapper">
             <div class="main__container">
-              <section class="fiveStrengths" id="fiveStrengths">
-                <h2 class="futura-bold">4 Strengths</h2>
+              <!-- 4つの強み -->
+              <section class="strengths" id="fiveStrengths">
+                <h2 class="u-futura-bold">4 Strengths</h2>
                 <h3>ドリームマーリンの4つの強み</h3>
-                <ul class="fiveStrengths__list">
-                  <li class="fiveStrengths__color--black01">
-                    <div class="fiveStrengths__desc">
-                      <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">01</dt>
-                        <dd class="fiveStrengths__eng">pay for certification</dd>
+                <ul class="strengths__list">
+                  <li class="strengths__item strengths__item--tone-1">
+                    <div class="strengths__body">
+                      <dl class="strengths__sub u-futura-bold">
+                        <dt class="strengths__num">01</dt>
+                        <dd class="strengths__eng">pay for certification</dd>
                       </dl>
-                      <dl class="fiveStrengths__main">
-                        <dt class="fiveStrengths__title">資格費用全額負担</dt>
-                        <div class="fiveStrengths__img sp_br">
+                      <dl class="strengths__detail">
+                        <dt class="strengths__title">資格費用全額負担</dt>
+                        <div class="strengths__image u-sp-only">
                           <img src="./images/fiveStrengths_img01.png" alt="fiveStrengths_img01" />
                         </div>
-                        <dd class="fiveStrengths__text">
+                        <dd class="strengths__text">
                           就職や実務で役立つ資格取得費用を全額負担します。資格に関する教材についても、基礎から応用、試験対策まで取り揃えているので、個人のレベルやペースに合わせた学習が可能です。
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img pc_br">
+                    <div class="strengths__image u-pc-only">
                       <img src="./images/fiveStrengths_img01.png" alt="fiveStrengths_img01" />
                     </div>
                   </li>
-                  <!--
-                  <li class="fiveStrengths__color--black02">
-                    <div class="fiveStrengths__desc">
-                      <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">02</dt>
-                        <dd class="fiveStrengths__eng">lunch for free</dd>
+                  <li class="strengths__item strengths__item--tone-2">
+                    <div class="strengths__body">
+                      <dl class="strengths__sub u-futura-bold">
+                        <dt class="strengths__num">02</dt>
+                        <dd class="strengths__eng">training from home</dd>
                       </dl>
-                      <dl class="fiveStrengths__main">
-                        <dt class="fiveStrengths__title">ランチ無料提供</dt>
-                        <dd class="fiveStrengths__text">
-                          バラエティ豊かなメニューのランチを無料で提供しています。栄養バランスが考えられたメニューで集中して訓練に取り組んでいただけます。
-                          <br /><small>※一部例外あり</small>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="fiveStrengths__img">
-                      <img src="./images/fiveStrengths_img02.png" alt="fiveStrengths_img02" />
-                    </div>
-                  </li>
-                  -->
-                  <li class="fiveStrengths__color--black03">
-                    <div class="fiveStrengths__desc">
-                      <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">02</dt>
-                        <dd class="fiveStrengths__eng">training from home</dd>
-                      </dl>
-                      <dl class="fiveStrengths__main fiveStrengths__white">
-                        <dt class="fiveStrengths__title">在宅利用可能</dt>
-                        <div class="fiveStrengths__img sp_br">
+                      <dl class="strengths__detail strengths__detail--light">
+                        <dt class="strengths__title">在宅利用可能</dt>
+                        <div class="strengths__image u-sp-only">
                           <img src="./images/fiveStrengths_img03.png" alt="fiveStrengths_img03" />
                         </div>
-                        <dd class="fiveStrengths__text">
+                        <dd class="strengths__text">
                           通所が困難な方でも、ご自宅での訓練が行える体制を整えています。訓練や生活についての悩み事を日々オンラインでヒアリングするとともに、定期的にご自宅へ訪問し、訓練全般に関する支援を行っております。
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img pc_br">
+                    <div class="strengths__image u-pc-only">
                       <img src="./images/fiveStrengths_img03.png" alt="fiveStrengths_img03" />
                     </div>
                   </li>
-                  <li class="fiveStrengths__color--black04">
-                    <div class="fiveStrengths__desc">
-                      <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">03</dt>
-                        <dd class="fiveStrengths__eng">high employment rat</dd>
+                  <li class="strengths__item strengths__item--tone-3">
+                    <div class="strengths__body">
+                      <dl class="strengths__sub u-futura-bold">
+                        <dt class="strengths__num">03</dt>
+                        <dd class="strengths__eng">high employment rate</dd>
                       </dl>
-                      <dl class="fiveStrengths__main fiveStrengths__white">
-                        <dt class="fiveStrengths__title">圧倒的な就職実績</dt>
-                        <div class="fiveStrengths__img sp_br">
+                      <dl class="strengths__detail strengths__detail--light">
+                        <dt class="strengths__title">圧倒的な就職実績</dt>
+                        <div class="strengths__image u-sp-only">
                           <img src="./images/fiveStrengths_img04.png" alt="fiveStrengths_img04" />
                         </div>
-                        <dd class="fiveStrengths__text">
+                        <dd class="strengths__text">
                           元人事やキャリアアドバイザーのサポートにより、高い就職率を実現しています。ビジネスマナーの講座や応募書類の添削・模擬面接、面接同席など徹底してフォローしますので、安心して就職準備に取り組んでいただけます
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img pc_br">
+                    <div class="strengths__image u-pc-only">
                       <img src="./images/fiveStrengths_img04.png" alt="fiveStrengths_img04" />
                     </div>
                   </li>
-                  <li class="fiveStrengths__color--black05">
-                    <div class="fiveStrengths__desc">
-                      <dl class="fiveStrengths__sub futura-bold">
-                        <dt class="fiveStrengths__num">04</dt>
-                        <dd class="fiveStrengths__eng">IT specialist</dd>
+                  <li class="strengths__item strengths__item--tone-4">
+                    <div class="strengths__body">
+                      <dl class="strengths__sub u-futura-bold">
+                        <dt class="strengths__num">04</dt>
+                        <dd class="strengths__eng">IT specialist</dd>
                       </dl>
-                      <dl class="fiveStrengths__main fiveStrengths__white">
-                        <dt class="fiveStrengths__title">IT専門スタッフ</dt>
-                        <div class="fiveStrengths__img sp_br">
+                      <dl class="strengths__detail strengths__detail--light">
+                        <dt class="strengths__title">IT専門スタッフ</dt>
+                        <div class="strengths__image u-sp-only">
                           <img src="./images/fiveStrengths_img05.png" alt="fiveStrengths_img05" />
                         </div>
-
-                        <dd class="fiveStrengths__text">
+                        <dd class="strengths__text">
                           プログラミングやデザインなどの専門スキルを持った元IT企業出身のスタッフが多数在籍しているため、未経験でも安心して基礎から実践的なスキルの取得が目指せます。
                         </dd>
                       </dl>
                     </div>
-                    <div class="fiveStrengths__img pc_br">
+                    <div class="strengths__image u-pc-only">
                       <img src="./images/fiveStrengths_img05.png" alt="fiveStrengths_img05" />
                     </div>
                   </li>
                 </ul>
               </section>
-              <section class="supportResults" id="supportResults">
-                <h2 class="futura-bold">Support Results</h2>
+
+              <!-- 支援実績 -->
+              <section class="results" id="supportResults">
+                <h2 class="u-futura-bold">Support Results</h2>
                 <h3>ドリームマーリンの支援実績</h3>
-                <ul class="supportResults__list">
-                  <li>
-                    <div class="supportResults__chart">
-                      <img src="./images/supportResults_chart01.png" alt="就職率96%" />
-                    </div>
+                <ul class="results__list">
+                  <li class="results__item">
+                    <div class="results__chart"><img src="./images/supportResults_chart01.png" alt="就職率96%" /></div>
                   </li>
-                  <li>
-                    <div class="supportResults__chart">
-                      <img src="./images/supportResults_chart02.png" alt="就職定着率99%" />
-                    </div>
+                  <li class="results__item">
+                    <div class="results__chart"><img src="./images/supportResults_chart02.png" alt="就職定着率99%" /></div>
                   </li>
-                  <li>
-                    <div class="supportResults__chart">
-                      <img src="./images/supportResults_chart03.png" alt="資格取得率99%" />
-                    </div>
+                  <li class="results__item">
+                    <div class="results__chart"><img src="./images/supportResults_chart03.png" alt="資格取得率99%" /></div>
                   </li>
                 </ul>
-                <p class="supportResults__text">※2025年6月現在</p>
+                <p class="results__note">※2025年6月現在</p>
               </section>
-              <section class="employmentSupport" id="employmentSupport">
-                <h2 class="futura-bold">Employment<br />Support</h2>
+
+              <!-- 就職徹底サポート -->
+              <section class="support" id="employmentSupport">
+                <h2 class="u-futura-bold">Employment<br />Support</h2>
                 <h3>就職徹底サポート</h3>
-                <ul class="employmentSupport__list">
-                  <li>
-                    <p class="employmentSupport__num futura">[01]</p>
-                    <p class="employmentSupport__title">
-                      面談<span><img src="./images/employmentSupport_title01.svg" alt="Meeting" /></span>
+                <ul class="support__list">
+                  <li class="support__item support__item--white">
+                    <p class="support__num u-futura">[01]</p>
+                    <p class="support__title">
+                      面談<span class="support__title-img"><img src="./images/employmentSupport_title01.svg" alt="Meeting" /></span>
                     </p>
-                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust01.png" alt="面談" /></p>
-                    <p class="employmentSupport__text">ご自身の障がいや特性、現在の状況、職種や勤務地などの就職に関するご希望をお伺いし、一人ひとりに合わせた支援計画を作成します。</p>
+                    <p class="support__image"><img src="./images/employmentSupport_illust01.png" alt="面談" /></p>
+                    <p class="support__text">ご自身の障がいや特性、現在の状況、職種や勤務地などの就職に関するご希望をお伺いし、一人ひとりに合わせた支援計画を作成します。</p>
                   </li>
-                  <li>
-                    <p class="employmentSupport__num futura">[02]</p>
-                    <p class="employmentSupport__title">
-                      訓練<span><img src="./images/employmentSupport_title02.svg" alt="Training" /></span>
+                  <li class="support__item support__item--light">
+                    <p class="support__num u-futura">[02]</p>
+                    <p class="support__title">
+                      訓練<span class="support__title-img"><img src="./images/employmentSupport_title02.svg" alt="Training" /></span>
                     </p>
-                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust02.png" alt="訓練" /></p>
-                    <p class="employmentSupport__text">ITに特化した専門的なスキルの学習を中心に、講座やグループディスカッションを通じて、就労に必要なスキルと知識を習得していきます。</p>
+                    <p class="support__image"><img src="./images/employmentSupport_illust02.png" alt="訓練" /></p>
+                    <p class="support__text">ITに特化した専門的なスキルの学習を中心に、講座やグループディスカッションを通じて、就労に必要なスキルと知識を習得していきます。</p>
                   </li>
-                  <li>
-                    <p class="employmentSupport__num futura">[03]</p>
-                    <p class="employmentSupport__title">
-                      実習<span><img src="./images/employmentSupport_title03.svg" alt="Internship" /></span>
+                  <li class="support__item support__item--mid">
+                    <p class="support__num u-futura">[03]</p>
+                    <p class="support__title">
+                      実習<span class="support__title-img"><img src="./images/employmentSupport_title03.svg" alt="Internship" /></span>
                     </p>
-                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust03.png" alt="実習" /></p>
-                    <p class="employmentSupport__text">訓練では体験できない実務経験の中から、就職に必要なスキルやマナーを学ぶとともに、訓練で培ったスキルを企業にアピールしていきます。</p>
+                    <p class="support__image"><img src="./images/employmentSupport_illust03.png" alt="実習" /></p>
+                    <p class="support__text">訓練では体験できない実務経験の中から、就職に必要なスキルやマナーを学ぶとともに、訓練で培ったスキルを企業にアピールしていきます。</p>
                   </li>
-                  <li>
-                    <p class="employmentSupport__num futura">[04]</p>
-                    <p class="employmentSupport__title">
-                      就職<span><img src="./images/employmentSupport_title04.svg" alt="Start Working" /></span>
+                  <li class="support__item support__item--dark">
+                    <p class="support__num u-futura">[04]</p>
+                    <p class="support__title">
+                      就職<span class="support__title-img"><img src="./images/employmentSupport_title04.svg" alt="Start Working" /></span>
                     </p>
-                    <p class="employmentSupport__img"><img src="./images/employmentSupport_illust04.png" alt="就職" /></p>
-                    <p class="employmentSupport__text">応募書類の添削や模擬面接の実施など就職までサポートします。また、就職後も長く働き続けていただけるよう、定着支援も行っていきます。</p>
+                    <p class="support__image"><img src="./images/employmentSupport_illust04.png" alt="就職" /></p>
+                    <p class="support__text">応募書類の添削や模擬面接の実施など就職までサポートします。また、就職後も長く働き続けていただけるよう、定着支援も行っていきます。</p>
                   </li>
                 </ul>
               </section>
+
+              <!-- サービス事業 -->
               <section class="service" id="service">
-                <h2 class="futura-bold">Service</h2>
+                <h2 class="u-futura-bold">Service</h2>
                 <h3>サービス事業</h3>
                 <div class="service__wrapper">
                   <ul class="service__list">
-                    <li>
-                      <div class="service__item">
-                        <p class="service__title">就労移行支援事業所</p>
-                        <p class="service__img"><img src="./images/service_illust01.png" alt="就労移行支援事業所" /></p>
-                        <p class="service__text">
+                    <li class="service__item service__item--left">
+                      <div class="service__card">
+                        <p class="service__card-title">就労移行支援事業所</p>
+                        <p class="service__card-image"><img src="./images/service_illust01.png" alt="就労移行支援事業所" /></p>
+                        <p class="service__card-text">
                           一般企業への就職を目指す方を対象に、必要な知識やスキル習得のための支援を受けられます。コミュニケーション・専門スキル・ビジネスマナー・職業に関する知識など就労に関する支援を幅広く受けることができます。
                         </p>
                       </div>
                     </li>
-                    <li>
-                      <div class="service__item">
-                        <p class="service__title">A型事業所</p>
-                        <p class="service__img"><img src="./images/service_illust02.png" alt="A型事業所" /></p>
-                        <p class="service__text">
+                    <li class="service__item service__item--right">
+                      <div class="service__card">
+                        <p class="service__card-title">A型事業所</p>
+                        <p class="service__card-image"><img src="./images/service_illust02.png" alt="A型事業所" /></p>
+                        <p class="service__card-text">
                           障がいや特性によって一般企業での就労が困難な方が、雇用契約を結び就労することができます。実務を通して、一般企業に就職するために必要な知識と能力を習得していきます。
                         </p>
                       </div>
@@ -402,136 +384,144 @@
                   </ul>
                 </div>
               </section>
+
+              <!-- 学習内容 -->
               <section class="curriculum" id="curriculum">
-                <h2 class="futura-bold">Curriculum</h2>
+                <h2 class="u-futura-bold">Curriculum</h2>
                 <h3>学習内容</h3>
-                <div class="curriculum__wrapper01">
-                  <div class="curriculum__container01">
+                <div class="curriculum__slider">
+                  <div class="curriculum__slide-wrap">
                     <section class="splide" aria-label="カリキュラムスライダー">
                       <div class="splide__track">
                         <ul class="splide__list">
-                          <li class="splide__slide curriculum__container">
-                            <div class="curriculum__content-box">
-                              <div class="curriculum__Category">
-                                <p class="curriculum__Category-title source-bold">グラフィックデザイン<br />webデザイン</p>
-                                <p class="curriculum__text">デザインソフトの基礎から学び、情報を視覚的にわかりやすく伝えるスキルを<br class="pc_br" />身につけていきます。</p>
-                                <ul class="curriculum__list">
-                                  <li class="curriculum__item">Photoshop</li>
-                                  <li class="curriculum__item">Illustrator</li>
-                                  <li class="curriculum__item">AdobeXD</li>
-                                  <li class="curriculum__item">Figma</li>
-                                  <li class="curriculum__item">HTML&CSS</li>
-                                  <li class="curriculum__item">Javascript</li>
-                                  <li class="curriculum__item">InDesign</li>
-                                  <li class="curriculum__item">WordPress</li>
-                                  <li class="curriculum__item">Wix</li>
-                                  <li class="curriculum__item">STUDIO</li>
-                                  <li class="curriculum__item">Live2D</li>
-                                  <li class="curriculum__item">Blender</li>
+                          <li class="splide__slide curriculum__slide">
+                            <div class="curriculum__content">
+                              <div class="curriculum__category">
+                                <p class="curriculum__category-title u-source-bold">グラフィックデザイン<br />webデザイン</p>
+                                <p class="curriculum__category-text">デザインソフトの基礎から学び、情報を視覚的にわかりやすく伝えるスキルを<br class="u-pc-only" />身につけていきます。</p>
+                                <ul class="curriculum__tool-list">
+                                  <li class="curriculum__tool-item">Photoshop</li>
+                                  <li class="curriculum__tool-item">Illustrator</li>
+                                  <li class="curriculum__tool-item">AdobeXD</li>
+                                  <li class="curriculum__tool-item">Figma</li>
+                                  <li class="curriculum__tool-item">HTML&CSS</li>
+                                  <li class="curriculum__tool-item">Javascript</li>
+                                  <li class="curriculum__tool-item">InDesign</li>
+                                  <li class="curriculum__tool-item">WordPress</li>
+                                  <li class="curriculum__tool-item">Wix</li>
+                                  <li class="curriculum__tool-item">STUDIO</li>
+                                  <li class="curriculum__tool-item">Live2D</li>
+                                  <li class="curriculum__tool-item">Blender</li>
                                 </ul>
                               </div>
                             </div>
                           </li>
-                          <li class="splide__slide curriculum__container">
-                            <div class="curriculum__content-box">
-                              <div class="curriculum__Category">
-                                <p class="curriculum__Category-title source-bold">プログラミング</p>
-                                <p class="curriculum__text">PC作業の効率化させるツールやアプリの開発を目指し、<br class="pc_br" />プログラミングの基礎から学んでいきます。</p>
-                                <ul class="curriculum__list">
-                                  <li class="curriculum__item">Javascript</li>
-                                  <li class="curriculum__item">Java</li>
-                                  <li class="curriculum__item">PHP</li>
-                                  <li class="curriculum__item">Python</li>
-                                  <li class="curriculum__item">C言語</li>
-                                  <li class="curriculum__item">C++</li>
-                                  <li class="curriculum__item">C#</li>
-                                  <li class="curriculum__item">Go</li>
-                                  <li class="curriculum__item">MySQL</li>
-                                  <li class="curriculum__item">Linux</li>
-                                  <li class="curriculum__item">Git</li>
-                                  <li class="curriculum__item">AWS</li>
+                          <li class="splide__slide curriculum__slide">
+                            <div class="curriculum__content">
+                              <div class="curriculum__category">
+                                <p class="curriculum__category-title u-source-bold">プログラミング</p>
+                                <p class="curriculum__category-text">PC作業の効率化させるツールやアプリの開発を目指し、<br class="u-pc-only" />プログラミングの基礎から学んでいきます。</p>
+                                <ul class="curriculum__tool-list">
+                                  <li class="curriculum__tool-item">Javascript</li>
+                                  <li class="curriculum__tool-item">Java</li>
+                                  <li class="curriculum__tool-item">PHP</li>
+                                  <li class="curriculum__tool-item">Python</li>
+                                  <li class="curriculum__tool-item">C言語</li>
+                                  <li class="curriculum__tool-item">C++</li>
+                                  <li class="curriculum__tool-item">C#</li>
+                                  <li class="curriculum__tool-item">Go</li>
+                                  <li class="curriculum__tool-item">MySQL</li>
+                                  <li class="curriculum__tool-item">Linux</li>
+                                  <li class="curriculum__tool-item">Git</li>
+                                  <li class="curriculum__tool-item">AWS</li>
                                 </ul>
                               </div>
                             </div>
                           </li>
-                          <li class="splide__slide curriculum__container">
-                            <div class="curriculum__content-box">
-                              <div class="curriculum__Category">
-                                <p class="curriculum__Category-title source-bold">動画編集<br />3Dデザイン</p>
-                                <p class="curriculum__text">プロが使用する専用ソフトの基本操作を学び、多彩な表現方法を駆使して、<br class="pc_br" />楽しく、実践的な作品を制作していきます。</p>
-                                <ul class="curriculum__list">
-                                  <li class="curriculum__item">Premiere Pro</li>
-                                  <li class="curriculum__item">AfterEffect</li>
-                                  <li class="curriculum__item">Illustrator</li>
-                                  <li class="curriculum__item">Photoshop</li>
-                                  <li class="curriculum__item">DaVinci Resolve</li>
-                                  <li class="curriculum__item">Audition</li>
-                                  <li class="curriculum__item">Live2D</li>
-                                  <li class="curriculum__item">Blender</li>
-                                </ul>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="splide__slide curriculum__container">
-                            <div class="curriculum__content-box">
-                              <div class="curriculum__Category">
-                                <p class="curriculum__Category-title source-bold">事務</p>
-                                <p class="curriculum__text">
-                                  基本的なPC操作からMicrosoft Office関連の資格取得の学習、<br class="pc_br" />メール・チャット対応まで、実務に直結する事務スキルを段階的に習得していきます。
+                          <li class="splide__slide curriculum__slide">
+                            <div class="curriculum__content">
+                              <div class="curriculum__category">
+                                <p class="curriculum__category-title u-source-bold">動画編集<br />3Dデザイン</p>
+                                <p class="curriculum__category-text">
+                                  プロが使用する専用ソフトの基本操作を学び、多彩な表現方法を駆使して、<br class="u-pc-only" />楽しく、実践的な作品を制作していきます。
                                 </p>
-                                <ul class="curriculum__list">
-                                  <li class="curriculum__item">PC基本操作</li>
-                                  <li class="curriculum__item">タイピング</li>
-                                  <li class="curriculum__item">Word</li>
-                                  <li class="curriculum__item">Excel</li>
-                                  <li class="curriculum__item">PowerPoint</li>
-                                  <li class="curriculum__item">Access</li>
-                                  <li class="curriculum__item">マクロ・VBA</li>
-                                  <li class="curriculum__item">メール</li>
-                                  <li class="curriculum__item">チャット</li>
-                                  <li class="curriculum__item">WEB会議</li>
+                                <ul class="curriculum__tool-list">
+                                  <li class="curriculum__tool-item">Premiere Pro</li>
+                                  <li class="curriculum__tool-item">AfterEffect</li>
+                                  <li class="curriculum__tool-item">Illustrator</li>
+                                  <li class="curriculum__tool-item">Photoshop</li>
+                                  <li class="curriculum__tool-item">DaVinci Resolve</li>
+                                  <li class="curriculum__tool-item">Audition</li>
+                                  <li class="curriculum__tool-item">Live2D</li>
+                                  <li class="curriculum__tool-item">Blender</li>
                                 </ul>
                               </div>
                             </div>
                           </li>
-                          <li class="splide__slide curriculum__container">
-                            <div class="curriculum__content-box">
-                              <div class="curriculum__Category">
-                                <p class="curriculum__Category-title source-bold">コミュニケーション<br />自己管理</p>
-                                <p class="curriculum__text">個別ワークやグループワークを通して自己理解を深め、<br class="pc_br" />他者との関わり方や実践的なコミュニケーション力を育成します。</p>
-                                <ul class="curriculum__list">
-                                  <li class="curriculum__item">SST</li>
-                                  <li class="curriculum__item">JST</li>
-                                  <li class="curriculum__item">グループワーク</li>
-                                  <li class="curriculum__item">自己理解・自己分析</li>
-                                  <li class="curriculum__item">ビジネスマナー</li>
-                                  <li class="curriculum__item">アンガーマネジメント</li>
-                                  <li class="curriculum__item">職業適性理解</li>
-                                  <li class="curriculum__item">健康管理・生活管理</li>
-                                  <li class="curriculum__item">レクリエーション</li>
-                                  <li class="curriculum__item">マインドフルネス</li>
-                                </ul>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="splide__slide curriculum__container">
-                            <div class="curriculum__content-box">
-                              <div class="curriculum__Category">
-                                <p class="curriculum__Category-title source-bold">就職活動</p>
-                                <p class="curriculum__text">
-                                  応募書類の作成支援に加え、自己PRや志望動機の添削・模擬面接の実施など、<br class="pc_br" />実践的なサポートを通じて、希望企業への内定獲得を全力でバックアップします。
+                          <li class="splide__slide curriculum__slide">
+                            <div class="curriculum__content">
+                              <div class="curriculum__category">
+                                <p class="curriculum__category-title u-source-bold">事務</p>
+                                <p class="curriculum__category-text">
+                                  基本的なPC操作からMicrosoft Office関連の資格取得の学習、<br class="u-pc-only" />メール・チャット対応まで、実務に直結する事務スキルを段階的に習得していきます。
                                 </p>
-                                <ul class="curriculum__list">
-                                  <li class="curriculum__item">履歴書作成</li>
-                                  <li class="curriculum__item">職務経歴書作成</li>
-                                  <li class="curriculum__item">障害説明書作成</li>
-                                  <li class="curriculum__item">職場実習</li>
-                                  <li class="curriculum__item">面接対策</li>
-                                  <li class="curriculum__item">企業研究・業界研究</li>
-                                  <li class="curriculum__item">志望動機作成</li>
-                                  <li class="curriculum__item">自己PR作成</li>
-                                  <li class="curriculum__item">就活講座</li>
-                                  <li class="curriculum__item">ポートフォリオ制作</li>
+                                <ul class="curriculum__tool-list">
+                                  <li class="curriculum__tool-item">PC基本操作</li>
+                                  <li class="curriculum__tool-item">タイピング</li>
+                                  <li class="curriculum__tool-item">Word</li>
+                                  <li class="curriculum__tool-item">Excel</li>
+                                  <li class="curriculum__tool-item">PowerPoint</li>
+                                  <li class="curriculum__tool-item">Access</li>
+                                  <li class="curriculum__tool-item">マクロ・VBA</li>
+                                  <li class="curriculum__tool-item">メール</li>
+                                  <li class="curriculum__tool-item">チャット</li>
+                                  <li class="curriculum__tool-item">WEB会議</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide curriculum__slide">
+                            <div class="curriculum__content">
+                              <div class="curriculum__category">
+                                <p class="curriculum__category-title u-source-bold">コミュニケーション<br />自己管理</p>
+                                <p class="curriculum__category-text">
+                                  個別ワークやグループワークを通して自己理解を深め、<br class="u-pc-only" />他者との関わり方や実践的なコミュニケーション力を育成します。
+                                </p>
+                                <ul class="curriculum__tool-list">
+                                  <li class="curriculum__tool-item">SST</li>
+                                  <li class="curriculum__tool-item">JST</li>
+                                  <li class="curriculum__tool-item">グループワーク</li>
+                                  <li class="curriculum__tool-item">自己理解・自己分析</li>
+                                  <li class="curriculum__tool-item">ビジネスマナー</li>
+                                  <li class="curriculum__tool-item">アンガーマネジメント</li>
+                                  <li class="curriculum__tool-item">職業適性理解</li>
+                                  <li class="curriculum__tool-item">健康管理・生活管理</li>
+                                  <li class="curriculum__tool-item">レクリエーション</li>
+                                  <li class="curriculum__tool-item">マインドフルネス</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide curriculum__slide">
+                            <div class="curriculum__content">
+                              <div class="curriculum__category">
+                                <p class="curriculum__category-title u-source-bold">就職活動</p>
+                                <p class="curriculum__category-text">
+                                  応募書類の作成支援に加え、自己PRや志望動機の添削・模擬面接の実施など、<br
+                                    class="u-pc-only"
+                                  />実践的なサポートを通じて、希望企業への内定獲得を全力でバックアップします。
+                                </p>
+                                <ul class="curriculum__tool-list">
+                                  <li class="curriculum__tool-item">履歴書作成</li>
+                                  <li class="curriculum__tool-item">職務経歴書作成</li>
+                                  <li class="curriculum__tool-item">障害説明書作成</li>
+                                  <li class="curriculum__tool-item">職場実習</li>
+                                  <li class="curriculum__tool-item">面接対策</li>
+                                  <li class="curriculum__tool-item">企業研究・業界研究</li>
+                                  <li class="curriculum__tool-item">志望動機作成</li>
+                                  <li class="curriculum__tool-item">自己PR作成</li>
+                                  <li class="curriculum__tool-item">就活講座</li>
+                                  <li class="curriculum__tool-item">ポートフォリオ制作</li>
                                 </ul>
                               </div>
                             </div>
@@ -541,161 +531,162 @@
                     </section>
                   </div>
                 </div>
-                <div class="curriculum__wrapper02">
-                  <div class="curriculum__container02">
-                    <div class="curriculum__background-circle"></div>
-                    <div class="curriculum__center-content">
-                      <div class="curriculum__center-title">
-                        <p class="curriculum__catchphrase">実際に取得できる！</p>
-                        <h2 class="curriculum__main-title">検定・資格</h2>
+                <div class="curriculum__circle-wrap">
+                  <div class="curriculum__circle-stage">
+                    <div class="curriculum__circle-bg"></div>
+                    <div class="curriculum__circle-center">
+                      <div class="curriculum__circle-heading">
+                        <p class="curriculum__circle-catchphrase">実際に取得できる！</p>
+                        <h2 class="curriculum__circle-title">検定・資格</h2>
                       </div>
-                      <img src="./images/curriculum_img.png" alt="学習イラスト" class="curriculum__center-img" />
+                      <img src="./images/curriculum_img.png" alt="学習イラスト" class="curriculum__circle-image" />
                     </div>
-                    <div class="curriculum__circle-item" style="--i: 0">Microsoft Office<br />Specialist</div>
-                    <div class="curriculum__circle-item" style="--i: 1">Microsoft Office<br />Expert</div>
-                    <div class="curriculum__circle-item" style="--i: 2">VBA<br />Expert</div>
-                    <div class="curriculum__circle-item" style="--i: 3">ITパスポート</div>
-                    <div class="curriculum__circle-item" style="--i: 4">日商簿記検定</div>
-                    <div class="curriculum__circle-item" style="--i: 5">基本情報<br />技術者試験</div>
-                    <div class="curriculum__circle-item" style="--i: 6">応用情報<br />技術者試験</div>
-                    <div class="curriculum__circle-item" style="--i: 7">Web<br />クリエイター<br />能力認定試験</div>
-                    <div class="curriculum__circle-item" style="--i: 8">Photoshop<br />クリエイター<br />能力認定試験</div>
-                    <div class="curriculum__circle-item" style="--i: 9">Illustrator<br />クリエイター<br />能力認定試験</div>
+                    <div class="curriculum__circle-label" style="--i: 0">Microsoft Office<br />Specialist</div>
+                    <div class="curriculum__circle-label" style="--i: 1">Microsoft Office<br />Expert</div>
+                    <div class="curriculum__circle-label" style="--i: 2">VBA<br />Expert</div>
+                    <div class="curriculum__circle-label" style="--i: 3">ITパスポート</div>
+                    <div class="curriculum__circle-label" style="--i: 4">日商簿記検定</div>
+                    <div class="curriculum__circle-label" style="--i: 5">基本情報<br />技術者試験</div>
+                    <div class="curriculum__circle-label" style="--i: 6">応用情報<br />技術者試験</div>
+                    <div class="curriculum__circle-label" style="--i: 7">Web<br />クリエイター<br />能力認定試験</div>
+                    <div class="curriculum__circle-label" style="--i: 8">Photoshop<br />クリエイター<br />能力認定試験</div>
+                    <div class="curriculum__circle-label" style="--i: 9">Illustrator<br />クリエイター<br />能力認定試験</div>
                   </div>
                 </div>
-                <p class="curriculum__background-text futura-bold">JOB FROM DREAM</p>
+                <p class="curriculum__bg-text u-futura-bold">JOB FROM DREAM</p>
               </section>
-              <section class="flowToUse" id="flowToUse">
-                <div class="flowToUse__box00">
-                  <h2 class="futura-bold">Flow to use</h2>
+
+              <!-- ご利用の流れ -->
+              <section class="flow" id="flowToUse">
+                <div class="flow__header">
+                  <h2 class="u-futura-bold">Flow to use</h2>
                   <h3>ご利用の流れ</h3>
                 </div>
-                <div class="flowToUse__list">
-                  <div class="flowToUse__box01">
-                    <div class="flowToUse__box--content">
-                      <div class="flowToUse__box--border">
-                        <span class="flowToUse__flow futura-bold">01</span>
-                        <p class="flowToUse__title">お問い合せ</p>
-                        <p class="flowToUse__text">
+                <div class="flow__list">
+                  <div class="flow__item flow__item--step-1">
+                    <div class="flow__card">
+                      <div class="flow__card-inner">
+                        <span class="flow__num u-futura-bold">01</span>
+                        <p class="flow__title">お問い合せ</p>
+                        <p class="flow__text">
                           まずは、お気軽にお電話またはメールにてお問い合せください。事業所のことや就労支援サービスなど、ご不明な点や気になることをお聞かせください。見学・面談・体験のご予約も受け付けています。
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div class="flowToUse__box02">
-                    <div class="flowToUse__box--content">
-                      <div class="flowToUse__box--border">
-                        <span class="flowToUse__flow futura-bold">02</span>
-                        <p class="flowToUse__title">見学・面談</p>
-                        <p class="flowToUse__text">
+                  <div class="flow__item flow__item--step-2">
+                    <div class="flow__card">
+                      <div class="flow__card-inner">
+                        <span class="flow__num u-futura-bold">02</span>
+                        <p class="flow__title">見学・面談</p>
+                        <p class="flow__text">
                           訓練の内容・事業所の設備などをご案内します。面談では、今までの状況やどのような仕事に就きたいかなどをお伺いいたします。また、安心して利用できるかどうか、実際に訓練を体験することができます。
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div class="flowToUse__box03">
-                    <div class="flowToUse__box--content">
-                      <div class="flowToUse__box--border">
-                        <span class="flowToUse__flow futura-bold">03</span>
-                        <p class="flowToUse__title">ご利用手続き</p>
-                        <p class="flowToUse__text">
-                          お住まいの市区町村の役所窓口にて、障害福祉利用サービス受給者証の申請を行います。ご希望の場合、スタッフが手続きをサポートしますので、ご安心ください。
-                        </p>
+                  <div class="flow__item flow__item--step-3">
+                    <div class="flow__card">
+                      <div class="flow__card-inner">
+                        <span class="flow__num u-futura-bold">03</span>
+                        <p class="flow__title">ご利用手続き</p>
+                        <p class="flow__text">お住まいの市区町村の役所窓口にて、障害福祉利用サービス受給者証の申請を行います。ご希望の場合、スタッフが手続きをサポートしますので、ご安心ください。</p>
                       </div>
                     </div>
                   </div>
-                  <div class="flowToUse__box04">
-                    <div class="flowToUse__box--content">
-                      <div class="flowToUse__box--border">
-                        <span class="flowToUse__flow futura-bold">04</span>
-                        <p class="flowToUse__title">契約・利用開始</p>
-                        <p class="flowToUse__text">受給者証が支給されましたら、事業所との契約手続きを行い、ご利用開始となります。 就職に向けて一緒にプログラムに取り組んでいきましょう！</p>
+                  <div class="flow__item flow__item--step-4">
+                    <div class="flow__card">
+                      <div class="flow__card-inner">
+                        <span class="flow__num u-futura-bold">04</span>
+                        <p class="flow__title">契約・利用開始</p>
+                        <p class="flow__text">受給者証が支給されましたら、事業所との契約手続きを行い、ご利用開始となります。就職に向けて一緒にプログラムに取り組んでいきましょう！</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </section>
+
+              <!-- 利用者の声 -->
               <section class="voice" id="voice">
-                <h2 class="futura-bold">Voice</h2>
+                <h2 class="u-futura-bold">Voice</h2>
                 <h3>利用者の声</h3>
                 <div class="voice__wrapper">
                   <div class="swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div class="swiper-box">
-                          <p class="voice__img"><img src="./images/voice_illust01.png" alt="利用者の声" /></p>
+                        <div class="voice__slide">
+                          <p class="voice__avatar"><img src="./images/voice_illust01.png" alt="利用者の声" /></p>
                           <div class="voice__content">
                             <p class="voice__title">復職への不安が、<br />自信に変わりました！</p>
                             <p class="voice__text">
                               仕事や人間関係につまずき自信をなくしていましたが、職員のみなさんに寄り添ってもらいながら訓練に励むうちに少しずつ前向きになれました。今では再就職を果たし、自信を持って笑顔で働けるようになりました。
                             </p>
-                            <p class="voice__people">発達障害/ADHD 30代・女性</p>
+                            <p class="voice__author">発達障害/ADHD 30代・女性</p>
                           </div>
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-box">
-                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                        <div class="voice__slide">
+                          <p class="voice__avatar"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
                           <div class="voice__content">
                             <p class="voice__title">訓練したことを活かせる<br />会社に就職できました</p>
                             <p class="voice__text">
                               前職でうつ病が再発し、休職を挟んで退職しました。その後、ドリームマーリンへ通所を開始し、デザインスキル向上のためコーディングの学習に取り組みました。通所してから３か月程で就職が決まり、名刺やホームページのデザインに携わっています。
                             </p>
-                            <p class="voice__people">発達障害/ADHD 40代・男性</p>
+                            <p class="voice__author">発達障害/ADHD 40代・男性</p>
                           </div>
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-box">
-                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                        <div class="voice__slide">
+                          <p class="voice__avatar"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
                           <div class="voice__content">
                             <p class="voice__title">なりたい自分と向き合う、<br />有意義な時間</p>
                             <p class="voice__text">
                               気持ちの浮き沈みで生活リズムが崩れやすい状態でしたが、職員さんとの報連相で励ましや気づきを感じ、自分の特性や考え方に向き合うことができました。就職先も決まり、自分らしい人生を歩めていることを実感しています。
                             </p>
-                            <p class="voice__people">精神障害/うつ病 30代・男性</p>
+                            <p class="voice__author">精神障害/うつ病 30代・男性</p>
                           </div>
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-box">
-                          <p class="voice__img"><img src="./images/voice_illust01.png" alt="利用者の声" /></p>
+                        <div class="voice__slide">
+                          <p class="voice__avatar"><img src="./images/voice_illust01.png" alt="利用者の声" /></p>
                           <div class="voice__content">
                             <p class="voice__title">自分のペースで、<br />着実に成長できる</p>
                             <p class="voice__text">
                               最初は環境に慣れず不安が強く通所も緊張していましたが、個別に配慮してもらい安心して取り組めるようになりました。少しずつ作業スピードも上がり、自分にもできるという自信がついてきました。
                             </p>
-                            <p class="voice__people">発達障害/ASD 20代・女性</p>
+                            <p class="voice__author">発達障害/ASD 20代・女性</p>
                           </div>
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-box">
-                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                        <div class="voice__slide">
+                          <p class="voice__avatar"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
                           <div class="voice__content">
                             <p class="voice__title">安心できる、<br />居場所ができました</p>
                             <p class="voice__text">
                               人間関係に強い不安があり通所に抵抗がありましたが、スタッフが丁寧に関わってくれるため安心して過ごせています。少しずつ人と話すことにも慣れ、自分から発言できる場面も増えてきました。
                             </p>
-                            <p class="voice__people">精神障害/不安障害 30代・男性</p>
+                            <p class="voice__author">精神障害/不安障害 30代・男性</p>
                           </div>
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-box">
-                          <p class="voice__img"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
+                        <div class="voice__slide">
+                          <p class="voice__avatar"><img src="./images/voice_illust02.png" alt="利用者の声" /></p>
                           <div class="voice__content">
                             <p class="voice__title">在宅訓練で、<br />無理なくスキル習得</p>
                             <p class="voice__text">
                               通所が難しい状況でしたが、在宅訓練に対応してもらい無理なくスキルを身につけることができました。自分の体調に合わせて学べるため継続しやすく、将来の働き方を考える良い機会になりました。
                             </p>
-                            <p class="voice__people">身体障害/脊髄損傷 40代・男性</p>
+                            <p class="voice__author">身体障害/脊髄損傷 40代・男性</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- ページネーション -->
-                    <div class="slide-pagination-wrapper">
+                    <div class="voice__nav">
                       <div class="swiper-button-prev">◀</div>
                       <div class="swiper-pagination"></div>
                       <div class="swiper-button-next">▶</div>
@@ -703,38 +694,42 @@
                   </div>
                 </div>
               </section>
+
+              <!-- お問い合わせ -->
               <section class="contact" id="contact">
-                <h2 class="futura-bold">Contact</h2>
+                <h2 class="u-futura-bold">Contact</h2>
                 <h3>お問い合わせ</h3>
                 <div class="contact__wrapper">
-                  <p class="contact__text">まずはお気軽に<br class="sp_br" />見学・ご相談ください</p>
+                  <p class="contact__lead">まずはお気軽に<br class="u-sp-only" />見学・ご相談ください</p>
                   <ul class="contact__list">
-                    <li class="contact__item">
+                    <li class="contact__item contact__item--tel">
                       <div class="contact__content">
                         <p class="contact__item-title">電話でのお問い合わせはこちら</p>
-                        <p class="contact__item-tel futura">04-7157-3307</p>
-                        <p class="contact__item-text">受付時間 10:00 -18:00 (平日)</p>
+                        <p class="contact__item-tel u-futura">04-7157-3307</p>
+                        <p class="contact__item-note">受付時間 10:00 -18:00 (平日)</p>
                       </div>
                     </li>
-                    <li class="contact__item">
+                    <li class="contact__item contact__item--mail">
                       <div class="contact__content">
                         <p class="contact__item-title">メールでのお問い合わせはこちら</p>
                         <p class="contact__item-btn">お問い合わせフォーム</p>
-                        <p class="contact__item-text">24時間受付中</p>
+                        <p class="contact__item-note">24時間受付中</p>
                       </div>
                     </li>
                   </ul>
                 </div>
               </section>
+
+              <!-- お知らせ -->
               <section class="news" id="news">
-                <h2 class="futura-bold">News</h2>
+                <h2 class="u-futura-bold">News</h2>
                 <h3>お知らせ</h3>
                 <div class="news__wrapper">
                   <div class="news__content">
                     <ul class="news__list">
                       <li class="news__item">
-                        <a href="">
-                          <p class="news__item-date futura">25.6.10</p>
+                        <a href="" class="news__link">
+                          <p class="news__item-date u-futura">25.6.10</p>
                           <p class="news__item-title">ホームページリニューアル</p>
                           <p class="news__item-text">
                             この度、ドリームマーリンのホームページを大幅にリニューアルいたしました。新しいサイトでは、訓練内容や取得可能な資格、これまでの実績、就職までのステップなどを、より分かりやすく具体的にご紹介しています。見学・体験のご相談もお待ちしております。
@@ -742,59 +737,61 @@
                         </a>
                       </li>
                       <li class="news__item">
-                        <a href="">
+                        <a href="" class="news__link">
                           <p class="news__item-date">25.6.10</p>
                           <p class="news__item-title">ドリームマーリン千葉10.1オープン予定</p>
                           <p class="news__item-text">
-                            ドリームマーリン千葉駅前校の開校が決定いたしました。2025年10月1日のオープンに向けて準備を進めております。ドリームマーリンは、充実した訓練プログラムと高い就職実績を誇り、多くの方の“働く”を全力でサポートしています。「自分らしい就職を叶えたい」「スキルを身につけたい」――そんな想いを、ぜひ新しい校舎で実現してみませんか？皆さまからのお問い合わせを心よりお待ちしております。
+                            ドリームマーリン千葉駅前校の開校が決定いたしました。2025年10月1日のオープンに向けて準備を進めております。ドリームマーリンは、充実した訓練プログラムと高い就職実績を誇り、多くの方の"働く"を全力でサポートしています。「自分らしい就職を叶えたい」「スキルを身につけたい」――そんな想いを、ぜひ新しい校舎で実現してみませんか？皆さまからのお問い合わせを心よりお待ちしております。
                           </p>
                         </a>
                       </li>
                     </ul>
-                    <a href="" class="news__btn futura-bold">MORE</a>
+                    <a href="" class="news__btn u-futura-bold">MORE</a>
                   </div>
                 </div>
               </section>
+
+              <!-- 事業所一覧 -->
               <section class="access" id="access">
-                <h2 class="futura-bold">Access</h2>
+                <h2 class="u-futura-bold">Access</h2>
                 <h3>事業所一覧</h3>
                 <div class="access__wrapper">
                   <ul class="access__list">
                     <li class="access__item">
-                      <div class="access__item-left">
+                      <div class="access__panel access__panel--info">
                         <ul class="access__tag-list">
                           <li class="access__tag-item">就労移行支援事業所</li>
                           <li class="access__tag-item">就労継続支援A型事業所</li>
                         </ul>
-                        <p class="access__item-title">ドリームマーリン</p>
+                        <p class="access__name">ドリームマーリン</p>
                         <ul class="access__data">
-                          <li class="access__data-address">
-                            <dl>
-                              <dt>所在地</dt>
-                              <dd>277-0005<br />千葉県柏市 柏6-8-40<br class="sp_br" />小溝ビル3階B</dd>
+                          <li class="access__data-item access__data-item--address">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">所在地</dt>
+                              <dd class="access__data-dd">277-0005<br />千葉県柏市 柏6-8-40<br class="u-sp-only" />小溝ビル3階B</dd>
                             </dl>
                           </li>
-                          <li class="access__data-tel">
-                            <dl>
-                              <dt>TEL</dt>
-                              <dd>04-7157-3307</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">TEL</dt>
+                              <dd class="access__data-dd">04-7157-3307</dd>
                             </dl>
                           </li>
-                          <li class="access__data-fax">
-                            <dl>
-                              <dt>FAX</dt>
-                              <dd>04-7196-7735</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">FAX</dt>
+                              <dd class="access__data-dd">04-7196-7735</dd>
                             </dl>
                           </li>
-                          <li class="access__data-time">
-                            <dl>
-                              <dt>営業時間</dt>
-                              <dd>10:00-18:00（平日）</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">営業時間</dt>
+                              <dd class="access__data-dd">10:00-18:00（平日）</dd>
                             </dl>
                           </li>
                         </ul>
                       </div>
-                      <div class="access__item-right">
+                      <div class="access__panel access__panel--map">
                         <iframe
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.3363444582272!2d139.97567876674947!3d35.86505214242634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189df31e5342f9%3A0x8f2fec75a09b0a82!2z5bCx5Yq05pSv5o-05LqL5qWt5omA44OJ44Oq44O844Og44Oe44O844Oq44Oz!5e0!3m2!1sja!2sjp!4v1771555852444!5m2!1sja!2sjp"
                           width="600"
@@ -807,39 +804,39 @@
                       </div>
                     </li>
                     <li class="access__item">
-                      <div class="access__item-left">
+                      <div class="access__panel access__panel--info">
                         <ul class="access__tag-list">
                           <li class="access__tag-item">就労移行支援事業所</li>
                         </ul>
-                        <p class="access__item-title">ドリームマーリンANNEX</p>
+                        <p class="access__name">ドリームマーリンANNEX</p>
                         <ul class="access__data">
-                          <li class="access__data-address">
-                            <dl>
-                              <dt>所在地</dt>
-                              <dd>277-0021<br />千葉県柏市中央町5-19 1階</dd>
+                          <li class="access__data-item access__data-item--address">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">所在地</dt>
+                              <dd class="access__data-dd">277-0021<br />千葉県柏市中央町5-19 1階</dd>
                             </dl>
                           </li>
-                          <li class="access__data-tel">
-                            <dl>
-                              <dt>TEL</dt>
-                              <dd>04-7196-7316</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">TEL</dt>
+                              <dd class="access__data-dd">04-7196-7316</dd>
                             </dl>
                           </li>
-                          <li class="access__data-fax">
-                            <dl>
-                              <dt>FAX</dt>
-                              <dd>04-7196-7735</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">FAX</dt>
+                              <dd class="access__data-dd">04-7196-7735</dd>
                             </dl>
                           </li>
-                          <li class="access__data-time">
-                            <dl>
-                              <dt>営業時間</dt>
-                              <dd>10:00-18:00（平日）</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">営業時間</dt>
+                              <dd class="access__data-dd">10:00-18:00（平日）</dd>
                             </dl>
                           </li>
                         </ul>
                       </div>
-                      <div class="access__item-right">
+                      <div class="access__panel access__panel--map">
                         <iframe
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.3990185624219!2d139.97116630064497!3d35.858906850074646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189d2c902500b7%3A0x93bff27430eeec04!2z5bCx5Yq05pSv5o-05LqL5qWt5omA44OJ44Oq44O844Og44Oe44O844Oq44OzIEFOTkVY!5e0!3m2!1sja!2sjp!4v1771555600669!5m2!1sja!2sjp"
                           width="600"
@@ -852,40 +849,40 @@
                       </div>
                     </li>
                     <li class="access__item">
-                      <div class="access__item-left">
+                      <div class="access__panel access__panel--info">
                         <ul class="access__tag-list">
                           <li class="access__tag-item">就労移行支援事業所</li>
                           <li class="access__tag-item">就労継続支援A型事業所</li>
                         </ul>
-                        <p class="access__item-title">ドリームマーリン<br />千葉就労支援センター</p>
+                        <p class="access__name">ドリームマーリン<br />千葉就労支援センター</p>
                         <ul class="access__data">
-                          <li class="access__data-address">
-                            <dl>
-                              <dt>所在地</dt>
-                              <dd>260-0032<br />千葉県千葉市中央区登戸1-13-22<br />シティファイブビルA棟206号</dd>
+                          <li class="access__data-item access__data-item--address">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">所在地</dt>
+                              <dd class="access__data-dd">260-0032<br />千葉県千葉市中央区登戸1-13-22<br />シティファイブビルA棟206号</dd>
                             </dl>
                           </li>
-                          <li class="access__data-tel">
-                            <dl>
-                              <dt>TEL</dt>
-                              <dd>043-216-5905</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">TEL</dt>
+                              <dd class="access__data-dd">043-216-5905</dd>
                             </dl>
                           </li>
-                          <li class="access__data-fax">
-                            <dl>
-                              <dt>FAX</dt>
-                              <dd>04-7196-7735</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">FAX</dt>
+                              <dd class="access__data-dd">04-7196-7735</dd>
                             </dl>
                           </li>
-                          <li class="access__data-time">
-                            <dl>
-                              <dt>営業時間</dt>
-                              <dd>10:00-18:00（平日）</dd>
+                          <li class="access__data-item">
+                            <dl class="access__data-dl">
+                              <dt class="access__data-dt">営業時間</dt>
+                              <dd class="access__data-dd">10:00-18:00（平日）</dd>
                             </dl>
                           </li>
                         </ul>
                       </div>
-                      <div class="access__item-right">
+                      <div class="access__panel access__panel--map">
                         <iframe
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.930825683822!2d140.1096184878079!3d35.609891396122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022850b316b6785%3A0x7de2b467dce35365!2z5bCx5Yq05pSv5o-05LqL5qWt5omA44OJ44Oq44O844Og44Oe44O844Oq44OzIOWNg-iRieWwseWKtOaUr-aPtOOCu-ODs-OCv-ODvA!5e0!3m2!1sja!2sjp!4v1771555912252!5m2!1sja!2sjp"
                           width="600"
@@ -900,74 +897,77 @@
                   </ul>
                 </div>
               </section>
+
+              <!-- 会社概要 -->
               <section class="profile" id="profile">
-                <h2 class="futura-bold">Profile</h2>
+                <h2 class="u-futura-bold">Profile</h2>
                 <h3>会社概要</h3>
                 <div class="profile__wrapper">
                   <ul class="profile__list">
                     <li class="profile__item">
-                      <dl>
-                        <dt>運営会社</dt>
-                        <dd>株式会社ドリームブリッジ</dd>
+                      <dl class="profile__dl">
+                        <dt class="profile__dt">運営会社</dt>
+                        <dd class="profile__dd">株式会社ドリームブリッジ</dd>
                       </dl>
                     </li>
                     <li class="profile__item">
-                      <dl>
-                        <dt>役員</dt>
-                        <dd>代表取締役 大屋隆之<br />専務取締役 岸岡直哉</dd>
+                      <dl class="profile__dl">
+                        <dt class="profile__dt">役員</dt>
+                        <dd class="profile__dd">代表取締役 大屋隆之<br />専務取締役 岸岡直哉</dd>
                       </dl>
                     </li>
                     <li class="profile__item">
-                      <dl>
-                        <dt>指定認可日</dt>
-                        <dd>就労移行支援型：<br class="sp_br" />2023 年7月1日 認可<br class="sp_br" />（事業所番号：1212102626）</dd>
+                      <dl class="profile__dl">
+                        <dt class="profile__dt">指定認可日</dt>
+                        <dd class="profile__dd">就労移行支援型：<br class="u-sp-only" />2023 年7月1日 認可<br class="u-sp-only" />（事業所番号：1212102626）</dd>
                       </dl>
                     </li>
                     <li class="profile__item">
-                      <dl>
-                        <dt>事業内容</dt>
-                        <dd>障害者総合支援法に基づく<br class="sp_br" />障がい福祉サービス事業</dd>
+                      <dl class="profile__dl">
+                        <dt class="profile__dt">事業内容</dt>
+                        <dd class="profile__dd">障害者総合支援法に基づく<br class="u-sp-only" />障がい福祉サービス事業</dd>
                       </dl>
                     </li>
                     <li class="profile__item">
-                      <dl>
-                        <dt>事業所住所</dt>
-                        <dd>277-0005 <br class="sp_br" />千葉県柏市 柏6-8-40 <br class="sp_br" />小溝ビル3階B</dd>
+                      <dl class="profile__dl">
+                        <dt class="profile__dt">事業所住所</dt>
+                        <dd class="profile__dd">277-0005 <br class="u-sp-only" />千葉県柏市 柏6-8-40 <br class="u-sp-only" />小溝ビル3階B</dd>
                       </dl>
                     </li>
                     <li class="profile__item">
-                      <dl>
-                        <dt>電話番号 / <br class="sp_br" />FAX</dt>
-                        <dd>04-7157-3307 / <br class="sp_br" />04-7196-7735</dd>
+                      <dl class="profile__dl">
+                        <dt class="profile__dt">電話番号 / <br class="u-sp-only" />FAX</dt>
+                        <dd class="profile__dd">04-7157-3307 / <br class="u-sp-only" />04-7196-7735</dd>
                       </dl>
                     </li>
                   </ul>
-                  <p class="score__btn"><a href="https://dreammarlin.com/wp-content/uploads/2024/05/dream-marlin_2024.pdf">スコアシート</a></p>
+                  <p class="profile__score-btn"><a href="https://dreammarlin.com/wp-content/uploads/2024/05/dream-marlin_2024.pdf">スコアシート</a></p>
                 </div>
               </section>
             </div>
           </div>
         </main>
-        <footer>
+
+        <footer class="footer">
           <div class="footer__wrapper">
             <div class="footer__left">
-              <ul class="footer__list">
-                <li><a href="">5つの強み</a></li>
-                <li><a href="">ご利用までの流れ</a></li>
-                <li><a href="">支援実績</a></li>
-                <li><a href="">利用者の声</a></li>
-                <li><a href="">就労までの流れ</a></li>
-                <li><a href="">お知らせ</a></li>
-                <li><a href="">サービス内容</a></li>
-                <li><a href="">事業所一覧</a></li>
-                <li><a href="">カリキュラム</a></li>
-                <li><a href="">会社概要</a></li>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">5つの強み</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">ご利用までの流れ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">支援実績</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">利用者の声</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">就労までの流れ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">お知らせ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">サービス内容</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">事業所一覧</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">カリキュラム</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="">会社概要</a></li>
               </ul>
             </div>
             <div class="footer__right">
-              <div class="footer__title">
-                <p class="footer__title--main">就いて<br />ピース</p>
-                <p class="footer__title--sub">ドリームマーリン</p>
+              <div class="footer__brand">
+                <p class="footer__brand-slogan">就いて<br />ピース</p>
+                <p class="footer__brand-name">ドリームマーリン</p>
               </div>
               <p class="footer__copyright">© 2025 Dreambridge Inc.</p>
             </div>
@@ -975,11 +975,17 @@
         </footer>
       </div>
     </div>
-    <!-- TOPに戻るボタン -->
+
     <button class="back-to-top" id="backToTop" aria-label="TOPに戻る">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="18 15 12 9 6 15"></polyline>
       </svg>
     </button>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./JS/common.js"></script>
+    <script src="./JS/index.js"></script>
   </body>
 </html>

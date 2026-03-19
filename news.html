@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News | お知らせ | ドリームマーリン</title>
+    <meta name="description" content="ドリームマーリンのお知らせ一覧です。" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- adobeフォント -->
+    <script>
+      (function (d) {
+        var config = { kitId: "avy5lfd", scriptTimeout: 3000, async: true },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/subpage.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- ===== Header ===== -->
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="header__logo">
+            <a href="index.html" class="header__logo-link u-futura">DreamBridge</a>
+          </h1>
+          <nav class="header__nav" aria-label="main">
+            <div class="header__menu" id="header__menu--ic">
+              <p class="header__menu-label u-futura">Menu</p>
+              <p class="header__menu-icon" id="hamburger">
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
+              </p>
+            </div>
+            <a href="contact.html">
+              <div class="header__contact">
+                <p class="header__contact-label u-futura">Contact</p>
+                <span class="header__contact-icon"></span>
+              </div>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ===== Menu Overlay ===== -->
+      <div class="menu" id="menu">
+        <div class="menu__close-wrap">
+          <button class="menu__close-btn u-futura" id="closeBtn">Close<span class="menu__close-icon"></span></button>
+        </div>
+        <div class="menu__container">
+          <div class="menu__panel menu__panel--nav">
+            <div class="menu__panel-inner">
+              <p class="menu__heading u-futura">Menu</p>
+              <ul class="menu__list u-futura">
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#fiveStrengths">5 Strengths<span class="menu__link-sub">5つの強み</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#supportResults">Support Results<span class="menu__link-sub">支援実績</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#employmentSupport">Employment Support<span class="menu__link-sub">就職徹底サポート</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#service">Service<span class="menu__link-sub">サービス事業</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#curriculum">Curriculum<span class="menu__link-sub">学習内容</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#flowToUse">Flow to use<span class="menu__link-sub">ご利用の流れ</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#voice">Voice<span class="menu__link-sub">利用者の声</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="news.html">News<span class="menu__link-sub">お知らせ</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#access">Access<span class="menu__link-sub">事業所一覧</span></a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html#profile">Profile<span class="menu__link-sub">会社概要</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu__panel menu__panel--contact">
+            <div class="menu__panel-inner u-pc-only">
+              <p class="menu__heading u-futura">Contact</p>
+              <ul class="menu__contact-list">
+                <li>
+                  <p class="menu__desc">見学・体験のお問い合わせは、各事業所へお電話<br />もしくは下記お問い合わせフォームからご相談ください。</p>
+                </li>
+                <li>
+                  <a href="/contact.html" class="menu__btn"><span class="menu__btn-icon"></span><span class="menu__btn-text">お問合わせフォーム</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu__panel--sp u-sp-only">
+              <p class="menu__heading u-futura">Contact</p>
+              <ul class="menu__contact-list">
+                <li class="menu__contact-item">
+                  <a href="" class="menu__btn-sp"><img src="./images/menu-phone.svg" alt="電話でのお問い合わせ" /></a>
+                </li>
+                <li class="menu__contact-item">
+                  <a href="/contact.html" class="menu__btn-sp"><img src="./images/menu-mail.svg" alt="コンタクトフォームでのお問い合わせ" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- ===== ページヘッダー ===== -->
+        <div class="page-header page-header--black">
+          <div class="page-header__inner">
+            <h1 class="page-header__title u-futura-bold">News</h1>
+            <p class="page-header__sub">お知らせ</p>
+          </div>
+        </div>
+
+        <!-- ===== メインコンテンツ ===== -->
+        <main class="subpage-main">
+          <div class="subpage-main__wrapper">
+            <ul class="news-list">
+              <li class="news-list__item">
+                <div class="news-list__date u-futura">25.6.10</div>
+                <div class="news-list__body">
+                  <p class="news-list__title">ホームページリニューアル</p>
+                  <p class="news-list__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                  </p>
+                </div>
+              </li>
+
+              <li class="news-list__item">
+                <div class="news-list__date u-futura">25.6.10</div>
+                <div class="news-list__body">
+                  <p class="news-list__title">タイトル入ります。タイトル入ります。</p>
+                  <p class="news-list__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                  </p>
+                </div>
+              </li>
+
+              <li class="news-list__item">
+                <div class="news-list__date u-futura">25.6.10</div>
+                <div class="news-list__body">
+                  <p class="news-list__title">タイトル入ります。タイトル入ります。</p>
+                  <p class="news-list__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- TOPへ戻るボタン -->
+            <div class="subpage-main__back-wrap">
+              <a href="index.html" class="subpage-main__back-btn u-futura-bold">TOPへ戻る</a>
+            </div>
+          </div>
+        </main>
+
+        <!-- ===== Footer ===== -->
+        <footer class="footer">
+          <div class="footer__wrapper">
+            <div class="footer__left">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#fiveStrengths">5つの強み</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#flowToUse">ご利用までの流れ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#supportResults">支援実績</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#voice">利用者の声</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#employmentSupport">就労までの流れ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="news.html">お知らせ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#service">サービス内容</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#access">事業所一覧</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#curriculum">カリキュラム</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html#profile">会社概要</a></li>
+              </ul>
+            </div>
+            <div class="footer__right">
+              <div class="footer__brand">
+                <p class="footer__brand-slogan">就いて<br />ピース</p>
+                <p class="footer__brand-name">ドリームマーリン<br />ドリームマーリンANNEX</p>
+              </div>
+              <p class="footer__copyright">© 2025 Dreambridge Inc.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ライブラリ -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- 自作JS -->
+    <script src="./JS/common.js"></script>
+  </body>
+</html>

@@ -1,16 +1,21 @@
 @charset "UTF-8";
 
-/* CSS変数 */
+/* =============================================
+   CSS変数
+   ============================================= */
 :root {
   --color-black: #000;
   --color-white: #fff;
   --color-yellow: #ffef8a;
-  --background-gray: #ececec;
-  --font-size-S: 1.8rem;
-  --font-size-M: 2.4rem;
-  --font-size-L: 4.6rem;
+  --color-gray-bg: #ececec;
+  --font-size-s: 1.8rem;
+  --font-size-m: 2.4rem;
+  --font-size-l: 4.6rem;
 }
-/* 共通 */
+
+/* =============================================
+   Base
+   ============================================= */
 * {
   font-feature-settings: "palt";
   letter-spacing: 0.025em;
@@ -37,42 +42,6 @@ a {
 ul {
   list-style: none;
 }
-/* 768px以下では改行タグを無効 */
-.pc_br {
-  display: block;
-}
-.sp_br {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .pc_br {
-    display: none;
-  }
-  .sp_br {
-    display: block;
-  }
-}
-
-/* スクロール禁止 */
-body.no-scroll {
-  overflow: hidden;
-}
-/* fonts */
-.futura {
-  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.futura-bold {
-  font-family: "futura-pt-bold", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.source-bold {
-  font-family: "source-han-sans-japanese", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
 h2 {
   font-size: 10rem;
   line-height: 1;
@@ -84,6 +53,47 @@ h3 {
   line-height: 1;
   background-image: linear-gradient(0deg, transparent 0.38em, #ffef8a80 0.38em, #ffef8a80 0.76em, transparent 0.76em);
 }
+
+/* =============================================
+   ユーティリティ
+   ============================================= */
+.u-futura {
+  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.u-futura-bold {
+  font-family: "futura-pt-bold", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.u-source-bold {
+  font-family: "source-han-sans-japanese", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.u-pc-only {
+  display: block;
+}
+.u-sp-only {
+  display: none;
+}
+
+/* =============================================
+   State
+   ============================================= */
+.no-scroll {
+  overflow: hidden;
+}
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* =============================================
+   Layout: wrapper / container
+   ============================================= */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -97,6 +107,10 @@ h3 {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+/* =============================================
+   Block: header
+   ============================================= */
 header {
   width: 100vw;
   max-width: 1200px;
@@ -109,59 +123,55 @@ header {
   left: 50%;
   transform: translateX(-50%);
   mix-blend-mode: difference;
+  z-index: 10;
 }
-.header__wrapper {
+.header__inner {
   width: 100%;
   max-width: 1200px;
   display: flex;
   align-items: center;
 }
-header h1 {
+.header__logo {
   width: 164px;
   margin-right: auto;
 }
-header h1 {
-  width: 164px;
-  margin-right: auto;
-}
-header h1 a {
+.header__logo a {
   color: var(--color-white);
   text-decoration: none;
   font-size: 2.4rem;
 }
-header nav {
+.header__nav {
   display: flex;
   font-size: 2rem;
   column-gap: 2rem;
   align-items: center;
 }
-.header__menu--ic,
-.header__contact--ic {
+.header__menu,
+.header__contact {
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 1rem;
   cursor: pointer;
 }
-.header__menu--ic {
+.header__menu {
   color: var(--color-white);
 }
-.header__contact--ic {
+.header__contact {
   background-color: #001075;
   color: var(--color-white);
   border-radius: 22px;
   width: 140px;
   height: 45px;
 }
-.header__contact--ic span::before {
+.header__contact-icon::before {
   content: url("../images/contact_mail.svg");
   display: block;
   width: 21px;
   height: 15px;
   line-height: 0;
 }
-/* ハンバーガーメニューアイコンのスタイル */
-.hamburger {
+.header__menu-icon {
   background: var(--color-white);
   width: 44px;
   height: 44px;
@@ -173,31 +183,29 @@ header nav {
   justify-content: center;
   row-gap: 0.6rem;
 }
-.hamburger .line {
+.header__menu-line {
   width: 17px;
   height: 0.5px;
   background-color: var(--color-black);
   transition: all 0.3s ease;
 }
-.hamburger .line:nth-child(1) {
+.header__menu-line:nth-child(1) {
   position: relative;
   right: 2px;
 }
-.hamburger .line:nth-child(2) {
+.header__menu-line:nth-child(2) {
   position: relative;
   left: 2px;
 }
-.hamburger .line:nth-child(3) {
+.header__menu-line:nth-child(3) {
   position: relative;
   right: 2px;
 }
 
-/* =================================================
-   全画面メニュー (Overlay Menu)
-   ================================================= */
-
-/* メニュー全体 */
-.menu-overlay {
+/* =============================================
+   Block: menu（全画面オーバーレイ）
+   ============================================= */
+.menu {
   position: fixed;
   top: 0;
   right: -100%;
@@ -208,13 +216,13 @@ header nav {
   display: flex;
   overflow: hidden;
 }
-.menu-container {
+.menu__container {
   display: flex;
   width: 100%;
   height: 100%;
 }
-/* 閉じるボタン（右上） */
-.close-btn__container {
+
+.menu__close-wrap {
   width: 100%;
   max-width: 1200px;
   height: 89px;
@@ -228,7 +236,7 @@ header nav {
   padding-right: 160px;
   z-index: 10001;
 }
-.close-btn {
+.menu__close-btn {
   font-size: 2rem;
   color: var(--color-black);
   background: transparent;
@@ -238,14 +246,14 @@ header nav {
   align-items: center;
   column-gap: 18px;
 }
-.close-btn span {
+.menu__close-icon {
   width: 36px;
   height: 36px;
   position: relative;
   display: inline-block;
 }
-.close-btn span::before,
-.close-btn span::after {
+.menu__close-icon::before,
+.menu__close-icon::after {
   content: "";
   background: var(--color-black);
   position: absolute;
@@ -254,15 +262,14 @@ header nav {
   width: 100%;
   height: 1px;
 }
-.close-btn span::before {
+.menu__close-icon::before {
   transform: translateY(-50%) rotate(20deg);
 }
-.close-btn span::after {
+.menu__close-icon::after {
   transform: translateY(-50%) rotate(-20deg);
 }
-/* 共通：パネル設定 */
-.menu-left,
-.menu-right {
+
+.menu__panel {
   flex: 1;
   height: 100%;
   display: flex;
@@ -271,57 +278,48 @@ header nav {
   position: relative;
   will-change: transform;
 }
-
-/* 左パネル（MENU） */
-.menu-left {
+.menu__panel--nav {
   background-color: var(--color-white);
   align-items: flex-end;
   padding-right: 60px;
 }
-
-/* 右パネル（CONTACT） */
-.menu-right {
+.menu__panel--contact {
   background-color: var(--color-yellow);
   align-items: flex-start;
   padding-left: 60px;
 }
-/* 共通：コンテンツラッパー */
-.menu-left__wrapper,
-.menu-right__wrapper {
+.menu__panel-inner {
   width: 100%;
   max-width: 550px;
   display: flex;
   flex-direction: column;
 }
-/* 共通：タイトル */
-.menu-ttl {
+.menu__heading {
   font-size: 2rem;
   line-height: 1.2;
   padding-bottom: 2rem;
 }
-.menu-left .menu-ttl {
+.menu__panel--nav .menu__heading {
   border-bottom: 1px solid var(--color-black);
   margin-bottom: 2rem;
 }
-/* 左パネル：リスト */
-.menu-left .menu-left__list {
+.menu__list {
   font-size: 2.8rem;
   line-height: 1.2;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-.menu-left ul li a span {
+.menu__link-sub {
   font-size: 1.2rem;
   font-weight: bold;
   padding-left: 1.5rem;
 }
-/* 右パネル：テキストとボタン */
-.menu-right__text {
+.menu__desc {
   font-size: 1.6rem;
   margin-bottom: 2rem;
 }
-.menu-right__btn {
+.menu__btn {
   color: var(--color-black);
   background-color: transparent;
   border: 1.5px solid var(--color-black);
@@ -340,12 +338,11 @@ header nav {
     color 0.4s ease-in-out,
     border-color 0.4s ease-in-out;
 }
-.menu-right__btn:hover {
+.menu__btn:hover {
   color: var(--color-white);
   border-color: var(--color-black);
 }
-/* メールアイコン：通常は黒、ホバーで白 */
-.menu-right__btn span.btn-icon:not(.ripple)::after {
+.menu__btn-icon:not(.menu__ripple)::after {
   content: url("../images/mail_white.svg");
   display: block;
   width: 21px;
@@ -354,11 +351,10 @@ header nav {
   filter: invert(1);
   transition: filter 0.4s ease-in-out;
 }
-.menu-right__btn:hover span:not(.ripple)::after {
+.menu__btn:hover .menu__btn-icon:not(.menu__ripple)::after {
   filter: invert(0);
 }
-/* リップル */
-.menu-right__btn .ripple {
+.menu__ripple {
   position: absolute;
   display: block;
   width: 0;
@@ -372,23 +368,24 @@ header nav {
   z-index: 0;
   pointer-events: none;
 }
-.menu-right__btn:hover .ripple {
+.menu__btn:hover .menu__ripple {
   width: 576px;
   height: 576px;
 }
-.menu-right__btn span:not(.ripple) {
+.menu__btn-text {
   position: relative;
   z-index: 1;
 }
-.menu-right__btn > :not(span) {
+.menu__btn-icon {
   position: relative;
   z-index: 1;
 }
-/* --- アニメーション要素の初期状態 (右からフェードイン) --- */
-.menu-ttl,
-.menu-left__list li,
-.menu-right__text,
-.menu-right__btn {
+
+/* アニメーション初期状態 */
+.menu__heading,
+.menu__item,
+.menu__desc,
+.menu__btn {
   opacity: 0;
   transform: translateX(60px);
   clip-path: inset(0 0 0 100%);
@@ -396,16 +393,18 @@ header nav {
   visibility: hidden;
   transition: none;
 }
-/* 展開時 */
-.menu-overlay.is-open .menu-ttl,
-.menu-overlay.is-open .menu-left__list li,
-.menu-overlay.is-open .menu-right__text,
-.menu-overlay.is-open .menu-right__btn {
+.menu.is-open .menu__heading,
+.menu.is-open .menu__item,
+.menu.is-open .menu__desc,
+.menu.is-open .menu__btn {
   pointer-events: auto;
   visibility: visible;
 }
-/* footer */
-footer {
+
+/* =============================================
+   Block: footer
+   ============================================= */
+.footer {
   width: 100vw;
   height: 500px;
   display: flex;
@@ -418,7 +417,8 @@ footer {
   margin: 0 auto;
   display: flex;
 }
-.footer__wrapper div {
+.footer__left,
+.footer__right {
   flex: 1;
   color: var(--color-white);
 }
@@ -426,16 +426,16 @@ footer {
   text-align: left;
   padding: 4rem 5rem 1.5rem;
 }
-.footer__list {
+.footer__nav-list {
   max-width: 345px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 2rem;
 }
-.footer__list li {
+.footer__nav-item {
   width: 50%;
 }
-.footer__list li a {
+.footer__nav-link {
   color: var(--color-white);
 }
 .footer__right {
@@ -445,17 +445,17 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
-.footer__title {
+.footer__brand {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
 }
-.footer__title--main {
+.footer__brand-slogan {
   font-size: 8rem;
   font-weight: bold;
   line-height: 1.1;
 }
-.footer__title--sub {
+.footer__brand-name {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -463,7 +463,10 @@ footer {
   color: #a4a4a4;
   padding-top: 8rem;
 }
-/* TOPに戻るボタン */
+
+/* =============================================
+   Block: back-to-top
+   ============================================= */
 .back-to-top {
   position: fixed;
   bottom: 40px;
@@ -501,8 +504,10 @@ footer {
   display: block;
 }
 
-/* ===== パララックス■ ===== */
-.parallax-squares {
+/* =============================================
+   Block: parallax
+   ============================================= */
+.parallax {
   position: absolute;
   top: 0;
   left: 0;
@@ -512,57 +517,103 @@ footer {
   z-index: 0;
   overflow: hidden;
 }
-.sq {
+.parallax__sq {
   position: absolute;
   background-color: var(--color-black);
   will-change: transform;
 }
 
-/*　画面サイズが1024px以下　*/
+/* =============================================
+   Responsive: 1024px以下
+   ============================================= */
 @media screen and (max-width: 1024px) {
-  header {
+  .header {
     padding: 0 30px;
   }
-  .header__menu--ic,
-  .header__contact--ic {
-    column-gap: 1.5rem;
-  }
-  .header__wrapper {
+  .header__inner {
     justify-content: space-between;
   }
-  header h1 {
+  .header__logo {
     width: auto;
     margin-right: 0;
     display: flex;
     align-items: center;
   }
-  header nav {
+  .header__nav {
     font-size: 2.8rem;
+    column-gap: 0;
   }
-  .header__contact--ic {
+  .header__contact {
     display: none;
   }
-  .hamburger {
+  .header__menu {
+    column-gap: 1.5rem;
+  }
+  .header__menu-icon {
     width: 60px;
     height: 60px;
     row-gap: 0.9rem;
   }
-  .hamburger .line {
+  .header__menu-line {
     width: 30px;
     height: 2px;
   }
-  .menu-left,
-  .menu-right {
+  .menu__panel {
     padding: 10rem 3rem 0;
   }
 }
 
-/*　画面サイズが768px以下　*/
+/* =============================================
+   Responsive: 768px以下
+   ============================================= */
 @media screen and (max-width: 768px) {
   body {
     font-size: 2.8rem;
   }
-  footer {
+  .u-pc-only {
+    display: none;
+  }
+  .u-sp-only {
+    display: block;
+  }
+  .menu__panel--sp {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu__contact-item {
+    border: 1px solid var(--color-black);
+    border-radius: 500px;
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu__btn-sp img {
+    width: 30px;
+  }
+  .menu__panel--sp .menu__contact-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+  .menu__link {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu__link-sub {
+    padding-left: 0;
+  }
+  .menu__btn-sp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer {
     height: auto;
     background: transparent;
     font-size: 2.4rem;
@@ -578,112 +629,105 @@ footer {
     background-color: var(--color-black);
     padding: 7rem 3rem 1.5rem;
   }
-  .footer__list {
+  .footer__nav-list {
     max-width: 100%;
     row-gap: 3rem;
   }
-  .footer__title--main {
+  .footer__brand-slogan {
     font-size: 12rem;
   }
-  .footer__title--sub {
+  .footer__brand-name {
     font-size: 3.5rem;
   }
   .footer__copyright {
     padding-top: 8rem;
   }
 }
-/*　画面サイズが425px以下　*/
+
+/* =============================================
+   Responsive: 425px以下
+   ============================================= */
 @media screen and (max-width: 425px) {
   body {
     font-size: 1.8rem;
   }
-  header {
+  .header {
     padding: 0 15px;
   }
-
-  .close-btn__container {
+  .menu__close-wrap {
     height: 74px;
     padding-right: 1.5rem;
   }
-  .menu-container {
+  .menu__container {
     flex-direction: column;
   }
-  .menu-left,
-  .menu-right {
-    padding: 7rem 1.5rem 0;
-  }
-  header nav {
-    font-size: 2rem;
-  }
-  .menu-ttl {
-    padding-bottom: 1rem;
-  }
-  .menu-left .menu-ttl {
-    margin-bottom: 1rem;
-  }
-  .menu-left .menu-left__list {
-    font-size: 2.7rem;
-    row-gap: 1.8rem;
-  }
-  .menu-left ul li a span {
-    font-size: 1.1rem;
-    padding-left: 1.2rem;
-  }
-  .menu-left,
-  .menu-right {
+  .menu__panel {
     padding: 2rem 1.5rem 2rem;
   }
-  .menu-left {
+  .menu__panel--nav {
     padding-top: 6rem;
     flex: auto;
   }
-  .menu-right {
+  .menu__panel--contact {
     flex: 1;
   }
+  .header__nav {
+    font-size: 2rem;
+  }
+  .menu__list {
+    font-size: 2.7rem;
+    row-gap: 1.1rem;
+    text-align: end;
+  }
+  .menu__panel--sp .menu__heading {
+    padding: 0;
+  }
+
   h2 {
     font-size: 6rem;
   }
   .footer__left {
     padding: 4rem 1.5rem;
   }
-  footer {
+  .footer {
     font-size: 1.8rem;
   }
   .footer__right {
     padding: 3rem 1.5rem 1.5rem;
   }
-  .footer__title--main {
+  .footer__brand-slogan {
     font-size: 8rem;
   }
-  .footer__title--sub {
+  .footer__brand-name {
     font-size: 2.2rem;
   }
-  .footer__title {
+  .footer__brand {
     row-gap: 2rem;
   }
   .footer__copyright {
     padding-top: 4rem;
-  }
-  .footer__copyright {
     font-size: 1.4rem;
   }
   .back-to-top {
     right: 15px;
   }
 }
-/*　画面サイズが320px以下　*/
+
+/* =============================================
+   Responsive: 320px以下
+   ============================================= */
 @media screen and (max-width: 320px) {
-  header h1 a {
+  .header__logo a {
     font-size: 1.8rem;
   }
-  header nav {
+  .header__nav {
     font-size: 1.8rem;
   }
-  .hamburger {
+  .header__menu-icon {
     width: 52px;
     height: 52px;
   }
-  .hamburger .line {
+  .header__menu-line {
     width: 24px;
     height: 2px;
   }
@@ -694,13 +738,13 @@ footer {
   h3 {
     font-size: 1.8rem;
   }
-  .footer__list {
+  .footer__nav-list {
     font-size: 1.5rem;
   }
-  .footer__title--main {
+  .footer__brand-slogan {
     font-size: 7rem;
   }
-  .footer__title--sub {
+  .footer__brand-name {
     font-size: 1.8rem;
   }
 }

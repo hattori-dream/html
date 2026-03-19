@@ -1,27 +1,31 @@
 @charset "UTF-8";
-.firstView {
+
+/* =============================================
+   Block: fv（First View）
+   ============================================= */
+.fv {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.firstView__col {
+.fv__col {
   width: 100%;
   height: 864px;
   display: flex;
 }
-.firstView__slogan {
+.fv__slogan {
   flex: 1;
   background-color: var(--color-black);
   display: flex;
   justify-content: right;
   padding-top: 180px;
 }
-.firstView__slogan--container,
-.firstView__desc--container {
+.fv__slogan-inner,
+.fv__desc-inner {
   width: 600px;
 }
-.firstView__slogan--main {
+.fv__slogan-text {
   height: 430px;
   color: var(--color-white);
   font-size: 19rem;
@@ -32,21 +36,21 @@
   background-position: bottom 0px right 35px;
   background-repeat: no-repeat;
 }
-.firstView__desc {
+.fv__desc {
   flex: 1;
   display: flex;
   justify-content: left;
   padding-left: 4rem;
   padding-top: 180px;
 }
-.firstView__desc--title {
+.fv__desc-title {
   font-size: 3.6rem;
   font-weight: bold;
   padding-bottom: 5rem;
   margin-bottom: 5rem;
   position: relative;
 }
-.firstView__desc--title::after {
+.fv__desc-title::after {
   position: absolute;
   content: "";
   background-color: var(--color-black);
@@ -56,12 +60,12 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.firstView__desc--text {
+.fv__desc-text {
   line-height: 2;
   font-weight: bold;
   letter-spacing: 0.05em;
 }
-.firstView__img {
+.fv__image {
   width: 100%;
   max-width: 1200px;
   height: 688px;
@@ -72,12 +76,16 @@
   background-position: bottom -6rem right -5rem;
   background-repeat: no-repeat;
 }
-.firstView__img img {
+.fv__image img {
   width: 100%;
   max-width: 1100px;
   height: 628px;
 }
-main {
+
+/* =============================================
+   Layout: main
+   ============================================= */
+.main {
   width: 100vw;
   padding-top: 150px;
 }
@@ -85,90 +93,84 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-.main__wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 50px;
 }
-/* ドリームマーリンの５つの強み */
-.fiveStrengths {
+
+/* =============================================
+   Block: strengths（4つの強み）
+   ============================================= */
+.strengths {
   border-bottom: 1px solid var(--color-black);
   margin-bottom: 100px;
 }
-.fiveStrengths__list {
+.strengths__list {
   display: flex;
   flex-direction: column;
   row-gap: 0;
   margin: 60px 0 120px;
 }
-.fiveStrengths__list li {
+.strengths__item {
   padding: 60px 80px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   position: sticky;
-  top: 89px; /* ヘッダー高さ */
+  top: 89px;
   transform-origin: center top;
 }
-.fiveStrengths__list li:nth-child(1) {
+.strengths__item:nth-child(1) {
   z-index: 1;
   margin-bottom: 24px;
 }
-.fiveStrengths__list li:nth-child(2) {
+.strengths__item:nth-child(2) {
   z-index: 2;
   margin-bottom: 24px;
 }
-.fiveStrengths__list li:nth-child(3) {
+.strengths__item:nth-child(3) {
   z-index: 3;
   margin-bottom: 24px;
 }
-.fiveStrengths__list li:nth-child(4) {
+.strengths__item:nth-child(4) {
   z-index: 4;
-  margin-bottom: 24px;
 }
-.fiveStrengths__list li:nth-child(5) {
-  z-index: 5;
+
+/* Modifier: 背景色トーン */
+.strengths__item--tone-1 {
+  background-color: #d1d1d1;
 }
-.fiveStrengths__img {
+.strengths__item--tone-2 {
+  background-color: #888888;
+}
+.strengths__item--tone-3 {
+  background-color: #5c5c5c;
+}
+.strengths__item--tone-4 {
+  background-color: #303030;
+}
+
+.strengths__image {
   width: 100%;
   max-width: 438px;
 }
-.fiveStrengths__color--black01 {
-  background-color: #d1d1d1;
-}
-.fiveStrengths__color--black02 {
-  background-color: #b1b0b0;
-}
-.fiveStrengths__color--black03 {
-  background-color: #888888;
-}
-.fiveStrengths__color--black04 {
-  background-color: #5c5c5c;
-}
-.fiveStrengths__color--black05 {
-  background-color: #303030;
-}
-.fiveStrengths__sub {
+.strengths__sub {
   display: flex;
   align-items: center;
   column-gap: 14px;
 }
-.fiveStrengths__num {
+.strengths__num {
   font-size: 10rem;
   line-height: 0.7;
   color: var(--color-yellow);
 }
-.fiveStrengths__eng {
+.strengths__eng {
   font-size: 2.4rem;
   color: var(--color-white);
   position: relative;
   display: inline-block;
   margin-bottom: 1rem;
 }
-.fiveStrengths__eng:before {
+.strengths__eng::before {
   content: "";
   position: absolute;
   left: 0;
@@ -178,28 +180,31 @@ main {
   height: 1px;
   background-color: var(--color-white);
 }
-.fiveStrengths__white {
+.strengths__detail--light {
   color: var(--color-white);
 }
-.fiveStrengths__title {
+.strengths__title {
   font-size: 4.6rem;
   line-height: 1;
   font-weight: bold;
   margin: 50px 0;
 }
-.fiveStrengths__text {
+.strengths__text {
   width: 100%;
   max-width: 400px;
   line-height: 2;
   letter-spacing: 0.025em;
   text-align: justify;
 }
-/* ドリームマーリンの支援実績 */
-.supportResults {
+
+/* =============================================
+   Block: results（支援実績）
+   ============================================= */
+.results {
   margin-top: 80px;
   padding-bottom: 90px;
 }
-.supportResults__list {
+.results__list {
   width: 100%;
   max-width: 995px;
   display: flex;
@@ -210,21 +215,24 @@ main {
   margin-top: 80px;
   margin-bottom: 20px;
 }
-.supportResults__list li {
+.results__item {
   width: 45%;
 }
-.supportResults__list li:last-of-type {
+.results__item:last-of-type {
   margin-top: -2rem;
 }
-.supportResults__chart {
+.results__chart {
   width: 100%;
 }
-.supportResults__text {
+.results__note {
   font-size: 1.4rem;
   text-align: right;
 }
-/* 就職徹底サポート */
-.employmentSupport {
+
+/* =============================================
+   Block: support（就職徹底サポート）
+   ============================================= */
+.support {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,14 +241,14 @@ main {
   width: 100vw;
   padding: 150px 0 140px;
 }
-.employmentSupport h2 {
+.support h2 {
   text-align: center;
   margin-bottom: 3rem;
 }
-.employmentSupport h3 {
+.support h3 {
   margin-bottom: 14rem;
 }
-.employmentSupport__list {
+.support__list {
   width: 100%;
   max-width: 1100px;
   display: flex;
@@ -249,55 +257,60 @@ main {
   justify-content: space-around;
   row-gap: 3rem;
 }
-.employmentSupport__list li {
+.support__item {
   width: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 4rem 0 9rem;
   row-gap: 3rem;
-  background-color: var(--color-white);
   border-radius: 240px;
 }
-.employmentSupport__list li:nth-child(2) {
+.support__item--white {
+  background-color: var(--color-white);
+}
+.support__item--light {
   background-color: #e9e9e9;
 }
-.employmentSupport__list li:nth-child(3) {
+.support__item--mid {
   color: var(--color-white);
   background-color: #a6a6a6;
 }
-.employmentSupport__list li:nth-child(4) {
+.support__item--dark {
   color: var(--color-white);
   background-color: #515151;
 }
-.employmentSupport__num {
+.support__num {
   font-size: 3.6rem;
   font-weight: bold;
 }
-.employmentSupport__title {
+.support__title {
   font-size: 4.6rem;
   font-weight: bold;
   position: relative;
 }
-.employmentSupport__title span {
+.support__title-img {
   position: absolute;
   display: block;
   top: -10px;
   left: -26px;
 }
-.employmentSupport__title span img {
+.support__title-img img {
   width: 100%;
 }
-.employmentSupport__img {
+.support__image {
   width: 100%;
   max-width: 240px;
 }
-.employmentSupport__text {
+.support__text {
   width: 315px;
   text-align: justify;
   text-align-last: center;
 }
-/* サービス事業 */
+
+/* =============================================
+   Block: service（サービス事業）
+   ============================================= */
 .service {
   padding-top: 100px;
   padding-bottom: 120px;
@@ -314,18 +327,20 @@ main {
   justify-content: space-between;
   column-gap: 5%;
 }
-.service__list li {
+.service__item {
   width: 50%;
   padding: 120px 0;
   display: flex;
+}
+.service__item--left {
   justify-content: flex-end;
   background-image: linear-gradient(to right, #e6e6e6 0%, #e6e6e6 80%, #fff 80%, #fff 100%);
 }
-.service__list li:last-child {
+.service__item--right {
   justify-content: flex-start;
   background-image: linear-gradient(to right, #fff 0%, #fff 22%, #e6e6e6 20%, #e6e6e6 100%);
 }
-.service__item {
+.service__card {
   width: 495px;
   border: 10px solid var(--color-yellow);
   display: flex;
@@ -335,23 +350,26 @@ main {
   padding: 60px 0;
   background-color: var(--color-white);
 }
-.service__title {
+.service__card-title {
   font-size: 4.6rem;
   font-weight: bold;
 }
-.service__img img {
+.service__card-image img {
   width: auto;
   height: 166px;
 }
-.service__text {
+.service__card-text {
   width: 330px;
   text-align: justify;
 }
-/* 学習内容 */
-.curriculum__wrapper01 {
+
+/* =============================================
+   Block: curriculum（学習内容）
+   ============================================= */
+.curriculum__slider {
   margin: 4rem 0 18rem;
 }
-.curriculum__container01 {
+.curriculum__slide-wrap {
   width: 100vw;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/curriculum_bg.jpg);
   background-repeat: no-repeat;
@@ -363,7 +381,7 @@ main {
   right: auto;
   bottom: 5.5em;
 }
-.curriculum__content-box {
+.curriculum__content {
   color: #fff;
   width: 100%;
   max-width: 1100px;
@@ -372,30 +390,30 @@ main {
   align-items: center;
   padding: 15rem 5rem;
 }
-.curriculum__Category {
+.curriculum__category {
   width: 100%;
   max-width: 666px;
   display: flex;
   flex-direction: column;
   row-gap: 5rem;
 }
-.curriculum__Category-title {
+.curriculum__category-title {
   font-size: 4.6rem;
   font-weight: bold;
   border-left: 10px solid var(--color-white);
   padding-left: 2rem;
 }
-.curriculum__text {
+.curriculum__category-text {
   font-size: 1.8rem;
   line-height: 1.8;
 }
-.curriculum__list {
+.curriculum__tool-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 3rem;
 }
-.curriculum__item {
+.curriculum__tool-item {
   background-color: var(--color-white);
   color: var(--color-black);
   font-size: 2rem;
@@ -405,31 +423,33 @@ main {
   text-align: center;
   font-weight: bold;
 }
+
+/* 資格円グラフ */
 :root {
-  --container-size: 880px; /* 全体の枠サイズ */
-  --radius: 330px; /* 中心から資格円までの距離 */
-  --item-size: 185px; /* 資格円の大きさ */
-  --bg-circle-weight: 30px; /* グレーの線の太さ */
+  --container-size: 880px;
+  --radius: 330px;
+  --item-size: 185px;
+  --bg-circle-weight: 30px;
 }
-.curriculum__wrapper02 {
+.curriculum__circle-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.curriculum__container02 {
+.curriculum__circle-stage {
   position: relative;
   width: var(--container-size);
   height: var(--container-size);
   mix-blend-mode: darken;
 }
-.curriculum__background-circle,
-.curriculum__center-content,
-.curriculum__circle-item {
+.curriculum__circle-bg,
+.curriculum__circle-center,
+.curriculum__circle-label {
   position: absolute;
   top: 50%;
   left: 50%;
 }
-.curriculum__background-circle {
+.curriculum__circle-bg {
   width: calc(var(--radius) * 2);
   height: calc(var(--radius) * 2);
   border: var(--bg-circle-weight) solid #e6e6e6;
@@ -437,36 +457,35 @@ main {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-.curriculum__center-content {
+.curriculum__circle-center {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 10;
   width: 100%;
   max-width: 350px;
 }
-.curriculum__catchphrase {
+.curriculum__circle-catchphrase {
   font-size: 36px;
   font-weight: bold;
   margin: 0;
 }
-.curriculum__main-title {
+.curriculum__circle-title {
   font-size: 36px;
   font-weight: bold;
   margin: 5px 0;
 }
-.curriculum__center-img {
+.curriculum__circle-image {
   width: 100%;
   max-width: 315px;
   height: auto;
   margin-top: 10px;
 }
-.curriculum__circle-item {
+.curriculum__circle-label {
   width: var(--item-size);
   height: var(--item-size);
   background-color: #fff188;
   border-radius: 50%;
   z-index: 5;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,13 +495,12 @@ main {
   line-height: 1.3;
   padding: 8px;
   box-sizing: border-box;
-
   --angle: calc(var(--i) * 36deg - 108deg);
   --x: calc(var(--radius) * cos(var(--angle)));
   --y: calc(var(--radius) * sin(var(--angle)));
   transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)));
 }
-.curriculum__background-text {
+.curriculum__bg-text {
   width: 100vw;
   margin: 60px calc(50% - 50vw);
   display: flex;
@@ -493,95 +511,65 @@ main {
   white-space: nowrap;
   overflow: hidden;
 }
-/* ご利用の流れ */
-.flowToUse__box00 {
+
+/* =============================================
+   Block: flow（ご利用の流れ）
+   ============================================= */
+.flow__header {
   width: 100vw;
   margin: 0 calc(50% - 50vw);
   background: linear-gradient(90deg, #cfcfcf 0%, #cfcfcf 50%, #a4a4a4 50%, #a4a4a4 100%);
   padding: 100px 0 175px;
   text-align: center;
 }
-.flowToUse__list {
+.flow__list {
   width: 100vw;
   margin: 0 calc(50% - 50vw);
   display: flex;
   flex-wrap: wrap;
 }
-.flowToUse__list > div {
+.flow__item {
   flex-basis: 50%;
-}
-.flowToUse__box01 {
-  background-color: #cfcfcf;
   display: flex;
-  justify-content: end;
 }
-.flowToUse__box01 .flowToUse__box--content {
+
+.flow__item--step-1 {
+  background-color: #cfcfcf;
+  justify-content: flex-end;
+}
+.flow__item--step-2 {
+  background-color: #a4a4a4;
+  justify-content: flex-start;
+}
+.flow__item--step-3 {
+  background-color: #747474;
+  justify-content: flex-end;
+  padding-bottom: 410px;
+}
+.flow__item--step-4 {
+  background-color: #515151;
+  justify-content: flex-start;
+  padding-bottom: 410px;
+}
+
+.flow__item--step-1 .flow__card {
   border-bottom: 1px solid;
   border-image: linear-gradient(to right, #ffef8a 0%, #ffef8a 10%, #000 10%, #000 100%) 1;
 }
-.flowToUse__box01 .flowToUse__box--border {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 30px;
+.flow__item--step-1 .flow__card-inner {
   border-right: 1px solid;
   border-image: linear-gradient(to bottom, #ffef8a 0%, #ffef8a 10%, #000 10%, #000 100%) 1;
 }
-
-.flowToUse__box02 {
-  background-color: #a4a4a4;
-  display: flex;
-  justify-content: flex-start;
-}
-.flowToUse__box02 .flowToUse__box--content {
+.flow__item--step-2 .flow__card {
   border-bottom: 1px solid;
   border-image: linear-gradient(to left, #ffef8a 0%, #ffef8a 10%, #000 10%, #000 100%) 1;
 }
-.flowToUse__box02 .flowToUse__box--border {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 30px;
-}
-.flowToUse__box03 {
-  background-color: #747474;
-  display: flex;
-  justify-content: end;
-  padding-bottom: 410px;
-}
-.flowToUse__box03 .flowToUse__box--border {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 30px;
+.flow__item--step-3 .flow__card-inner {
   border-right: 1px solid;
   border-image: linear-gradient(to top, #ffef8a 0%, #ffef8a 10%, #000 10%, #000 100%) 1;
 }
-.flowToUse__box04 {
-  background-color: #515151;
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 410px;
-}
-.flowToUse__box04 .flowToUse__box--border {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 30px;
-}
-.flowToUse__box--content {
+
+.flow__card {
   width: 550px;
   height: 550px;
   background-color: #ffef8a;
@@ -591,7 +579,16 @@ main {
   justify-content: center;
   row-gap: 30px;
 }
-.flowToUse__flow {
+.flow__card-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+}
+.flow__num {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -601,29 +598,31 @@ main {
   color: #fff;
   font-size: 4.8rem;
 }
-.flowToUse__box01 .flowToUse__flow {
+.flow__item--step-1 .flow__num {
   background-color: #cfcfcf;
 }
-.flowToUse__box02 .flowToUse__flow {
+.flow__item--step-2 .flow__num {
   background-color: #a4a4a4;
 }
-.flowToUse__box03 .flowToUse__flow {
+.flow__item--step-3 .flow__num {
   background-color: #747474;
 }
-.flowToUse__box04 .flowToUse__flow {
+.flow__item--step-4 .flow__num {
   background-color: #515151;
 }
-.flowToUse__title {
+.flow__title {
   font-size: 4.6rem;
   font-weight: bold;
 }
-.flowToUse__text {
+.flow__text {
   width: 100%;
   max-width: 330px;
   text-align: justify;
 }
 
-/* 利用者の声 */
+/* =============================================
+   Block: voice（利用者の声）
+   ============================================= */
 .voice {
   padding: 150px 0 0;
 }
@@ -635,7 +634,7 @@ main {
 .swiper .swiper-wrapper {
   width: 100%;
 }
-.swiper-box {
+.voice__slide {
   background-color: var(--color-yellow);
   transition: 0.7s;
   padding: 100px 30px 50px;
@@ -643,11 +642,11 @@ main {
   opacity: 0.3;
   position: relative;
 }
-.swiper .swiper-slide-active .swiper-box {
+.swiper .swiper-slide-active .voice__slide {
   opacity: 1;
   transform: scale(1);
 }
-.slide-pagination-wrapper {
+.voice__nav {
   display: flex;
   justify-content: center;
   padding-top: 60px;
@@ -684,7 +683,7 @@ main {
   flex-direction: column;
   row-gap: 2.5rem;
 }
-.voice__img {
+.voice__avatar {
   width: 140px;
   height: 140px;
   position: absolute;
@@ -693,7 +692,7 @@ main {
   left: 0;
   margin: 0 auto;
 }
-.voice__img img {
+.voice__avatar img {
   width: 100%;
 }
 .voice__title {
@@ -703,11 +702,14 @@ main {
 .voice__text {
   text-align: justify;
 }
-.voice__people {
+.voice__author {
   font-weight: bold;
   text-align: right;
 }
-/* お問い合わせ */
+
+/* =============================================
+   Block: contact（お問い合わせ）
+   ============================================= */
 .contact {
   background-color: var(--color-yellow);
   margin: 0 calc(50% - 50vw);
@@ -726,7 +728,7 @@ main {
   margin-top: 6rem;
   row-gap: 5rem;
 }
-.contact__text {
+.contact__lead {
   font-size: 4.6rem;
   font-weight: bold;
 }
@@ -743,10 +745,10 @@ main {
   background-repeat: no-repeat;
   background-position: 5% 100%;
 }
-.contact__item:nth-child(1) {
+.contact__item--tel {
   background-image: url(../images/contact_illust01.png);
 }
-.contact__item:nth-child(2) {
+.contact__item--mail {
   background-image: url(../images/contact_illust02.png);
 }
 .contact__content {
@@ -806,7 +808,12 @@ main {
   right: 5%;
   content: url(../images/cpntact_arrow.svg);
 }
-/* お知らせ */
+.contact__item-note {
+}
+
+/* =============================================
+   Block: news（お知らせ）
+   ============================================= */
 .news {
   padding: 7rem 0 10rem;
   border-bottom: 1px solid var(--color-black);
@@ -815,7 +822,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 0 -4rem 0rem;
+  margin: 0 -4rem 0;
   padding: 4rem 4rem 4rem;
   background: url(../images/black_bg-news.svg), url(../images/black_bg-news.svg);
   background-size: 235px 235px;
@@ -841,6 +848,11 @@ main {
   flex-direction: column;
   row-gap: 0.8rem;
 }
+.news__link {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
 .news__item-date {
   font-size: 2.4rem;
   font-weight: bold;
@@ -864,12 +876,10 @@ main {
   margin: 0 auto;
   display: block;
 }
-.news__item a {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
-/* アクセス */
+
+/* =============================================
+   Block: access（事業所一覧）
+   ============================================= */
 .access {
   padding-top: 70px;
   border-bottom: 1px solid var(--color-black);
@@ -896,10 +906,10 @@ main {
   column-gap: 4%;
   padding: 5.5rem 4rem;
 }
-.access__item-left {
+.access__panel--info {
   width: 46%;
 }
-.access__item-right {
+.access__panel--map {
   width: 50%;
 }
 .access__tag-list {
@@ -913,7 +923,7 @@ main {
   font-weight: bold;
   padding: 0.1rem 1rem;
 }
-.access__item-title {
+.access__name {
   font-size: 4rem;
   line-height: 1.2;
   padding: 2rem 0;
@@ -923,28 +933,31 @@ main {
   display: flex;
   flex-direction: column;
 }
-.access__data li {
+.access__data-item {
   border-bottom: 1px solid #d7d7d7;
 }
-.access__data-address {
+.access__data-item--address {
   border-top: 1px solid #d7d7d7;
 }
-.access__data dl {
+.access__data-dl {
   display: flex;
   padding: 1rem 2rem;
 }
-.access__data dl dt {
+.access__data-dt {
   width: 10rem;
 }
-.access__data dl dd {
+.access__data-dd {
   word-wrap: break-word;
 }
-.access__item-right iframe {
+.access__panel--map iframe {
   width: 100%;
   height: 100%;
   border-radius: 20px;
 }
-/* プロフィール */
+
+/* =============================================
+   Block: profile（会社概要）
+   ============================================= */
 .profile {
   padding-top: 70px;
 }
@@ -961,14 +974,14 @@ main {
 .profile__item:first-of-type {
   border-top: 1px solid #d7d7d7;
 }
-.profile__item dl {
+.profile__dl {
   display: flex;
   padding: 2rem 8rem;
 }
-.profile__item dt {
+.profile__dt {
   width: 220px;
 }
-.score__btn a {
+.profile__score-btn a {
   display: block;
   background-color: var(--color-black);
   color: var(--color-white);
@@ -980,7 +993,7 @@ main {
   position: relative;
   font-weight: bold;
 }
-.score__btn a::after {
+.profile__score-btn a::after {
   position: absolute;
   content: "";
   display: inline-block;
@@ -995,29 +1008,29 @@ main {
   filter: invert(1);
 }
 
-/*　画面サイズが1024px以下　*/
+/* =============================================
+   Responsive: 1024px以下
+   ============================================= */
 @media screen and (max-width: 1024px) {
-  .firstView__col {
-    width: 100%;
+  .fv__col {
     height: auto;
     flex-direction: column;
   }
-  .firstView__slogan {
+  .fv__slogan {
     justify-content: center;
     padding: 130px 0 90px;
   }
-  .firstView__slogan--container,
-  .firstView__desc--container {
+  .fv__slogan-inner,
+  .fv__desc-inner {
     width: 100%;
   }
-  .firstView__slogan--main {
+  .fv__slogan-text {
     height: 380px;
     font-size: 16.6rem;
     text-align: center;
     background-position: bottom 6px right 110px;
   }
-
-  .firstView__img {
+  .fv__image {
     max-width: 100%;
     padding: 5rem;
     height: auto;
@@ -1029,69 +1042,69 @@ main {
       bottom 0rem right 0rem;
     background-repeat: no-repeat;
   }
-  .firstView__img img {
+  .fv__image img {
     max-width: 100%;
     height: 490px;
     object-fit: cover;
   }
-  .firstView__desc {
+  .fv__desc {
     padding: 80px 50px 100px;
   }
-  .firstView__desc--title {
+  .fv__desc-title {
     font-size: 4.4rem;
     text-align: center;
     margin-bottom: 4rem;
   }
-  .firstView__desc--text {
+  .fv__desc-text {
     font-size: 2.8rem;
   }
-  .fiveStrengths__list li {
+  .strengths__item {
     padding: 60px 40px;
   }
-  .fiveStrengths__img {
+  .strengths__image {
     max-width: 360px;
   }
-  .employmentSupport__list {
+  .support__list {
     padding: 0 5rem;
   }
-  .employmentSupport__list li {
+  .support__item {
     width: 46%;
   }
-  .employmentSupport h3 {
+  .support h3 {
     margin-bottom: 7rem;
   }
-  .service__list li:first-child {
+  .service__item--left {
     padding: 6rem 0 6rem 5rem;
   }
-  .service__list li:last-child {
+  .service__item--right {
     padding: 6rem 5rem 6rem 0;
   }
-  .service__item {
+  .service__card {
     width: 100%;
     max-width: 495px;
     padding: 3rem;
   }
-  .service__text {
+  .service__card-text {
     width: 100%;
   }
-  .service__title {
+  .service__card-title {
     font-size: 3.8rem;
   }
-  .curriculum__wrapper01 {
+  .curriculum__slider {
     width: 100vw;
     margin: 4rem calc(50% - 50vw) 8rem;
   }
-  .curriculum__content-box {
+  .curriculum__content {
     padding: 10rem 5rem;
     justify-content: center;
   }
-  .curriculum__Category {
+  .curriculum__category {
     max-width: 100%;
   }
-  .curriculum__text {
+  .curriculum__category-text {
     font-size: 2.8rem;
   }
-  .curriculum__item {
+  .curriculum__tool-item {
     max-width: 46%;
     font-size: 2.4rem;
   }
@@ -1100,32 +1113,32 @@ main {
     right: 0%;
     bottom: 6rem;
   }
-  .curriculum__background-text {
+  .curriculum__bg-text {
     font-size: 180px;
   }
-  .flowToUse__box00 {
+  .flow__header {
     padding: 60px 0 60px;
   }
-  .flowToUse__box--content {
+  .flow__card {
     width: 100%;
     height: 550px;
   }
-  .flowToUse__box01,
-  .flowToUse__box03 {
+  .flow__item--step-1,
+  .flow__item--step-3 {
     padding-left: 5rem;
   }
-  .flowToUse__box02,
-  .flowToUse__box04 {
+  .flow__item--step-2,
+  .flow__item--step-4 {
     padding-right: 5rem;
   }
-  .flowToUse__box03,
-  .flowToUse__box04 {
+  .flow__item--step-3,
+  .flow__item--step-4 {
     padding-bottom: 100px;
   }
   .contact {
     padding: 9rem 3rem 9rem;
   }
-  .contact__text {
+  .contact__lead {
     line-height: 1.5;
   }
   .contact__list {
@@ -1148,8 +1161,8 @@ main {
     height: 40px;
     transform: translateY(11px);
   }
-  .contact__item:nth-child(1),
-  .contact__item:nth-child(2) {
+  .contact__item--tel,
+  .contact__item--mail {
     background-size: 125px;
   }
   .contact__item-btn {
@@ -1164,79 +1177,81 @@ main {
   }
 }
 
-/*　画面サイズが768px以下　*/
+/* =============================================
+   Responsive: 768px以下
+   ============================================= */
 @media screen and (max-width: 768px) {
-  .firstView__desc {
+  .fv__desc {
     padding: 80px 30px 100px;
   }
-  .firstView__img {
+  .fv__image {
     padding: 3rem;
     background-position:
       top 0rem left 2rem,
       bottom 0rem right 2rem;
   }
-  .firstView__img img {
+  .fv__image img {
     max-width: 648px;
     height: 490px;
   }
-  .fiveStrengths__list {
+  .strengths__list {
     row-gap: 0;
   }
-  .fiveStrengths__list li {
+  .strengths__item {
     flex-direction: column;
     padding: 60px 40px 80px;
     align-items: center;
-    top: 60px; /* SP時のヘッダー高さ相当 */
+    top: 60px;
     margin-bottom: -1px !important;
   }
-  .fiveStrengths__sub {
+  .strengths__sub {
     justify-content: center;
   }
-  .fiveStrengths__main {
+  .strengths__detail {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  .fiveStrengths__title {
+  .strengths__title {
     text-align: center;
     margin: 2.5rem 0;
   }
-  .fiveStrengths__img {
+  .strengths__image {
     margin-bottom: 2.5rem;
     max-width: 480px;
   }
-  .fiveStrengths__text {
+  .strengths__text {
     font-size: 2.8rem;
     max-width: 100%;
   }
-  .supportResults__list {
+  .results__list {
     flex-direction: column;
     row-gap: 6rem;
     align-items: center;
   }
-  .supportResults__list li {
+  .results__item {
     width: 550px;
   }
-  .supportResults__text {
+  .results__note {
     font-size: 2.8rem;
   }
-  .employmentSupport__list li {
+  .support__item {
     width: 555px;
     border-radius: 274px;
   }
-  .employmentSupport h3 {
+  .support h3 {
     margin-bottom: 7rem;
   }
-  .employmentSupport__title span {
+  .support__title-img {
     top: -21px;
     left: -37px;
   }
-  .employmentSupport__title {
+  .support__title {
     font-size: 5.6rem;
     line-height: 1;
   }
-  .employmentSupport__text {
+  .support__text {
     width: 360px;
   }
   .service__list {
@@ -1244,27 +1259,27 @@ main {
     align-items: center;
     row-gap: 6rem;
   }
-  .service__list li {
+  .service__item {
     width: 100%;
   }
-  .service__list li:first-child,
-  .service__list li:last-child {
+  .service__item--left,
+  .service__item--right {
     padding: 8rem 3rem;
   }
-  .service__item {
+  .service__card {
     width: 100%;
     max-width: 100%;
   }
-  .service__text {
+  .service__card-text {
     width: 100%;
     padding: 0 2rem;
   }
-  .curriculum__wrapper02 {
+  .curriculum__circle-wrap {
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
   }
-  .curriculum__container02 {
+  .curriculum__circle-stage {
     width: 100%;
     height: auto;
     position: static;
@@ -1274,25 +1289,25 @@ main {
     justify-items: center;
     mix-blend-mode: normal;
   }
-  .curriculum__main-title,
-  .curriculum__catchphrase {
+  .curriculum__circle-catchphrase,
+  .curriculum__circle-title {
     font-size: 46px;
   }
-  .curriculum__background-circle {
+  .curriculum__circle-bg {
     display: none;
   }
-  .curriculum__center-content {
+  .curriculum__circle-center {
     position: static;
     transform: none;
     display: contents;
   }
-  .curriculum__center-title {
+  .curriculum__circle-heading {
     grid-column: 1 / -1;
     order: -1;
     text-align: center;
     width: 100%;
   }
-  .curriculum__center-img {
+  .curriculum__circle-image {
     display: block;
     grid-column: 1 / -1;
     order: 999;
@@ -1300,7 +1315,7 @@ main {
     max-width: 100%;
     margin: 10px auto 0;
   }
-  .curriculum__circle-item {
+  .curriculum__circle-label {
     position: static;
     transform: none;
     width: 240px;
@@ -1308,57 +1323,59 @@ main {
     font-size: 2.8rem;
     order: 1;
   }
-  .curriculum__background-text {
+  .curriculum__bg-text {
     font-size: 140px;
   }
-  .flowToUse__box00 {
+  .flow__header {
     padding-bottom: 8rem;
-  }
-  .flowToUse__box00 {
     background: #cfcfcf;
   }
-  .flowToUse__list {
+  .flow__list {
     align-items: center;
   }
-  .flowToUse__list > div {
+  .flow__item {
     flex-basis: 100%;
   }
-  .flowToUse__box--content {
+  .flow__card {
     width: 100%;
     height: auto;
     padding: 7.5rem 0;
   }
-  .flowToUse__box01,
-  .flowToUse__box02,
-  .flowToUse__box03,
-  .flowToUse__box04 {
+  .flow__item--step-1,
+  .flow__item--step-2,
+  .flow__item--step-3,
+  .flow__item--step-4 {
     justify-content: center;
     padding: 0 3rem;
   }
-  .flowToUse__box01 .flowToUse__box--content,
-  .flowToUse__box02 .flowToUse__box--content,
-  .flowToUse__box03 .flowToUse__box--content,
-  .flowToUse__box04 .flowToUse__box--content {
+  .flow__item--step-1 .flow__card,
+  .flow__item--step-2 .flow__card,
+  .flow__item--step-3 .flow__card,
+  .flow__item--step-4 .flow__card {
     border: none;
     border-image: none;
-    padding: 8rem 6rem 0;
+    padding: 4rem 3rem 0;
   }
-  .flowToUse__box04 {
+  .flow__item--step-1 .flow__card-inner,
+  .flow__item--step-3 .flow__card-inner {
+    border-right: none;
+    border-image: none;
+  }
+  .flow__item--step-4 {
     padding-bottom: 15rem;
   }
-
-  .flowToUse__box01 .flowToUse__box--border,
-  .flowToUse__box02 .flowToUse__box--border,
-  .flowToUse__box03 .flowToUse__box--border,
-  .flowToUse__box04 .flowToUse__box--border {
+  .flow__item--step-3 {
+    padding-bottom: 0;
+  }
+  .flow__card-inner {
     border: none;
     border-bottom: 1px solid var(--color-black);
     padding-bottom: 9rem;
   }
-  .flowToUse__box04 .flowToUse__box--border {
+  .flow__item--step-4 .flow__card-inner {
     border: none;
   }
-  .flowToUse__text {
+  .flow__text {
     width: 100%;
     max-width: 100%;
   }
@@ -1372,10 +1389,10 @@ main {
   .voice__title {
     font-size: 3.2rem;
   }
-  .voice__people {
+  .voice__author {
     font-size: 2.2rem;
   }
-  .slide-pagination-wrapper {
+  .voice__nav {
     padding-top: 3rem;
   }
   .contact__item {
@@ -1418,7 +1435,7 @@ main {
     flex-direction: column;
     align-items: center;
   }
-  .access__item-left {
+  .access__panel--info {
     width: 100%;
   }
   .access__tag-list {
@@ -1430,22 +1447,22 @@ main {
   .access__tag-item {
     font-size: 2.2rem;
   }
-  .access__item-title {
+  .access__name {
     font-size: 4.8rem;
     text-align: center;
   }
-  .access__data dl dt {
+  .access__data-dt {
     width: 15rem;
   }
-  .access__item-right {
+  .access__panel--map {
     padding-top: 5rem;
     width: 100%;
     height: 390px;
   }
-  .profile__item dl {
+  .profile__dl {
     padding: 2rem 0;
   }
-  .score__btn a {
+  .profile__score-btn a {
     width: 420px;
   }
   .back-to-top {
@@ -1453,102 +1470,105 @@ main {
   }
 }
 
-/*　画面サイズが425px以下　*/
+/* =============================================
+   Responsive: 425px以下
+   ============================================= */
 @media screen and (max-width: 425px) {
-  .firstView__slogan--main {
+  .fv__slogan-text {
     font-size: 10rem;
     height: 253px;
     background-size: 100px;
     background-position: bottom 15px right 35px;
   }
-  .firstView__desc {
+  .fv__desc {
     padding: 40px 15px 60px;
   }
-  .firstView__desc--title {
+  .fv__desc-title {
     padding-bottom: 3rem;
     margin-bottom: 3rem;
   }
-  .firstView__desc--text {
+  .fv__desc-text {
     font-size: 2.4rem;
   }
-  .firstView__img {
+  .fv__image {
     padding: 1.5rem;
     background-position:
       top 0rem left 1.5rem,
       bottom 0rem right 1.5rem;
   }
-  .firstView__img img {
+  .fv__image img {
     max-width: 100%;
     height: 350px;
     padding: 0 1.5rem;
   }
-  main {
+  .main {
     padding-top: 60px;
   }
   .main__wrapper {
     padding: 0 1.5rem;
   }
-  .fiveStrengths__list {
+  .strengths__list {
     margin: 30px 0 60px;
   }
-  .fiveStrengths__list li {
+  .strengths__item {
     padding: 30px 20px 60px;
   }
-  .fiveStrengths__num {
+  .strengths__num {
     font-size: 6rem;
   }
-  .fiveStrengths__eng {
+  .strengths__eng {
     font-size: 1.8rem;
   }
-  .fiveStrengths__title {
+  .strengths__title {
     font-size: 3.2rem;
   }
-  .fiveStrengths__text {
+  .strengths__text {
     font-size: 1.8rem;
+    line-height: 1.7;
   }
-  .fiveStrengths__img {
+  .strengths__image {
     max-width: 320px;
   }
-  .fiveStrengths {
+  .strengths {
     margin-bottom: 40px;
   }
-  .supportResults {
+  .results {
     margin-top: 40px;
     padding-bottom: 40px;
   }
-  .supportResults__list li {
+  .results__item {
     width: 80%;
   }
-  .supportResults__list {
+  .results__list {
     margin-top: 40px;
     row-gap: 3rem;
   }
-  .supportResults__text {
+  .results__note {
     font-size: 1.8rem;
   }
-  .employmentSupport {
+  .support {
     padding: 60px 0 60px;
   }
-  .employmentSupport h3 {
+  .support h3 {
     margin-bottom: 4rem;
   }
-  .employmentSupport__list {
+  .support__list {
     padding: 0 1.5rem;
   }
-  .employmentSupport__text {
+  .support__text {
     width: 100%;
     padding: 0 3rem;
   }
-  .employmentSupport__title {
+  .support__title {
     font-size: 4rem;
   }
-  .employmentSupport__num {
+  .support__num {
     font-size: 2.8rem;
   }
-  .employmentSupport__list li {
+  .support__item {
     row-gap: 1.5rem;
   }
-  .employmentSupport__img {
+  .support__image {
     max-width: 180px;
   }
   .service {
@@ -1558,89 +1578,83 @@ main {
   .service__wrapper {
     margin-top: 30px;
   }
-  .service__list li:first-child,
-  .service__list li:last-child {
+  .service__item--left,
+  .service__item--right {
     padding: 3rem 1.5rem;
   }
-  .service__title {
+  .service__card-title {
     font-size: 2.8rem;
   }
-  .service__text {
+  .service__card-text {
     padding: 0;
   }
-  .service__item {
+  .service__card {
     padding: 2rem;
     row-gap: 2rem;
   }
   .service__list {
     row-gap: 3rem;
   }
-  .curriculum__content-box {
+  .curriculum__content {
     padding: 4rem 1.5rem;
   }
-  .curriculum__Category-title {
+  .curriculum__category-title {
     font-size: 3.2rem;
   }
-  .curriculum__Category {
+  .curriculum__category {
     row-gap: 3rem;
   }
-  .curriculum__text {
+  .curriculum__category-text {
     font-size: 1.8rem;
   }
-  .curriculum__item {
+  .curriculum__tool-item {
     max-width: 49%;
     font-size: 1.8rem;
   }
-  .curriculum__main-title,
-  .curriculum__catchphrase {
+  .curriculum__circle-catchphrase,
+  .curriculum__circle-title {
     font-size: 3.2rem;
   }
-  .curriculum__wrapper01 {
+  .curriculum__slider {
     margin: 4rem calc(50% - 50vw) 5rem;
   }
-  .curriculum__circle-item {
+  .curriculum__circle-label {
     width: 140px;
     height: 140px;
     font-size: 1.8rem;
   }
-  .curriculum__background-text {
+  .curriculum__bg-text {
     font-size: 80px;
     margin: 30px calc(50% - 50vw);
   }
-  .curriculum__wrapper02 {
+  .curriculum__circle-wrap {
     padding: 0;
   }
-  .flowToUse__box00 {
+  .flow__header {
     padding: 30px 0 30px;
   }
-  .flowToUse__box01,
-  .flowToUse__box02,
-  .flowToUse__box03,
-  .flowToUse__box04 {
+  .flow__item--step-1,
+  .flow__item--step-2,
+  .flow__item--step-3,
+  .flow__item--step-4 {
     padding: 0 1.5rem;
   }
-  .flowToUse__box04 {
+  .flow__item--step-4 {
     padding-bottom: 6rem;
   }
-  .flowToUse__box01 .flowToUse__box--content,
-  .flowToUse__box02 .flowToUse__box--content,
-  .flowToUse__box03 .flowToUse__box--content,
-  .flowToUse__box04 .flowToUse__box--content {
+  .flow__card {
     padding: 3rem 2rem 0;
   }
-  .flowToUse__box01 .flowToUse__box--border,
-  .flowToUse__box02 .flowToUse__box--border,
-  .flowToUse__box03 .flowToUse__box--border,
-  .flowToUse__box04 .flowToUse__box--border {
+  .flow__card-inner {
     padding-bottom: 3rem;
     row-gap: 15px;
   }
-  .flowToUse__flow {
+  .flow__num {
     width: 80px;
     height: 80px;
     font-size: 3.4rem;
   }
-  .flowToUse__title {
+  .flow__title {
     font-size: 3rem;
     line-height: 1;
   }
@@ -1663,7 +1677,7 @@ main {
     margin-top: 2rem;
     row-gap: 2rem;
   }
-  .contact__text {
+  .contact__lead {
     font-size: 2.4rem;
   }
   .contact__item {
@@ -1676,8 +1690,8 @@ main {
     font-size: 3rem;
     padding-left: 22px;
   }
-  .contact__item:nth-child(1),
-  .contact__item:nth-child(2) {
+  .contact__item--tel,
+  .contact__item--mail {
     background-size: 20%;
   }
   .contact__item-tel::before {
@@ -1718,7 +1732,7 @@ main {
   .news__item-date {
     font-size: 2rem;
   }
-  .news__item a {
+  .news__link {
     row-gap: 1rem;
   }
   .news__list {
@@ -1743,16 +1757,16 @@ main {
   .access__tag-list {
     row-gap: 1rem;
   }
-  .access__item-title {
+  .access__name {
     font-size: 3.4rem;
   }
-  .access__data dl {
+  .access__data-dl {
     padding: 1rem 0;
   }
-  .access__data dl dt {
+  .access__data-dt {
     width: 10rem;
   }
-  .access__item-right {
+  .access__panel--map {
     padding-top: 2rem;
   }
   .access__list {
@@ -1761,86 +1775,88 @@ main {
   .profile {
     padding-top: 30px;
   }
-  .profile__item dt {
+  .profile__dt {
     width: 140px;
   }
-  .score__btn a {
+  .profile__score-btn a {
     width: 100%;
   }
 }
 
-/*　画面サイズが375px以下　*/
+/* =============================================
+   Responsive: 375px以下
+   ============================================= */
 @media screen and (max-width: 375px) {
-  .firstView {
+  .fv {
     width: 100vw;
     height: auto;
     flex-direction: column;
   }
-  .firstView__desc--title {
+  .fv__desc-title {
     font-size: 3.4rem;
   }
-  .firstView__desc--text {
+  .fv__desc-text {
     font-size: 1.8rem;
   }
-  .firstView__img img {
+  .fv__image img {
     height: 250px;
   }
-  .firstView__desc {
+  .fv__desc {
     padding: 40px 15px 40px;
   }
-  main {
+  .main {
     padding-top: 40px;
   }
-  .fiveStrengths__title {
+  .strengths__title {
     font-size: 2.8rem;
   }
-  .service__title {
+  .service__card-title {
     font-size: 2.4rem;
   }
-  .service__img img {
+  .service__card-image img {
     height: 120px;
   }
-  .curriculum__Category-title {
+  .curriculum__category-title {
     font-size: 2.4rem;
     border-left: 5px solid var(--color-white);
   }
-  .curriculum__item {
+  .curriculum__tool-item {
     font-size: 1.4rem;
   }
   .splide__pagination {
     bottom: 2rem;
   }
-  .curriculum__content-box {
+  .curriculum__content {
     padding: 6rem 1.5rem;
   }
-  .curriculum__main-title,
-  .curriculum__catchphrase {
+  .curriculum__circle-catchphrase,
+  .curriculum__circle-title {
     font-size: 2.8rem;
   }
-  .curriculum__circle-item {
+  .curriculum__circle-label {
     font-size: 1.4rem;
     width: 110px;
     height: 110px;
   }
-  .curriculum__background-text {
+  .curriculum__bg-text {
     font-size: 60px;
   }
-  .flowToUse__flow {
+  .flow__num {
     width: 60px;
     height: 60px;
     font-size: 2.8rem;
   }
-  .flowToUse__title {
+  .flow__title {
     font-size: 2.4rem;
   }
-  .voice__people {
+  .voice__author {
     font-size: 1.6rem;
   }
-  .contact__text {
+  .contact__lead {
     font-size: 1.8rem;
   }
-  .contact__item:nth-child(1),
-  .contact__item:nth-child(2) {
+  .contact__item--tel,
+  .contact__item--mail {
     background-image: none;
   }
   .contact__item-title {
@@ -1852,13 +1868,13 @@ main {
   .access__tag-item {
     font-size: 1.4rem;
   }
-  .access__item-title {
+  .access__name {
     font-size: 2.4rem;
   }
   .access__data {
     font-size: 1.6rem;
   }
-  .access__data dl dt {
+  .access__data-dt {
     width: 9.2rem;
   }
   .profile__wrapper {
@@ -1867,7 +1883,7 @@ main {
   .profile__list {
     font-size: 1.6rem;
   }
-  .profile__item dt {
+  .profile__dt {
     width: 9.2rem;
   }
 }
